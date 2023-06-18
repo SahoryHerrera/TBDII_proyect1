@@ -1,18 +1,24 @@
 package proyectodb;
 
 import com.mongodb.MongoClient;
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
+import javax.swing.JComboBox;
 
 public class main extends javax.swing.JFrame {
 
-   
-
     public main() {
         initComponents();
-        
+
     }
 
     @SuppressWarnings("unchecked")
@@ -22,18 +28,18 @@ public class main extends javax.swing.JFrame {
         Registro_Jugador = new javax.swing.JDialog();
         jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        player_persoExtra = new javax.swing.JTextField();
+        player_peso = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        player_date = new com.toedter.calendar.JDateChooser();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        player_name = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        player_id = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -41,18 +47,18 @@ public class main extends javax.swing.JFrame {
         Registro_Entrenador = new javax.swing.JDialog();
         jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        DT_pesoExtra = new javax.swing.JTextField();
+        DT_peso = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        DT_date = new com.toedter.calendar.JDateChooser();
         jLabel10 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        DT_nombre = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        DT_id = new javax.swing.JTextField();
         jSeparator8 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -60,18 +66,18 @@ public class main extends javax.swing.JFrame {
         Registro_Arbitro = new javax.swing.JDialog();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
+        arbitro_pesoExtra = new javax.swing.JTextField();
+        arbitro_peso = new javax.swing.JTextField();
         jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        arbitro_date = new com.toedter.calendar.JDateChooser();
         jLabel16 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        arbitro_nombre = new javax.swing.JTextField();
         jSeparator11 = new javax.swing.JSeparator();
         jLabel17 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
+        arbitro_id = new javax.swing.JTextField();
         jSeparator12 = new javax.swing.JSeparator();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -79,120 +85,74 @@ public class main extends javax.swing.JFrame {
         Registro_Club = new javax.swing.JDialog();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jTextField16 = new javax.swing.JTextField();
+        club_nombre = new javax.swing.JTextField();
         jSeparator15 = new javax.swing.JSeparator();
         jLabel23 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
+        club_id = new javax.swing.JTextField();
         jSeparator16 = new javax.swing.JSeparator();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jbl_IMAGEN_FONDO3 = new javax.swing.JLabel();
-        Registro_Equipo = new javax.swing.JDialog();
-        jSeparator24 = new javax.swing.JSeparator();
-        jTextField21 = new javax.swing.JTextField();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jTextField14 = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
-        jSeparator17 = new javax.swing.JSeparator();
         jLabel26 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
-        jSeparator18 = new javax.swing.JSeparator();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jbl_IMAGEN_FONDO4 = new javax.swing.JLabel();
+        club_entrenador = new javax.swing.JComboBox<>();
+        jbl_IMAGEN_FONDO3 = new javax.swing.JLabel();
         Registro_Quiniela = new javax.swing.JDialog();
-        jDateChooser5 = new com.toedter.calendar.JDateChooser();
-        jLabel33 = new javax.swing.JLabel();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jSeparator13 = new javax.swing.JSeparator();
-        jSeparator14 = new javax.swing.JSeparator();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jDateChooser4 = new com.toedter.calendar.JDateChooser();
-        jLabel29 = new javax.swing.JLabel();
-        jTextField22 = new javax.swing.JTextField();
-        jSeparator20 = new javax.swing.JSeparator();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jbl_IMAGEN_FONDO5 = new javax.swing.JLabel();
-        Registro_Prediccion = new javax.swing.JDialog();
         jSeparator23 = new javax.swing.JSeparator();
-        jTextField26 = new javax.swing.JTextField();
-        jSpinner2 = new javax.swing.JSpinner();
-        jSpinner1 = new javax.swing.JSpinner();
         jLabel39 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jSeparator19 = new javax.swing.JSeparator();
-        jTextField25 = new javax.swing.JTextField();
+        quiniela_monto = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
-        jTextField24 = new javax.swing.JTextField();
+        quiniela_id = new javax.swing.JTextField();
         jSeparator22 = new javax.swing.JSeparator();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
+        quiniela_partido = new javax.swing.JComboBox<>();
+        quiniela_golesVisita = new javax.swing.JTextField();
+        quiniela_golesLocal = new javax.swing.JTextField();
         jbl_IMAGEN_FONDO6 = new javax.swing.JLabel();
         Registro_Partido = new javax.swing.JDialog();
         jLabel47 = new javax.swing.JLabel();
         jSeparator29 = new javax.swing.JSeparator();
-        jTextField32 = new javax.swing.JTextField();
+        partido_golesLocal = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
         jSeparator21 = new javax.swing.JSeparator();
-        jTextField31 = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
         jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
-        jTextField27 = new javax.swing.JTextField();
-        jTextField28 = new javax.swing.JTextField();
         jSeparator25 = new javax.swing.JSeparator();
         jSeparator26 = new javax.swing.JSeparator();
         jLabel30 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        jTextField29 = new javax.swing.JTextField();
-        jSeparator27 = new javax.swing.JSeparator();
         jLabel42 = new javax.swing.JLabel();
-        jTextField30 = new javax.swing.JTextField();
+        partido_id = new javax.swing.JTextField();
         jSeparator28 = new javax.swing.JSeparator();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
-        jTextField33 = new javax.swing.JTextField();
         jSeparator30 = new javax.swing.JSeparator();
-        jTextField34 = new javax.swing.JTextField();
+        partido_golesVisita = new javax.swing.JTextField();
         jSeparator31 = new javax.swing.JSeparator();
         jLabel49 = new javax.swing.JLabel();
-        jDateChooser6 = new com.toedter.calendar.JDateChooser();
+        partido_date = new com.toedter.calendar.JDateChooser();
+        partido_arbitro3 = new javax.swing.JComboBox<>();
+        partido_local = new javax.swing.JComboBox<>();
+        partido_visita = new javax.swing.JComboBox<>();
+        partido_arbitro1 = new javax.swing.JComboBox<>();
+        partido_arbitro2 = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO7 = new javax.swing.JLabel();
-        Registro_Equipojugador = new javax.swing.JDialog();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jTextField23 = new javax.swing.JTextField();
-        jSeparator32 = new javax.swing.JSeparator();
-        jLabel41 = new javax.swing.JLabel();
-        jTextField35 = new javax.swing.JTextField();
-        jSeparator33 = new javax.swing.JSeparator();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jTextField36 = new javax.swing.JTextField();
-        jSeparator34 = new javax.swing.JSeparator();
-        jbl_IMAGEN_FONDO8 = new javax.swing.JLabel();
         Registro_Clubjugador = new javax.swing.JDialog();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jSeparator35 = new javax.swing.JSeparator();
-        jTextField38 = new javax.swing.JTextField();
         jSeparator36 = new javax.swing.JSeparator();
         jLabel54 = new javax.swing.JLabel();
         jLabel55 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
-        jTextField39 = new javax.swing.JTextField();
+        CJ_club = new javax.swing.JComboBox<>();
+        CJ_player = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO9 = new javax.swing.JLabel();
         Modificar_Jugador = new javax.swing.JDialog();
         jButton21 = new javax.swing.JButton();
@@ -415,28 +375,22 @@ public class main extends javax.swing.JFrame {
         jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItem3 = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItem4 = new javax.swing.JCheckBoxMenuItem();
-        jCheckBoxMenuItem5 = new javax.swing.JCheckBoxMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem16 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
-        jMenuItem16 = new javax.swing.JMenuItem();
-        jMenuItem17 = new javax.swing.JMenuItem();
         jMenuItem18 = new javax.swing.JMenuItem();
-        jMenuItem19 = new javax.swing.JMenuItem();
         jMenuItem20 = new javax.swing.JMenuItem();
 
         Registro_Jugador.setIconImage(null);
@@ -450,19 +404,24 @@ public class main extends javax.swing.JFrame {
         Registro_Jugador.getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton1.setText("Crear");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         Registro_Jugador.getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
 
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField5.setBorder(null);
-        jTextField5.setOpaque(false);
-        Registro_Jugador.getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
+        player_persoExtra.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        player_persoExtra.setForeground(new java.awt.Color(255, 255, 255));
+        player_persoExtra.setBorder(null);
+        player_persoExtra.setOpaque(false);
+        Registro_Jugador.getContentPane().add(player_persoExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
 
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField4.setBorder(null);
-        jTextField4.setOpaque(false);
-        Registro_Jugador.getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
+        player_peso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        player_peso.setForeground(new java.awt.Color(255, 255, 255));
+        player_peso.setBorder(null);
+        player_peso.setOpaque(false);
+        Registro_Jugador.getContentPane().add(player_peso, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
         Registro_Jugador.getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 220, -1));
         Registro_Jugador.getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
 
@@ -475,18 +434,18 @@ public class main extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Peso Base:");
         Registro_Jugador.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
-        Registro_Jugador.getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 130, -1));
+        Registro_Jugador.getContentPane().add(player_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 130, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Fecha de Nacimiento:");
         Registro_Jugador.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, -1, -1));
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.setBorder(null);
-        jTextField3.setOpaque(false);
-        Registro_Jugador.getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
+        player_name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        player_name.setForeground(new java.awt.Color(255, 255, 255));
+        player_name.setBorder(null);
+        player_name.setOpaque(false);
+        Registro_Jugador.getContentPane().add(player_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
         Registro_Jugador.getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -494,16 +453,16 @@ public class main extends javax.swing.JFrame {
         jLabel4.setText("Nombre:");
         Registro_Jugador.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setBorder(null);
-        jTextField2.setOpaque(false);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        player_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        player_id.setForeground(new java.awt.Color(255, 255, 255));
+        player_id.setBorder(null);
+        player_id.setOpaque(false);
+        player_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                player_idActionPerformed(evt);
             }
         });
-        Registro_Jugador.getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
+        Registro_Jugador.getContentPane().add(player_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
         Registro_Jugador.getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -532,19 +491,24 @@ public class main extends javax.swing.JFrame {
         Registro_Entrenador.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton2.setText("Crear");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         Registro_Entrenador.getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
 
-        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField6.setBorder(null);
-        jTextField6.setOpaque(false);
-        Registro_Entrenador.getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
+        DT_pesoExtra.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        DT_pesoExtra.setForeground(new java.awt.Color(255, 255, 255));
+        DT_pesoExtra.setBorder(null);
+        DT_pesoExtra.setOpaque(false);
+        Registro_Entrenador.getContentPane().add(DT_pesoExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
 
-        jTextField7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField7.setBorder(null);
-        jTextField7.setOpaque(false);
-        Registro_Entrenador.getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
+        DT_peso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        DT_peso.setForeground(new java.awt.Color(255, 255, 255));
+        DT_peso.setBorder(null);
+        DT_peso.setOpaque(false);
+        Registro_Entrenador.getContentPane().add(DT_peso, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
         Registro_Entrenador.getContentPane().add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 220, -1));
         Registro_Entrenador.getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
 
@@ -557,18 +521,18 @@ public class main extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Peso Base:");
         Registro_Entrenador.getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
-        Registro_Entrenador.getContentPane().add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 130, -1));
+        Registro_Entrenador.getContentPane().add(DT_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 130, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Fecha de Nacimiento:");
         Registro_Entrenador.getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, -1, -1));
 
-        jTextField8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField8.setBorder(null);
-        jTextField8.setOpaque(false);
-        Registro_Entrenador.getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
+        DT_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        DT_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        DT_nombre.setBorder(null);
+        DT_nombre.setOpaque(false);
+        Registro_Entrenador.getContentPane().add(DT_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
         Registro_Entrenador.getContentPane().add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, -1));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -576,16 +540,16 @@ public class main extends javax.swing.JFrame {
         jLabel11.setText("Nombre:");
         Registro_Entrenador.getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
 
-        jTextField9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField9.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField9.setBorder(null);
-        jTextField9.setOpaque(false);
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        DT_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        DT_id.setForeground(new java.awt.Color(255, 255, 255));
+        DT_id.setBorder(null);
+        DT_id.setOpaque(false);
+        DT_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                DT_idActionPerformed(evt);
             }
         });
-        Registro_Entrenador.getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
+        Registro_Entrenador.getContentPane().add(DT_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
         Registro_Entrenador.getContentPane().add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -614,19 +578,24 @@ public class main extends javax.swing.JFrame {
         Registro_Arbitro.getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton6.setText("Crear");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         Registro_Arbitro.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
 
-        jTextField10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField10.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField10.setBorder(null);
-        jTextField10.setOpaque(false);
-        Registro_Arbitro.getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
+        arbitro_pesoExtra.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        arbitro_pesoExtra.setForeground(new java.awt.Color(255, 255, 255));
+        arbitro_pesoExtra.setBorder(null);
+        arbitro_pesoExtra.setOpaque(false);
+        Registro_Arbitro.getContentPane().add(arbitro_pesoExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
 
-        jTextField11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField11.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField11.setBorder(null);
-        jTextField11.setOpaque(false);
-        Registro_Arbitro.getContentPane().add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
+        arbitro_peso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        arbitro_peso.setForeground(new java.awt.Color(255, 255, 255));
+        arbitro_peso.setBorder(null);
+        arbitro_peso.setOpaque(false);
+        Registro_Arbitro.getContentPane().add(arbitro_peso, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
         Registro_Arbitro.getContentPane().add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 220, -1));
         Registro_Arbitro.getContentPane().add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
 
@@ -639,18 +608,18 @@ public class main extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Peso Base:");
         Registro_Arbitro.getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
-        Registro_Arbitro.getContentPane().add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 130, -1));
+        Registro_Arbitro.getContentPane().add(arbitro_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 130, -1));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Fecha de Nacimiento:");
         Registro_Arbitro.getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, -1, -1));
 
-        jTextField12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField12.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField12.setBorder(null);
-        jTextField12.setOpaque(false);
-        Registro_Arbitro.getContentPane().add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
+        arbitro_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        arbitro_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        arbitro_nombre.setBorder(null);
+        arbitro_nombre.setOpaque(false);
+        Registro_Arbitro.getContentPane().add(arbitro_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
         Registro_Arbitro.getContentPane().add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, -1));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -658,16 +627,16 @@ public class main extends javax.swing.JFrame {
         jLabel17.setText("Nombre:");
         Registro_Arbitro.getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
 
-        jTextField13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField13.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField13.setBorder(null);
-        jTextField13.setOpaque(false);
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        arbitro_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        arbitro_id.setForeground(new java.awt.Color(255, 255, 255));
+        arbitro_id.setBorder(null);
+        arbitro_id.setOpaque(false);
+        arbitro_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                arbitro_idActionPerformed(evt);
             }
         });
-        Registro_Arbitro.getContentPane().add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
+        Registro_Arbitro.getContentPane().add(arbitro_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
         Registro_Arbitro.getContentPane().add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -703,28 +672,28 @@ public class main extends javax.swing.JFrame {
         });
         Registro_Club.getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 507, 190, -1));
 
-        jTextField16.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField16.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField16.setBorder(null);
-        jTextField16.setOpaque(false);
-        Registro_Club.getContentPane().add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
+        club_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        club_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        club_nombre.setBorder(null);
+        club_nombre.setOpaque(false);
+        Registro_Club.getContentPane().add(club_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
         Registro_Club.getContentPane().add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, -1));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setText("Nombre:");
-        Registro_Club.getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
+        jLabel23.setText("ID_entrenador:");
+        Registro_Club.getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, -1, -1));
 
-        jTextField17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField17.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField17.setBorder(null);
-        jTextField17.setOpaque(false);
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+        club_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        club_id.setForeground(new java.awt.Color(255, 255, 255));
+        club_id.setBorder(null);
+        club_id.setOpaque(false);
+        club_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
+                club_idActionPerformed(evt);
             }
         });
-        Registro_Club.getContentPane().add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
+        Registro_Club.getContentPane().add(club_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
         Registro_Club.getContentPane().add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -737,207 +706,56 @@ public class main extends javax.swing.JFrame {
         jLabel25.setText("Nuevo Club");
         Registro_Club.getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 70, -1, -1));
 
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("Nombre:");
+        Registro_Club.getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
+
+        club_entrenador.setToolTipText("");
+        Registro_Club.getContentPane().add(club_entrenador, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 200, -1));
+
         jbl_IMAGEN_FONDO3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO3.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
         Registro_Club.getContentPane().add(jbl_IMAGEN_FONDO3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
 
-        Registro_Equipo.setIconImage(null);
-        Registro_Equipo.setIconImages(null);
-        Registro_Equipo.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Registro_Equipo.getContentPane().add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, 220, 30));
-
-        jTextField21.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField21.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField21.setBorder(null);
-        jTextField21.setOpaque(false);
-        Registro_Equipo.getContentPane().add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, 220, 20));
-
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton9.setText("Atras");
-        jButton9.setBorder(null);
-        jButton9.setOpaque(false);
-        Registro_Equipo.getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
-
-        jButton10.setText("Crear");
-        Registro_Equipo.getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
-
-        jTextField14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField14.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField14.setBorder(null);
-        jTextField14.setOpaque(false);
-        Registro_Equipo.getContentPane().add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
-
-        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel21.setText("ID entrenador:");
-        Registro_Equipo.getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, -1, -1));
-
-        jTextField18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField18.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField18.setBorder(null);
-        jTextField18.setOpaque(false);
-        Registro_Equipo.getContentPane().add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
-        Registro_Equipo.getContentPane().add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, -1));
-
-        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("Nombre:");
-        Registro_Equipo.getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
-
-        jTextField19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField19.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField19.setBorder(null);
-        jTextField19.setOpaque(false);
-        jTextField19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField19ActionPerformed(evt);
-            }
-        });
-        Registro_Equipo.getContentPane().add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
-        Registro_Equipo.getContentPane().add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
-
-        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel27.setText("ID");
-        Registro_Equipo.getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, -1, -1));
-
-        jLabel28.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel28.setText("Nuevo Equipo");
-        Registro_Equipo.getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
-
-        jbl_IMAGEN_FONDO4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jbl_IMAGEN_FONDO4.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_IMAGEN_FONDO4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Registro_Equipo.getContentPane().add(jbl_IMAGEN_FONDO4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
-
         Registro_Quiniela.setIconImage(null);
         Registro_Quiniela.setIconImages(null);
         Registro_Quiniela.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Registro_Quiniela.getContentPane().add(jDateChooser5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, 220, -1));
-
-        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel33.setText("Fecha fin:");
-        Registro_Quiniela.getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, -1, -1));
-
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton11.setText("Atras");
-        jButton11.setBorder(null);
-        jButton11.setOpaque(false);
-        Registro_Quiniela.getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
-
-        jButton12.setText("Crear");
-        Registro_Quiniela.getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
-
-        jTextField15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField15.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField15.setBorder(null);
-        jTextField15.setOpaque(false);
-        Registro_Quiniela.getContentPane().add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
-
-        jTextField20.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField20.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField20.setBorder(null);
-        jTextField20.setOpaque(false);
-        Registro_Quiniela.getContentPane().add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
-        Registro_Quiniela.getContentPane().add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 220, -1));
-        Registro_Quiniela.getContentPane().add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
-
-        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("Ganancia:");
-        Registro_Quiniela.getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
-
-        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Inversión:");
-        Registro_Quiniela.getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
-        Registro_Quiniela.getContentPane().add(jDateChooser4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, -1));
-
-        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel29.setText("Fecha inicio:");
-        Registro_Quiniela.getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
-
-        jTextField22.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField22.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField22.setBorder(null);
-        jTextField22.setOpaque(false);
-        jTextField22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField22ActionPerformed(evt);
-            }
-        });
-        Registro_Quiniela.getContentPane().add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
-        Registro_Quiniela.getContentPane().add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
-
-        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel31.setText("ID:");
-        Registro_Quiniela.getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, -1));
-
-        jLabel32.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel32.setText("Nueva Quiniela");
-        Registro_Quiniela.getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
-
-        jbl_IMAGEN_FONDO5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jbl_IMAGEN_FONDO5.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_IMAGEN_FONDO5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Registro_Quiniela.getContentPane().add(jbl_IMAGEN_FONDO5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
-
-        Registro_Prediccion.setIconImage(null);
-        Registro_Prediccion.setIconImages(null);
-        Registro_Prediccion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Registro_Prediccion.getContentPane().add(jSeparator23, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, 10));
-
-        jTextField26.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField26.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField26.setBorder(null);
-        jTextField26.setOpaque(false);
-        jTextField26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField26ActionPerformed(evt);
-            }
-        });
-        Registro_Prediccion.getContentPane().add(jTextField26, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
-        Registro_Prediccion.getContentPane().add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, 20));
-        Registro_Prediccion.getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, 220, 20));
+        Registro_Quiniela.getContentPane().add(jSeparator23, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, 10));
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setText("Goles Visita:");
-        Registro_Prediccion.getContentPane().add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, -1));
+        Registro_Quiniela.getContentPane().add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, -1));
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("Goles Local:");
-        Registro_Prediccion.getContentPane().add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, -1));
-        Registro_Prediccion.getContentPane().add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, 220, 10));
+        Registro_Quiniela.getContentPane().add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, -1));
+        Registro_Quiniela.getContentPane().add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, 220, 10));
 
-        jTextField25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField25.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField25.setBorder(null);
-        jTextField25.setOpaque(false);
-        jTextField25.addActionListener(new java.awt.event.ActionListener() {
+        quiniela_monto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        quiniela_monto.setForeground(new java.awt.Color(255, 255, 255));
+        quiniela_monto.setBorder(null);
+        quiniela_monto.setOpaque(false);
+        quiniela_monto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField25ActionPerformed(evt);
+                quiniela_montoActionPerformed(evt);
             }
         });
-        Registro_Prediccion.getContentPane().add(jTextField25, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 220, 20));
+        Registro_Quiniela.getContentPane().add(quiniela_monto, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 220, 20));
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
         jLabel37.setText("Monto:");
-        Registro_Prediccion.getContentPane().add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
+        Registro_Quiniela.getContentPane().add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
 
         jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
         jButton13.setText("Atras");
         jButton13.setBorder(null);
         jButton13.setOpaque(false);
-        Registro_Prediccion.getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
+        Registro_Quiniela.getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton14.setText("Crear");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -945,39 +763,43 @@ public class main extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
-        Registro_Prediccion.getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 507, 190, -1));
+        Registro_Quiniela.getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 507, 190, -1));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText("ID Partido:");
-        Registro_Prediccion.getContentPane().add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, -1, -1));
+        Registro_Quiniela.getContentPane().add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, -1, -1));
 
-        jTextField24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField24.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField24.setBorder(null);
-        jTextField24.setOpaque(false);
-        jTextField24.addActionListener(new java.awt.event.ActionListener() {
+        quiniela_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        quiniela_id.setForeground(new java.awt.Color(255, 255, 255));
+        quiniela_id.setBorder(null);
+        quiniela_id.setOpaque(false);
+        quiniela_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField24ActionPerformed(evt);
+                quiniela_idActionPerformed(evt);
             }
         });
-        Registro_Prediccion.getContentPane().add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
-        Registro_Prediccion.getContentPane().add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
+        Registro_Quiniela.getContentPane().add(quiniela_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
+        Registro_Quiniela.getContentPane().add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(255, 255, 255));
         jLabel35.setText("ID:");
-        Registro_Prediccion.getContentPane().add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, -1));
+        Registro_Quiniela.getContentPane().add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, -1));
 
         jLabel36.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel36.setText("Nueva Predicción");
-        Registro_Prediccion.getContentPane().add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, -1, -1));
+        jLabel36.setText("Nueva Quiniela");
+        Registro_Quiniela.getContentPane().add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, -1, -1));
+
+        Registro_Quiniela.getContentPane().add(quiniela_partido, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, -1));
+        Registro_Quiniela.getContentPane().add(quiniela_golesVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
+        Registro_Quiniela.getContentPane().add(quiniela_golesLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, 220, -1));
 
         jbl_IMAGEN_FONDO6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO6.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Registro_Prediccion.getContentPane().add(jbl_IMAGEN_FONDO6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
+        Registro_Quiniela.getContentPane().add(jbl_IMAGEN_FONDO6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
 
         Registro_Partido.setIconImage(null);
         Registro_Partido.setIconImages(null);
@@ -989,23 +811,17 @@ public class main extends javax.swing.JFrame {
         Registro_Partido.getContentPane().add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 500, -1, -1));
         Registro_Partido.getContentPane().add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 480, 220, 10));
 
-        jTextField32.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField32.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField32.setBorder(null);
-        jTextField32.setOpaque(false);
-        Registro_Partido.getContentPane().add(jTextField32, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 460, 220, 20));
+        partido_golesLocal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        partido_golesLocal.setForeground(new java.awt.Color(255, 255, 255));
+        partido_golesLocal.setBorder(null);
+        partido_golesLocal.setOpaque(false);
+        Registro_Partido.getContentPane().add(partido_golesLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 460, 220, 20));
 
         jLabel46.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setText("ID Arbitro Auxiliar 2:");
         Registro_Partido.getContentPane().add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
         Registro_Partido.getContentPane().add(jSeparator21, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 260, 220, 20));
-
-        jTextField31.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField31.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField31.setBorder(null);
-        jTextField31.setOpaque(false);
-        Registro_Partido.getContentPane().add(jTextField31, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, 220, 20));
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
@@ -1019,19 +835,12 @@ public class main extends javax.swing.JFrame {
         Registro_Partido.getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 80, 40));
 
         jButton16.setText("Crear");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
         Registro_Partido.getContentPane().add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 550, 100, 20));
-
-        jTextField27.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField27.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField27.setBorder(null);
-        jTextField27.setOpaque(false);
-        Registro_Partido.getContentPane().add(jTextField27, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, 220, 30));
-
-        jTextField28.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField28.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField28.setBorder(null);
-        jTextField28.setOpaque(false);
-        Registro_Partido.getContentPane().add(jTextField28, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, 220, 30));
         Registro_Partido.getContentPane().add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 360, 220, 10));
         Registro_Partido.getContentPane().add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 220, 10));
 
@@ -1045,28 +854,21 @@ public class main extends javax.swing.JFrame {
         jLabel40.setText("ID Arbitro:");
         Registro_Partido.getContentPane().add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, -1, -1));
 
-        jTextField29.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField29.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField29.setBorder(null);
-        jTextField29.setOpaque(false);
-        Registro_Partido.getContentPane().add(jTextField29, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 190, 220, 20));
-        Registro_Partido.getContentPane().add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 220, 10));
-
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setText("ID Equipo Local:");
         Registro_Partido.getContentPane().add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 120, -1));
 
-        jTextField30.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField30.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField30.setBorder(null);
-        jTextField30.setOpaque(false);
-        jTextField30.addActionListener(new java.awt.event.ActionListener() {
+        partido_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        partido_id.setForeground(new java.awt.Color(255, 255, 255));
+        partido_id.setBorder(null);
+        partido_id.setOpaque(false);
+        partido_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField30ActionPerformed(evt);
+                partido_idActionPerformed(evt);
             }
         });
-        Registro_Partido.getContentPane().add(jTextField30, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 220, 30));
+        Registro_Partido.getContentPane().add(partido_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 220, 30));
         Registro_Partido.getContentPane().add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 220, 10));
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1083,100 +885,35 @@ public class main extends javax.swing.JFrame {
         jLabel48.setForeground(new java.awt.Color(255, 255, 255));
         jLabel48.setText("Goles visita:");
         Registro_Partido.getContentPane().add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, -1, -1));
-
-        jTextField33.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField33.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField33.setBorder(null);
-        jTextField33.setOpaque(false);
-        Registro_Partido.getContentPane().add(jTextField33, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 220, 20));
         Registro_Partido.getContentPane().add(jSeparator30, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 400, 220, 10));
 
-        jTextField34.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField34.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField34.setBorder(null);
-        jTextField34.setOpaque(false);
-        Registro_Partido.getContentPane().add(jTextField34, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, 220, 20));
+        partido_golesVisita.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        partido_golesVisita.setForeground(new java.awt.Color(255, 255, 255));
+        partido_golesVisita.setBorder(null);
+        partido_golesVisita.setOpaque(false);
+        Registro_Partido.getContentPane().add(partido_golesVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 420, 220, 20));
         Registro_Partido.getContentPane().add(jSeparator31, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 440, 220, 10));
 
         jLabel49.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setText("Goles Locales:");
         Registro_Partido.getContentPane().add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 460, -1, -1));
-        Registro_Partido.getContentPane().add(jDateChooser6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 500, 220, -1));
+        Registro_Partido.getContentPane().add(partido_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 500, 220, -1));
+
+        Registro_Partido.getContentPane().add(partido_arbitro3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 220, -1));
+
+        Registro_Partido.getContentPane().add(partido_local, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 190, 220, -1));
+
+        Registro_Partido.getContentPane().add(partido_visita, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, 220, -1));
+
+        Registro_Partido.getContentPane().add(partido_arbitro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, 220, -1));
+
+        Registro_Partido.getContentPane().add(partido_arbitro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, 220, -1));
 
         jbl_IMAGEN_FONDO7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO7.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_ancho.png"))); // NOI18N
         Registro_Partido.getContentPane().add(jbl_IMAGEN_FONDO7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
-
-        Registro_Equipojugador.setIconImage(null);
-        Registro_Equipojugador.setIconImages(null);
-        Registro_Equipojugador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton17.setText("Atras");
-        jButton17.setBorder(null);
-        jButton17.setOpaque(false);
-        Registro_Equipojugador.getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
-
-        jButton18.setText("Crear");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
-            }
-        });
-        Registro_Equipojugador.getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 507, 190, -1));
-
-        jTextField23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField23.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField23.setBorder(null);
-        jTextField23.setOpaque(false);
-        Registro_Equipojugador.getContentPane().add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 220, 20));
-        Registro_Equipojugador.getContentPane().add(jSeparator32, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, -1));
-
-        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel41.setText("Reserva:");
-        Registro_Equipojugador.getContentPane().add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, -1, -1));
-
-        jTextField35.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField35.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField35.setBorder(null);
-        jTextField35.setOpaque(false);
-        jTextField35.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField35ActionPerformed(evt);
-            }
-        });
-        Registro_Equipojugador.getContentPane().add(jTextField35, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
-        Registro_Equipojugador.getContentPane().add(jSeparator33, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
-
-        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel50.setText("ID Jugador:");
-        Registro_Equipojugador.getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, -1, -1));
-
-        jLabel51.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel51.setText("Nuevo Equipo Jugador");
-        Registro_Equipojugador.getContentPane().add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
-
-        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel52.setText("ID Equipo:");
-        Registro_Equipojugador.getContentPane().add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, -1, -1));
-
-        jTextField36.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField36.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField36.setBorder(null);
-        jTextField36.setOpaque(false);
-        Registro_Equipojugador.getContentPane().add(jTextField36, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
-        Registro_Equipojugador.getContentPane().add(jSeparator34, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 350, 220, 20));
-
-        jbl_IMAGEN_FONDO8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jbl_IMAGEN_FONDO8.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_IMAGEN_FONDO8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Registro_Equipojugador.getContentPane().add(jbl_IMAGEN_FONDO8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
 
         Registro_Clubjugador.setIconImage(null);
         Registro_Clubjugador.setIconImages(null);
@@ -1196,17 +933,6 @@ public class main extends javax.swing.JFrame {
         });
         Registro_Clubjugador.getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 507, 190, -1));
         Registro_Clubjugador.getContentPane().add(jSeparator35, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, 20));
-
-        jTextField38.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField38.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField38.setBorder(null);
-        jTextField38.setOpaque(false);
-        jTextField38.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField38ActionPerformed(evt);
-            }
-        });
-        Registro_Clubjugador.getContentPane().add(jTextField38, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
         Registro_Clubjugador.getContentPane().add(jSeparator36, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
 
         jLabel54.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1224,11 +950,9 @@ public class main extends javax.swing.JFrame {
         jLabel56.setText("ID Jugador:");
         Registro_Clubjugador.getContentPane().add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, -1, -1));
 
-        jTextField39.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField39.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField39.setBorder(null);
-        jTextField39.setOpaque(false);
-        Registro_Clubjugador.getContentPane().add(jTextField39, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
+        Registro_Clubjugador.getContentPane().add(CJ_club, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 220, -1));
+
+        Registro_Clubjugador.getContentPane().add(CJ_player, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 220, -1));
 
         jbl_IMAGEN_FONDO9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO9.setForeground(new java.awt.Color(255, 255, 255));
@@ -2207,42 +1931,14 @@ public class main extends javax.swing.JFrame {
         });
         jMenu1.add(jCheckBoxMenuItem4);
 
-        jCheckBoxMenuItem5.setSelected(true);
-        jCheckBoxMenuItem5.setText("Equipo");
-        jCheckBoxMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/equipo.png"))); // NOI18N
-        jCheckBoxMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxMenuItem5ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jCheckBoxMenuItem5);
-
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/torneo.png"))); // NOI18N
-        jMenuItem1.setText("Quiniela");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem1);
-
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/prediccion.png"))); // NOI18N
-        jMenuItem2.setText("Predicción");
+        jMenuItem2.setText("Quiniela");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
             }
         });
         jMenu1.add(jMenuItem2);
-
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/futbol-americano.png"))); // NOI18N
-        jMenuItem3.setText("Equipo Jugador");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem3);
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/futbodl.png"))); // NOI18N
         jMenuItem4.setText("Club Jugador");
@@ -2252,6 +1948,15 @@ public class main extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem4);
+
+        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/futbodl.png"))); // NOI18N
+        jMenuItem16.setText("Partido");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem16);
 
         jMenuBar1.add(jMenu1);
 
@@ -2303,17 +2008,8 @@ public class main extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem9);
 
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/apuesta.png"))); // NOI18N
-        jMenuItem10.setText("Quiniela");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem10);
-
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/prediccion.png"))); // NOI18N
-        jMenuItem11.setText("Predicción");
+        jMenuItem11.setText("Quiniela");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem11ActionPerformed(evt);
@@ -2362,41 +2058,14 @@ public class main extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem15);
 
-        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/equipo.png"))); // NOI18N
-        jMenuItem16.setText("Equipo");
-        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem16ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem16);
-
-        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/apuesta.png"))); // NOI18N
-        jMenuItem17.setText("Quiniela");
-        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem17ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem17);
-
         jMenuItem18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/prediccion.png"))); // NOI18N
-        jMenuItem18.setText("Prediccon");
+        jMenuItem18.setText("Quiniela");
         jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem18ActionPerformed(evt);
             }
         });
         jMenu3.add(jMenuItem18);
-
-        jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/torneo.png"))); // NOI18N
-        jMenuItem19.setText("Equipo Jugador");
-        jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem19ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem19);
 
         jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/futbodl.png"))); // NOI18N
         jMenuItem20.setText("Club Jugador");
@@ -2430,12 +2099,11 @@ public class main extends javax.swing.JFrame {
         //Registro_jugador.setModal(true);
         //Registro_jugador.pack();
         //Registro_jugador.setLocationRelativeTo(this);
-        
-        
+
         Registro_Jugador.setModal(true);
         Registro_Jugador.pack();
         Registro_Jugador.setLocationRelativeTo(this);
-        Registro_Jugador.setVisible(true);      
+        Registro_Jugador.setVisible(true);
     }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
 
     private void jCheckBoxMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem3ActionPerformed
@@ -2443,128 +2111,184 @@ public class main extends javax.swing.JFrame {
         Registro_Arbitro.setModal(true);
         Registro_Arbitro.pack();
         Registro_Arbitro.setLocationRelativeTo(this);
-        Registro_Arbitro.setVisible(true);  
+        Registro_Arbitro.setVisible(true);
     }//GEN-LAST:event_jCheckBoxMenuItem3ActionPerformed
 
-    private void jCheckBoxMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem5ActionPerformed
-        // TODO add your handling code here:
-              Registro_Equipo.setModal(true);
-      Registro_Equipo.pack();
-        Registro_Equipo.setLocationRelativeTo(this);
-        Registro_Equipo.setVisible(true);  
-    }//GEN-LAST:event_jCheckBoxMenuItem5ActionPerformed
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-    Registro_Quiniela.setModal(true);
-      Registro_Quiniela.pack();
-        Registro_Quiniela.setLocationRelativeTo(this);
-        Registro_Quiniela.setVisible(true); 
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-   Registro_Prediccion.setModal(true);
-      Registro_Prediccion.pack();
-  Registro_Prediccion.setLocationRelativeTo(this);
-      Registro_Prediccion.setVisible(true); 
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("partido");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("id");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            quiniela_partido.setModel(comboBoxModel);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        Registro_Quiniela.setModal(true);
+        Registro_Quiniela.pack();
+        Registro_Quiniela.setLocationRelativeTo(this);
+        Registro_Quiniela.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
         Modificar_Arbitro.setModal(true);
-  Modificar_Arbitro.pack();
-      Modificar_Arbitro.setLocationRelativeTo(this);
-      Modificar_Arbitro.setVisible(true);  
+        Modificar_Arbitro.pack();
+        Modificar_Arbitro.setLocationRelativeTo(this);
+        Modificar_Arbitro.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
-         Modificar_Equipo.setModal(true);
- Modificar_Equipo.pack();
-     Modificar_Equipo.setLocationRelativeTo(this);
-     Modificar_Equipo.setVisible(true);
+        Modificar_Equipo.setModal(true);
+        Modificar_Equipo.pack();
+        Modificar_Equipo.setLocationRelativeTo(this);
+        Modificar_Equipo.setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
         // TODO add your handling code here:
         Eliminar_Club.setModal(true);
-Eliminar_Club.pack();
-Eliminar_Club.setLocationRelativeTo(this);
-Eliminar_Club.setVisible(true);
+        Eliminar_Club.pack();
+        Eliminar_Club.setLocationRelativeTo(this);
+        Eliminar_Club.setVisible(true);
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
-           Registro_Clubjugador.setModal(true);
-Registro_Clubjugador.pack();
- Registro_Clubjugador.setLocationRelativeTo(this);
-      Registro_Clubjugador.setVisible(true);
+        {
+            String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+            MongoClientURI uri = new MongoClientURI(connectionString);
+            try (MongoClient mongoClient = new MongoClient(uri)) {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("jugadores");
+                List<String> identidades = new ArrayList<>();
+
+                for (Document doc : collection.find()) {
+                    String identidad = doc.getString("identidad");
+                    identidades.add(identidad);
+                }
+
+                DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+                CJ_player.setModel(comboBoxModel);
+
+                // Resto del código...
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+        {
+            String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+            MongoClientURI uri = new MongoClientURI(connectionString);
+            try (MongoClient mongoClient = new MongoClient(uri)) {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("clubes");
+                List<String> identidades = new ArrayList<>();
+
+                for (Document doc : collection.find()) {
+                    String identidad = doc.getString("identidad");
+                    identidades.add(identidad);
+                }
+
+                DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+                CJ_club.setModel(comboBoxModel);
+
+                // Resto del código...
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+        Registro_Clubjugador.setModal(true);
+        Registro_Clubjugador.pack();
+        Registro_Clubjugador.setLocationRelativeTo(this);
+        Registro_Clubjugador.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void player_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player_idActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_player_idActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void DT_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DT_idActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_DT_idActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void arbitro_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arbitro_idActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_arbitro_idActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void club_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_club_idActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+    }//GEN-LAST:event_club_idActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            if (club_id.getText().equals("") || club_nombre.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
+                club_id.setText("");
+                club_nombre.setText("");
+            } else {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("clubes");
+                String identidad = club_id.getText();
+                String nombre = club_nombre.getText();
+                String entrenadorSeleccionado = club_entrenador.getSelectedItem().toString(); // Obtener el valor seleccionado del JComboBox como String
+                Document club = new Document()
+                        .append("identidad", identidad)
+                        .append("nombre", nombre)
+                        .append("entrenador", entrenadorSeleccionado); // Agregar el valor seleccionado al documento del club
+                collection.insertOne(club);
+                JOptionPane.showMessageDialog(null, "Club creado correctamente.");
+                System.out.println("Clubes existentes:");
+                for (Document doc : collection.find()) {
+                    System.out.println(doc.toJson());
+                }
+                club_id.setText("");
+                club_nombre.setText("");
+            }
+        }
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+    private void partido_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_partido_idActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField19ActionPerformed
-
-    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField22ActionPerformed
-
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField24ActionPerformed
-
-    private void jTextField25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField25ActionPerformed
-
-    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField26ActionPerformed
-
-    private void jTextField30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField30ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField30ActionPerformed
-
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton18ActionPerformed
-
-    private void jTextField35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField35ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField35ActionPerformed
+    }//GEN-LAST:event_partido_idActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            String clubSeleccionado = CJ_club.getSelectedItem().toString();
+            String jugadorSeleccionado = CJ_player.getSelectedItem().toString();
+
+            if (clubSeleccionado.equals("") || jugadorSeleccionado.equals("")) {
+                JOptionPane.showMessageDialog(null, "Campos vacíos, seleccione un club y un jugador");
+            } else {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("equipo_jugador");
+
+                Document equipoJugador = new Document()
+                        .append("club", clubSeleccionado)
+                        .append("jugador", jugadorSeleccionado);
+
+                collection.insertOne(equipoJugador);
+                JOptionPane.showMessageDialog(null, "Relación equipo-jugador creada correctamente.");
+                System.out.println("Relaciones equipo-jugador existentes:");
+                for (Document doc : collection.find()) {
+                    System.out.println(doc.toJson());
+                }
+            }
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton20ActionPerformed
-
-    private void jTextField38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField38ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField38ActionPerformed
 
     private void jTextField43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField43ActionPerformed
         // TODO add your handling code here:
@@ -2613,130 +2337,402 @@ Registro_Clubjugador.pack();
     private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
         // TODO add your handling code here:
         Registro_Entrenador.setModal(true);
-      Registro_Entrenador.pack();
-       Registro_Entrenador.setLocationRelativeTo(this);
-        Registro_Entrenador.setVisible(true);  
+        Registro_Entrenador.pack();
+        Registro_Entrenador.setLocationRelativeTo(this);
+        Registro_Entrenador.setVisible(true);
     }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
 
     private void jCheckBoxMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem4ActionPerformed
-        // TODO add your handling code here:
-         Registro_Club.setModal(true);
-      Registro_Club.pack();
-       Registro_Club.setLocationRelativeTo(this);
-        Registro_Club.setVisible(true); 
-    }//GEN-LAST:event_jCheckBoxMenuItem4ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("entrenadores");
+            List<String> identidades = new ArrayList<>();
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-   Registro_Equipojugador.setModal(true);
-Registro_Equipojugador.pack();
-  Registro_Equipojugador.setLocationRelativeTo(this);
-       Registro_Equipojugador.setVisible(true);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            club_entrenador.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        Registro_Club.setModal(true);
+        Registro_Club.pack();
+        Registro_Club.setLocationRelativeTo(this);
+        Registro_Club.setVisible(true);
+
+
+    }//GEN-LAST:event_jCheckBoxMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-            Modificar_Jugador.setModal(true);
-  Modificar_Jugador.pack();
-      Modificar_Jugador.setLocationRelativeTo(this);
-       Modificar_Jugador.setVisible(true);  
+        Modificar_Jugador.setModal(true);
+        Modificar_Jugador.pack();
+        Modificar_Jugador.setLocationRelativeTo(this);
+        Modificar_Jugador.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
         Modificar_Entrenador.setModal(true);
-  Modificar_Entrenador.pack();
-      Modificar_Entrenador.setLocationRelativeTo(this);
-       Modificar_Entrenador.setVisible(true);  
+        Modificar_Entrenador.pack();
+        Modificar_Entrenador.setLocationRelativeTo(this);
+        Modificar_Entrenador.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
         Modificar_Club.setModal(true);
-  Modificar_Club.pack();
-     Modificar_Club.setLocationRelativeTo(this);
-      Modificar_Club.setVisible(true);
+        Modificar_Club.pack();
+        Modificar_Club.setLocationRelativeTo(this);
+        Modificar_Club.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
-
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        // TODO add your handling code here:
-                 Modificar_Quiniela.setModal(true);
-Modificar_Quiniela.pack();
-     Modificar_Quiniela.setLocationRelativeTo(this);
-    Modificar_Quiniela.setVisible(true);
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         // TODO add your handling code here:
-                        Modificar_Prediccion.setModal(true);
-Modificar_Prediccion.pack();
- Modificar_Prediccion.setLocationRelativeTo(this);
-   Modificar_Prediccion.setVisible(true);
+        Modificar_Prediccion.setModal(true);
+        Modificar_Prediccion.pack();
+        Modificar_Prediccion.setLocationRelativeTo(this);
+        Modificar_Prediccion.setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         // TODO add your handling code here:
-          Eliminar_Jugador.setModal(true);
-Eliminar_Jugador.pack();
- Eliminar_Jugador.setLocationRelativeTo(this);
-Eliminar_Jugador.setVisible(true);
+        Eliminar_Jugador.setModal(true);
+        Eliminar_Jugador.pack();
+        Eliminar_Jugador.setLocationRelativeTo(this);
+        Eliminar_Jugador.setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
         // TODO add your handling code here:
-               Eliminar_Entrenador.setModal(true);
-Eliminar_Entrenador.pack();
-Eliminar_Entrenador.setLocationRelativeTo(this);
-Eliminar_Entrenador.setVisible(true);
+        Eliminar_Entrenador.setModal(true);
+        Eliminar_Entrenador.pack();
+        Eliminar_Entrenador.setLocationRelativeTo(this);
+        Eliminar_Entrenador.setVisible(true);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
         // TODO add your handling code here:
-           Eliminar_Arbitro.setModal(true);
-Eliminar_Arbitro.pack();
-Eliminar_Arbitro.setLocationRelativeTo(this);
-Eliminar_Arbitro.setVisible(true);
+        Eliminar_Arbitro.setModal(true);
+        Eliminar_Arbitro.pack();
+        Eliminar_Arbitro.setLocationRelativeTo(this);
+        Eliminar_Arbitro.setVisible(true);
     }//GEN-LAST:event_jMenuItem14ActionPerformed
-
-    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
-        // TODO add your handling code here:
-       Eliminar_Equipo.setModal(true);
-Eliminar_Equipo.pack();
-Eliminar_Equipo.setLocationRelativeTo(this);
-Eliminar_Equipo.setVisible(true);
-    }//GEN-LAST:event_jMenuItem16ActionPerformed
-
-    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
-        // TODO add your handling code here:
-        Eliminar_Quiniela.setModal(true);
-Eliminar_Quiniela.pack();
-Eliminar_Quiniela.setLocationRelativeTo(this);
-Eliminar_Quiniela.setVisible(true);
-    }//GEN-LAST:event_jMenuItem17ActionPerformed
 
     private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
         // TODO add your handling code here:
-         Eliminar_Prediccion.setModal(true);
-Eliminar_Prediccion.pack();
-Eliminar_Prediccion.setLocationRelativeTo(this);
-Eliminar_Prediccion.setVisible(true);
+        Eliminar_Prediccion.setModal(true);
+        Eliminar_Prediccion.pack();
+        Eliminar_Prediccion.setLocationRelativeTo(this);
+        Eliminar_Prediccion.setVisible(true);
     }//GEN-LAST:event_jMenuItem18ActionPerformed
-
-    private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
-        // TODO add your handling code here:
-                Eliminar_Equipojugador.setModal(true);
-Eliminar_Equipojugador.pack();
-Eliminar_Equipojugador.setLocationRelativeTo(this);
-Eliminar_Equipojugador.setVisible(true);
-    }//GEN-LAST:event_jMenuItem19ActionPerformed
 
     private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
         // TODO add your handling code here:
-                     Eliminar_Clubjugador.setModal(true);
-Eliminar_Clubjugador.pack();
-Eliminar_Clubjugador.setLocationRelativeTo(this);
-Eliminar_Clubjugador.setVisible(true);
+        Eliminar_Clubjugador.setModal(true);
+        Eliminar_Clubjugador.pack();
+        Eliminar_Clubjugador.setLocationRelativeTo(this);
+        Eliminar_Clubjugador.setVisible(true);
     }//GEN-LAST:event_jMenuItem20ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            if ((player_id.getText().equals("") || player_name.getText().equals("") || player_persoExtra.getText().equals("") || player_peso.getText().equals("") || player_date.getDate() == null)) {
+                JOptionPane.showMessageDialog(null, "Campos vacios, ingrese la informacion en todos los campos");
+                player_id.setText("");
+                player_name.setText("");
+                Calendar calendar = Calendar.getInstance();
+                java.util.Date fechaActual = calendar.getTime();
+                player_date.setDate(fechaActual);
+                player_peso.setText("");
+                player_persoExtra.setText("");
+            } else {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("jugadores");
+                String identidad = player_id.getText();
+                String nombre = player_name.getText();
+                Date fechaNacimiento = player_date.getDate();
+                double pesoBase = Double.parseDouble(player_peso.getText());
+                double pesoExtra = Double.parseDouble(player_persoExtra.getText());
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                String fechaNacimientoFormatted = dateFormat.format(fechaNacimiento);
+                Document jugador = new Document()
+                        .append("identidad", identidad)
+                        .append("nombre", nombre)
+                        .append("fechaNacimiento", fechaNacimientoFormatted)
+                        .append("pesoBase", pesoBase)
+                        .append("pesoExtra", pesoExtra);
+                collection.insertOne(jugador);
+                JOptionPane.showMessageDialog(null, "Jugador creado correctamente.");
+                System.out.println("Jugadores existentes:");
+                for (Document doc : collection.find()) {
+                    System.out.println(doc.toJson());
+                }
+                player_id.setText("");
+                player_name.setText("");
+                Calendar calendar = Calendar.getInstance();
+                java.util.Date fechaActual = calendar.getTime();
+                player_date.setDate(fechaActual);
+                player_peso.setText("");
+                player_persoExtra.setText("");
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            if ((DT_id.getText().equals("") || DT_nombre.getText().equals("") || DT_peso.getText().equals("") || DT_date.getDate() == null)) {
+                JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
+                DT_id.setText("");
+                DT_nombre.setText("");
+                Calendar calendar = Calendar.getInstance();
+                java.util.Date fechaActual = calendar.getTime();
+                DT_date.setDate(fechaActual);
+                DT_peso.setText("");
+            } else {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("entrenadores");
+                String identidad = DT_id.getText();
+                String nombre = DT_nombre.getText();
+                Date fechaNacimiento = DT_date.getDate();
+                double pesoBase = Double.parseDouble(DT_peso.getText());
+                double pesoExtra = Double.parseDouble(DT_pesoExtra.getText()); // Agregué DT_pesoExtra a los campos del entrenador
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                String fechaNacimientoFormatted = dateFormat.format(fechaNacimiento);
+                Document entrenador = new Document()
+                        .append("identidad", identidad)
+                        .append("nombre", nombre)
+                        .append("fechaNacimiento", fechaNacimientoFormatted)
+                        .append("pesoBase", pesoBase)
+                        .append("pesoExtra", pesoExtra);
+                collection.insertOne(entrenador);
+                JOptionPane.showMessageDialog(null, "Entrenador creado correctamente.");
+                System.out.println("Entrenadores existentes:");
+                for (Document doc : collection.find()) {
+                    System.out.println(doc.toJson());
+                }
+                DT_id.setText("");
+                DT_nombre.setText("");
+                Calendar calendar = Calendar.getInstance();
+                java.util.Date fechaActual = calendar.getTime();
+                DT_date.setDate(fechaActual);
+                DT_peso.setText("");
+                DT_pesoExtra.setText(""); // Agregué DT_pesoExtra a los campos del entrenador
+            }
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            if ((arbitro_id.getText().equals("") || arbitro_nombre.getText().equals("") || arbitro_peso.getText().equals("") || arbitro_date.getDate() == null)) {
+                JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
+                arbitro_id.setText("");
+                arbitro_nombre.setText("");
+                Calendar calendar = Calendar.getInstance();
+                java.util.Date fechaActual = calendar.getTime();
+                arbitro_date.setDate(fechaActual);
+                arbitro_peso.setText("");
+            } else {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("arbitro");
+                String identidad = arbitro_id.getText();
+                String nombre = arbitro_nombre.getText();
+                Date fechaNacimiento = arbitro_date.getDate();
+                double pesoBase = Double.parseDouble(arbitro_peso.getText());
+                double pesoExtra = Double.parseDouble(arbitro_pesoExtra.getText());
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                String fechaNacimientoFormatted = dateFormat.format(fechaNacimiento);
+                Document arbitro = new Document()
+                        .append("identidad", identidad)
+                        .append("nombre", nombre)
+                        .append("fechaNacimiento", fechaNacimientoFormatted)
+                        .append("pesoBase", pesoBase)
+                        .append("pesoExtra", pesoExtra);
+                collection.insertOne(arbitro);
+                JOptionPane.showMessageDialog(null, "Árbitro creado correctamente.");
+                System.out.println("Árbitros existentes:");
+                for (Document doc : collection.find()) {
+                    System.out.println(doc.toJson());
+                }
+                arbitro_id.setText("");
+                arbitro_nombre.setText("");
+                Calendar calendar = Calendar.getInstance();
+                java.util.Date fechaActual = calendar.getTime();
+                arbitro_date.setDate(fechaActual);
+                arbitro_peso.setText("");
+                arbitro_pesoExtra.setText("");
+            }
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+        // id equipo
+        {
+            String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+            MongoClientURI uri = new MongoClientURI(connectionString);
+            try (MongoClient mongoClient = new MongoClient(uri)) {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("clubes");
+                List<String> identidades = new ArrayList<>();
+
+                for (Document doc : collection.find()) {
+                    String identidad = doc.getString("nombre");
+                    identidades.add(identidad);
+                }
+
+                DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+                DefaultComboBoxModel<String> comboBoxModel2 = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+                partido_local.setModel(comboBoxModel);
+                partido_visita.setModel(comboBoxModel2);
+
+                // Resto del código...
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+// arbitro
+        {
+            String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+            MongoClientURI uri = new MongoClientURI(connectionString);
+            try (MongoClient mongoClient = new MongoClient(uri)) {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("arbitro");
+                List<String> identidades = new ArrayList<>();
+
+                for (Document doc : collection.find()) {
+                    String identidad = doc.getString("identidad");
+                    identidades.add(identidad);
+                }
+
+                DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+                DefaultComboBoxModel<String> comboBoxMode2 = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+                DefaultComboBoxModel<String> comboBoxMode3 = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+
+                partido_arbitro1.setModel(comboBoxModel);
+                partido_arbitro2.setModel(comboBoxMode2);
+                partido_arbitro3.setModel(comboBoxMode3);
+
+                // Resto del código...
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+// gg
+        Registro_Partido.setModal(true);
+        Registro_Partido.pack();
+        Registro_Partido.setLocationRelativeTo(this);
+        Registro_Partido.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            if (partido_id.getText().equals("") || partido_golesVisita.getText().equals("") || partido_golesLocal.getText().equals("") || partido_date.getDate() == null) {
+                JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
+                partido_id.setText("");
+                partido_golesVisita.setText("");
+                partido_golesLocal.setText("");
+            } else {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("partido");
+                String id = partido_id.getText();
+                int golesVisita = Integer.parseInt(partido_golesVisita.getText());
+                int golesLocal = Integer.parseInt(partido_golesLocal.getText());
+                String local = partido_local.getSelectedItem().toString();
+                String visita = partido_visita.getSelectedItem().toString();
+                String arbitro1 = partido_arbitro1.getSelectedItem().toString();
+                String arbitro2 = partido_arbitro2.getSelectedItem().toString();
+                String arbitro3 = partido_arbitro3.getSelectedItem().toString();
+                Date fechaPartido = partido_date.getDate();
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                String fechaPartidoFormatted = dateFormat.format(fechaPartido);
+                Document partido = new Document()
+                        .append("id", id)
+                        .append("golesVisita", golesVisita)
+                        .append("golesLocal", golesLocal)
+                        .append("local", local)
+                        .append("visita", visita)
+                        .append("arbitro1", arbitro1)
+                        .append("arbitro2", arbitro2)
+                        .append("arbitro3", arbitro3)
+                        .append("fechaPartido", fechaPartidoFormatted);
+                collection.insertOne(partido);
+                JOptionPane.showMessageDialog(null, "Partido creado correctamente.");
+                System.out.println("Partidos existentes:");
+                for (Document doc : collection.find()) {
+                    System.out.println(doc.toJson());
+                }
+                partido_id.setText("");
+                partido_golesVisita.setText("");
+                partido_golesLocal.setText("");
+                partido_date.setDate(null);
+            }
+        }
+
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void quiniela_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quiniela_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quiniela_idActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            if (quiniela_id.getText().equals("") || quiniela_monto.getText().equals("") || quiniela_golesLocal.getText().equals("") || quiniela_golesVisita.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
+                quiniela_id.setText("");
+                quiniela_monto.setText("");
+                quiniela_golesLocal.setText("");
+                quiniela_golesVisita.setText("");
+            } else {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("quiniela");
+                String id = quiniela_id.getText();
+                double monto = Double.parseDouble(quiniela_monto.getText());
+                int golesLocal = Integer.parseInt(quiniela_golesLocal.getText());
+                int golesVisita = Integer.parseInt(quiniela_golesVisita.getText());
+                String partidoSeleccionado = quiniela_partido.getSelectedItem().toString();
+                Document quiniela = new Document()
+                        .append("id", id)
+                        .append("monto", monto)
+                        .append("golesLocal", golesLocal)
+                        .append("golesVisita", golesVisita)
+                        .append("partido", partidoSeleccionado);
+                collection.insertOne(quiniela);
+                JOptionPane.showMessageDialog(null, "Quiniela creada correctamente.");
+                System.out.println("Quinielas existentes:");
+                for (Document doc : collection.find()) {
+                    System.out.println(doc.toJson());
+                }
+                quiniela_id.setText("");
+                quiniela_monto.setText("");
+                quiniela_golesLocal.setText("");
+                quiniela_golesVisita.setText("");
+            }
+        }
+
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void quiniela_montoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quiniela_montoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quiniela_montoActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -2779,6 +2775,13 @@ Eliminar_Clubjugador.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CJ_club;
+    private javax.swing.JComboBox<String> CJ_player;
+    private com.toedter.calendar.JDateChooser DT_date;
+    private javax.swing.JTextField DT_id;
+    private javax.swing.JTextField DT_nombre;
+    private javax.swing.JTextField DT_peso;
+    private javax.swing.JTextField DT_pesoExtra;
     private javax.swing.JDialog Eliminar_Arbitro;
     private javax.swing.JDialog Eliminar_Club;
     private javax.swing.JDialog Eliminar_Clubjugador;
@@ -2799,22 +2802,22 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JDialog Registro_Club;
     private javax.swing.JDialog Registro_Clubjugador;
     private javax.swing.JDialog Registro_Entrenador;
-    private javax.swing.JDialog Registro_Equipo;
-    private javax.swing.JDialog Registro_Equipojugador;
     private javax.swing.JDialog Registro_Jugador;
     private javax.swing.JDialog Registro_Partido;
-    private javax.swing.JDialog Registro_Prediccion;
     private javax.swing.JDialog Registro_Quiniela;
+    private com.toedter.calendar.JDateChooser arbitro_date;
+    private javax.swing.JTextField arbitro_id;
+    private javax.swing.JTextField arbitro_nombre;
+    private javax.swing.JTextField arbitro_peso;
+    private javax.swing.JTextField arbitro_pesoExtra;
+    private javax.swing.JComboBox<String> club_entrenador;
+    private javax.swing.JTextField club_id;
+    private javax.swing.JTextField club_nombre;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
@@ -2856,12 +2859,10 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem4;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -2871,14 +2872,8 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser10;
     private com.toedter.calendar.JDateChooser jDateChooser11;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
-    private com.toedter.calendar.JDateChooser jDateChooser4;
-    private com.toedter.calendar.JDateChooser jDateChooser5;
-    private com.toedter.calendar.JDateChooser jDateChooser6;
     private com.toedter.calendar.JDateChooser jDateChooser7;
     private com.toedter.calendar.JDateChooser jDateChooser8;
     private com.toedter.calendar.JDateChooser jDateChooser9;
@@ -2927,21 +2922,12 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
@@ -2950,7 +2936,6 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
@@ -2960,9 +2945,6 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
@@ -3018,20 +3000,15 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
-    private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
-    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem20;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
@@ -3042,30 +3019,20 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
-    private javax.swing.JSeparator jSeparator13;
-    private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator16;
-    private javax.swing.JSeparator jSeparator17;
-    private javax.swing.JSeparator jSeparator18;
     private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator20;
     private javax.swing.JSeparator jSeparator21;
     private javax.swing.JSeparator jSeparator22;
     private javax.swing.JSeparator jSeparator23;
-    private javax.swing.JSeparator jSeparator24;
     private javax.swing.JSeparator jSeparator25;
     private javax.swing.JSeparator jSeparator26;
-    private javax.swing.JSeparator jSeparator27;
     private javax.swing.JSeparator jSeparator28;
     private javax.swing.JSeparator jSeparator29;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator30;
     private javax.swing.JSeparator jSeparator31;
-    private javax.swing.JSeparator jSeparator32;
-    private javax.swing.JSeparator jSeparator33;
-    private javax.swing.JSeparator jSeparator34;
     private javax.swing.JSeparator jSeparator35;
     private javax.swing.JSeparator jSeparator36;
     private javax.swing.JSeparator jSeparator37;
@@ -3106,43 +3073,9 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JSeparator jSeparator71;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSpinner jSpinner3;
     private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField36;
     private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField41;
     private javax.swing.JTextField jTextField42;
@@ -3153,7 +3086,6 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JTextField jTextField47;
     private javax.swing.JTextField jTextField48;
     private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField50;
     private javax.swing.JTextField jTextField51;
     private javax.swing.JTextField jTextField52;
@@ -3164,13 +3096,9 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JTextField jTextField57;
     private javax.swing.JTextField jTextField58;
     private javax.swing.JTextField jTextField59;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField60;
     private javax.swing.JTextField jTextField61;
     private javax.swing.JTextField jTextField62;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel jbl_IMAGEN_FONDO;
     private javax.swing.JLabel jbl_IMAGEN_FONDO1;
     private javax.swing.JLabel jbl_IMAGEN_FONDO10;
@@ -3191,14 +3119,29 @@ Eliminar_Clubjugador.setVisible(true);
     private javax.swing.JLabel jbl_IMAGEN_FONDO24;
     private javax.swing.JLabel jbl_IMAGEN_FONDO25;
     private javax.swing.JLabel jbl_IMAGEN_FONDO3;
-    private javax.swing.JLabel jbl_IMAGEN_FONDO4;
-    private javax.swing.JLabel jbl_IMAGEN_FONDO5;
     private javax.swing.JLabel jbl_IMAGEN_FONDO6;
     private javax.swing.JLabel jbl_IMAGEN_FONDO7;
-    private javax.swing.JLabel jbl_IMAGEN_FONDO8;
     private javax.swing.JLabel jbl_IMAGEN_FONDO9;
     private javax.swing.JLabel jbl_fondo;
+    private javax.swing.JComboBox<String> partido_arbitro1;
+    private javax.swing.JComboBox<String> partido_arbitro2;
+    private javax.swing.JComboBox<String> partido_arbitro3;
+    private com.toedter.calendar.JDateChooser partido_date;
+    private javax.swing.JTextField partido_golesLocal;
+    private javax.swing.JTextField partido_golesVisita;
+    private javax.swing.JTextField partido_id;
+    private javax.swing.JComboBox<String> partido_local;
+    private javax.swing.JComboBox<String> partido_visita;
+    private com.toedter.calendar.JDateChooser player_date;
+    private javax.swing.JTextField player_id;
+    private javax.swing.JTextField player_name;
+    private javax.swing.JTextField player_persoExtra;
+    private javax.swing.JTextField player_peso;
+    private javax.swing.JTextField quiniela_golesLocal;
+    private javax.swing.JTextField quiniela_golesVisita;
+    private javax.swing.JTextField quiniela_id;
+    private javax.swing.JTextField quiniela_monto;
+    private javax.swing.JComboBox<String> quiniela_partido;
     // End of variables declaration//GEN-END:variables
-
 
 }
