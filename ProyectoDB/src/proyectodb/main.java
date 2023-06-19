@@ -97,6 +97,8 @@ public class main extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         club_entrenador = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jbl_IMAGEN_FONDO3 = new javax.swing.JLabel();
         Registro_Quiniela = new javax.swing.JDialog();
         jSeparator23 = new javax.swing.JSeparator();
@@ -145,6 +147,10 @@ public class main extends javax.swing.JFrame {
         partido_visita = new javax.swing.JComboBox<>();
         partido_arbitro1 = new javax.swing.JComboBox<>();
         partido_arbitro2 = new javax.swing.JComboBox<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         jbl_IMAGEN_FONDO7 = new javax.swing.JLabel();
         Registro_Clubjugador = new javax.swing.JDialog();
         jButton19 = new javax.swing.JButton();
@@ -156,6 +162,10 @@ public class main extends javax.swing.JFrame {
         jLabel56 = new javax.swing.JLabel();
         CJ_club = new javax.swing.JComboBox<>();
         CJ_player = new javax.swing.JComboBox<>();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
         jbl_IMAGEN_FONDO9 = new javax.swing.JLabel();
         Modificar_Jugador = new javax.swing.JDialog();
         jButton21 = new javax.swing.JButton();
@@ -261,6 +271,8 @@ public class main extends javax.swing.JFrame {
         jLabel111 = new javax.swing.JLabel();
         jLabel112 = new javax.swing.JLabel();
         EJ_id = new javax.swing.JComboBox<>();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
         jbl_IMAGEN_FONDO17 = new javax.swing.JLabel();
         Eliminar_Entrenador = new javax.swing.JDialog();
         jButton37 = new javax.swing.JButton();
@@ -642,6 +654,36 @@ public class main extends javax.swing.JFrame {
         club_entrenador.setToolTipText("");
         Registro_Club.getContentPane().add(club_entrenador, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 200, -1));
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Id", "Nombre`"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        Registro_Club.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 350, 550));
+
         jbl_IMAGEN_FONDO3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO3.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -838,6 +880,36 @@ public class main extends javax.swing.JFrame {
 
         Registro_Partido.getContentPane().add(partido_arbitro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, 220, -1));
 
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        Registro_Partido.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 310, 250));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        Registro_Partido.getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 310, 260));
+
         jbl_IMAGEN_FONDO7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO7.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_ancho.png"))); // NOI18N
@@ -881,6 +953,36 @@ public class main extends javax.swing.JFrame {
         Registro_Clubjugador.getContentPane().add(CJ_club, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 220, -1));
 
         Registro_Clubjugador.getContentPane().add(CJ_player, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 220, -1));
+
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane5.setViewportView(jTable5);
+
+        Registro_Clubjugador.getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 380, 260));
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable4);
+
+        Registro_Clubjugador.getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 380, 260));
 
         jbl_IMAGEN_FONDO9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO9.setForeground(new java.awt.Color(255, 255, 255));
@@ -1341,6 +1443,21 @@ public class main extends javax.swing.JFrame {
         Eliminar_Jugador.getContentPane().add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
 
         Eliminar_Jugador.getContentPane().add(EJ_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable6);
+
+        Eliminar_Jugador.getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 350, 530));
 
         jbl_IMAGEN_FONDO17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO17.setForeground(new java.awt.Color(255, 255, 255));
@@ -3397,6 +3514,12 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -3445,6 +3568,12 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
     private javax.swing.JLabel jbl_IMAGEN_FONDO;
     private javax.swing.JLabel jbl_IMAGEN_FONDO1;
     private javax.swing.JLabel jbl_IMAGEN_FONDO10;
