@@ -4,6 +4,9 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.DeleteResult;
+import com.mongodb.client.result.UpdateResult;
+import java.text.ParseException;
 import org.bson.Document;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -157,135 +160,98 @@ public class main extends javax.swing.JFrame {
         Modificar_Jugador = new javax.swing.JDialog();
         jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
-        jTextField40 = new javax.swing.JTextField();
-        jTextField41 = new javax.swing.JTextField();
+        PM_pesoExtra = new javax.swing.JTextField();
+        PM_peso = new javax.swing.JTextField();
         jSeparator38 = new javax.swing.JSeparator();
         jSeparator39 = new javax.swing.JSeparator();
         jLabel57 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
-        jDateChooser7 = new com.toedter.calendar.JDateChooser();
+        PM_date = new com.toedter.calendar.JDateChooser();
         jLabel59 = new javax.swing.JLabel();
-        jTextField42 = new javax.swing.JTextField();
+        PM_nombre = new javax.swing.JTextField();
         jSeparator40 = new javax.swing.JSeparator();
         jLabel60 = new javax.swing.JLabel();
-        jTextField43 = new javax.swing.JTextField();
         jSeparator41 = new javax.swing.JSeparator();
         jLabel61 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
+        PM_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO10 = new javax.swing.JLabel();
         Modificar_Entrenador = new javax.swing.JDialog();
         jButton23 = new javax.swing.JButton();
         jButton24 = new javax.swing.JButton();
-        jTextField37 = new javax.swing.JTextField();
-        jTextField44 = new javax.swing.JTextField();
+        EM_pesoExtra = new javax.swing.JTextField();
+        EM_peso = new javax.swing.JTextField();
         jSeparator37 = new javax.swing.JSeparator();
         jSeparator42 = new javax.swing.JSeparator();
         jLabel63 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
-        jDateChooser8 = new com.toedter.calendar.JDateChooser();
+        EM_date = new com.toedter.calendar.JDateChooser();
         jLabel65 = new javax.swing.JLabel();
-        jTextField45 = new javax.swing.JTextField();
+        EM_nombre = new javax.swing.JTextField();
         jSeparator43 = new javax.swing.JSeparator();
         jLabel66 = new javax.swing.JLabel();
-        jTextField46 = new javax.swing.JTextField();
         jSeparator44 = new javax.swing.JSeparator();
         jLabel67 = new javax.swing.JLabel();
         jLabel68 = new javax.swing.JLabel();
         jLabel69 = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
+        EM_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO11 = new javax.swing.JLabel();
         Modificar_Arbitro = new javax.swing.JDialog();
         jButton25 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
-        jTextField47 = new javax.swing.JTextField();
-        jTextField48 = new javax.swing.JTextField();
+        AM_pesoExtra = new javax.swing.JTextField();
+        AM_peso = new javax.swing.JTextField();
         jSeparator45 = new javax.swing.JSeparator();
         jSeparator46 = new javax.swing.JSeparator();
         jLabel71 = new javax.swing.JLabel();
         jLabel72 = new javax.swing.JLabel();
-        jDateChooser9 = new com.toedter.calendar.JDateChooser();
+        AM_date = new com.toedter.calendar.JDateChooser();
         jLabel73 = new javax.swing.JLabel();
-        jTextField49 = new javax.swing.JTextField();
+        AM_nombre = new javax.swing.JTextField();
         jSeparator47 = new javax.swing.JSeparator();
         jLabel74 = new javax.swing.JLabel();
-        jTextField50 = new javax.swing.JTextField();
         jSeparator48 = new javax.swing.JSeparator();
         jLabel75 = new javax.swing.JLabel();
         jLabel76 = new javax.swing.JLabel();
         jLabel77 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
+        AM_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO12 = new javax.swing.JLabel();
         Modificar_Club = new javax.swing.JDialog();
         jButton27 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
-        jTextField51 = new javax.swing.JTextField();
+        CM_nombre = new javax.swing.JTextField();
         jSeparator49 = new javax.swing.JSeparator();
         jLabel79 = new javax.swing.JLabel();
-        jTextField52 = new javax.swing.JTextField();
         jSeparator50 = new javax.swing.JSeparator();
         jLabel80 = new javax.swing.JLabel();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
+        CM_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO13 = new javax.swing.JLabel();
-        Modificar_Equipo = new javax.swing.JDialog();
-        jSeparator51 = new javax.swing.JSeparator();
-        jTextField53 = new javax.swing.JTextField();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jTextField54 = new javax.swing.JTextField();
-        jLabel84 = new javax.swing.JLabel();
-        jTextField55 = new javax.swing.JTextField();
-        jSeparator52 = new javax.swing.JSeparator();
-        jLabel85 = new javax.swing.JLabel();
-        jTextField56 = new javax.swing.JTextField();
-        jSeparator53 = new javax.swing.JSeparator();
-        jLabel86 = new javax.swing.JLabel();
-        jLabel87 = new javax.swing.JLabel();
-        jLabel88 = new javax.swing.JLabel();
-        jLabel89 = new javax.swing.JLabel();
-        jbl_IMAGEN_FONDO14 = new javax.swing.JLabel();
         Modificar_Quiniela = new javax.swing.JDialog();
-        jDateChooser10 = new com.toedter.calendar.JDateChooser();
-        jLabel90 = new javax.swing.JLabel();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jTextField57 = new javax.swing.JTextField();
-        jTextField58 = new javax.swing.JTextField();
-        jSeparator54 = new javax.swing.JSeparator();
-        jSeparator55 = new javax.swing.JSeparator();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jDateChooser11 = new com.toedter.calendar.JDateChooser();
-        jLabel93 = new javax.swing.JLabel();
-        jTextField59 = new javax.swing.JTextField();
-        jSeparator56 = new javax.swing.JSeparator();
-        jLabel94 = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
-        jLabel96 = new javax.swing.JLabel();
-        jLabel97 = new javax.swing.JLabel();
-        jbl_IMAGEN_FONDO15 = new javax.swing.JLabel();
-        Modificar_Prediccion = new javax.swing.JDialog();
         jSeparator57 = new javax.swing.JSeparator();
-        jTextField60 = new javax.swing.JTextField();
-        jSpinner3 = new javax.swing.JSpinner();
-        jSpinner4 = new javax.swing.JSpinner();
         jLabel98 = new javax.swing.JLabel();
         jLabel99 = new javax.swing.JLabel();
         jSeparator58 = new javax.swing.JSeparator();
-        jTextField61 = new javax.swing.JTextField();
+        QM_monto = new javax.swing.JTextField();
         jLabel100 = new javax.swing.JLabel();
         jButton33 = new javax.swing.JButton();
         jButton34 = new javax.swing.JButton();
         jLabel101 = new javax.swing.JLabel();
-        jTextField62 = new javax.swing.JTextField();
         jSeparator59 = new javax.swing.JSeparator();
         jLabel102 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
         jLabel104 = new javax.swing.JLabel();
         jLabel105 = new javax.swing.JLabel();
+        QM_id = new javax.swing.JComboBox<>();
+        QM_golesVisita = new javax.swing.JTextField();
+        QM_golesLocal = new javax.swing.JTextField();
+        QM_partido = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO16 = new javax.swing.JLabel();
         Eliminar_Jugador = new javax.swing.JDialog();
         jButton35 = new javax.swing.JButton();
@@ -294,7 +260,7 @@ public class main extends javax.swing.JFrame {
         jLabel110 = new javax.swing.JLabel();
         jLabel111 = new javax.swing.JLabel();
         jLabel112 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        EJ_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO17 = new javax.swing.JLabel();
         Eliminar_Entrenador = new javax.swing.JDialog();
         jButton37 = new javax.swing.JButton();
@@ -303,7 +269,7 @@ public class main extends javax.swing.JFrame {
         jLabel113 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
         jLabel115 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        EE_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO18 = new javax.swing.JLabel();
         Eliminar_Arbitro = new javax.swing.JDialog();
         jButton39 = new javax.swing.JButton();
@@ -312,7 +278,7 @@ public class main extends javax.swing.JFrame {
         jLabel116 = new javax.swing.JLabel();
         jLabel117 = new javax.swing.JLabel();
         jLabel118 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        EA_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO19 = new javax.swing.JLabel();
         Eliminar_Club = new javax.swing.JDialog();
         jButton41 = new javax.swing.JButton();
@@ -321,53 +287,17 @@ public class main extends javax.swing.JFrame {
         jLabel119 = new javax.swing.JLabel();
         jLabel120 = new javax.swing.JLabel();
         jLabel121 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        EC_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO20 = new javax.swing.JLabel();
-        Eliminar_Equipo = new javax.swing.JDialog();
-        jButton43 = new javax.swing.JButton();
-        jButton44 = new javax.swing.JButton();
-        jSeparator67 = new javax.swing.JSeparator();
-        jLabel122 = new javax.swing.JLabel();
-        jLabel123 = new javax.swing.JLabel();
-        jLabel124 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jbl_IMAGEN_FONDO21 = new javax.swing.JLabel();
         Eliminar_Quiniela = new javax.swing.JDialog();
-        jButton45 = new javax.swing.JButton();
-        jButton46 = new javax.swing.JButton();
-        jSeparator68 = new javax.swing.JSeparator();
-        jLabel125 = new javax.swing.JLabel();
-        jLabel126 = new javax.swing.JLabel();
-        jLabel127 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jbl_IMAGEN_FONDO22 = new javax.swing.JLabel();
-        Eliminar_Prediccion = new javax.swing.JDialog();
         jButton47 = new javax.swing.JButton();
         jButton48 = new javax.swing.JButton();
         jSeparator69 = new javax.swing.JSeparator();
         jLabel128 = new javax.swing.JLabel();
         jLabel129 = new javax.swing.JLabel();
         jLabel130 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox<>();
+        EQ_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO23 = new javax.swing.JLabel();
-        Eliminar_Equipojugador = new javax.swing.JDialog();
-        jButton49 = new javax.swing.JButton();
-        jButton50 = new javax.swing.JButton();
-        jSeparator70 = new javax.swing.JSeparator();
-        jLabel131 = new javax.swing.JLabel();
-        jLabel132 = new javax.swing.JLabel();
-        jLabel133 = new javax.swing.JLabel();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jbl_IMAGEN_FONDO24 = new javax.swing.JLabel();
-        Eliminar_Clubjugador = new javax.swing.JDialog();
-        jButton51 = new javax.swing.JButton();
-        jButton52 = new javax.swing.JButton();
-        jSeparator71 = new javax.swing.JSeparator();
-        jLabel134 = new javax.swing.JLabel();
-        jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jComboBox9 = new javax.swing.JComboBox<>();
-        jbl_IMAGEN_FONDO25 = new javax.swing.JLabel();
         jbl_fondo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -383,7 +313,6 @@ public class main extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem12 = new javax.swing.JMenuItem();
@@ -391,7 +320,6 @@ public class main extends javax.swing.JFrame {
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem18 = new javax.swing.JMenuItem();
-        jMenuItem20 = new javax.swing.JMenuItem();
 
         Registro_Jugador.setIconImage(null);
         Registro_Jugador.setIconImages(null);
@@ -969,20 +897,25 @@ public class main extends javax.swing.JFrame {
         jButton21.setOpaque(false);
         Modificar_Jugador.getContentPane().add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
-        jButton22.setText("Crear");
+        jButton22.setText("Modificar");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
         Modificar_Jugador.getContentPane().add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
 
-        jTextField40.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField40.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField40.setBorder(null);
-        jTextField40.setOpaque(false);
-        Modificar_Jugador.getContentPane().add(jTextField40, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
+        PM_pesoExtra.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        PM_pesoExtra.setForeground(new java.awt.Color(255, 255, 255));
+        PM_pesoExtra.setBorder(null);
+        PM_pesoExtra.setOpaque(false);
+        Modificar_Jugador.getContentPane().add(PM_pesoExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
 
-        jTextField41.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField41.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField41.setBorder(null);
-        jTextField41.setOpaque(false);
-        Modificar_Jugador.getContentPane().add(jTextField41, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
+        PM_peso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        PM_peso.setForeground(new java.awt.Color(255, 255, 255));
+        PM_peso.setBorder(null);
+        PM_peso.setOpaque(false);
+        Modificar_Jugador.getContentPane().add(PM_peso, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
         Modificar_Jugador.getContentPane().add(jSeparator38, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 220, -1));
         Modificar_Jugador.getContentPane().add(jSeparator39, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
 
@@ -995,35 +928,24 @@ public class main extends javax.swing.JFrame {
         jLabel58.setForeground(new java.awt.Color(255, 255, 255));
         jLabel58.setText("Peso Base:");
         Modificar_Jugador.getContentPane().add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
-        Modificar_Jugador.getContentPane().add(jDateChooser7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 150, -1));
+        Modificar_Jugador.getContentPane().add(PM_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 150, -1));
 
         jLabel59.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel59.setForeground(new java.awt.Color(255, 255, 255));
         jLabel59.setText("Fecha de Nacimiento:");
         Modificar_Jugador.getContentPane().add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, -1, -1));
 
-        jTextField42.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField42.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField42.setBorder(null);
-        jTextField42.setOpaque(false);
-        Modificar_Jugador.getContentPane().add(jTextField42, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
+        PM_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        PM_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        PM_nombre.setBorder(null);
+        PM_nombre.setOpaque(false);
+        Modificar_Jugador.getContentPane().add(PM_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
         Modificar_Jugador.getContentPane().add(jSeparator40, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, -1));
 
         jLabel60.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel60.setForeground(new java.awt.Color(255, 255, 255));
         jLabel60.setText("Nombre:");
         Modificar_Jugador.getContentPane().add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, -1, -1));
-
-        jTextField43.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField43.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField43.setBorder(null);
-        jTextField43.setOpaque(false);
-        jTextField43.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField43ActionPerformed(evt);
-            }
-        });
-        Modificar_Jugador.getContentPane().add(jTextField43, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 20));
         Modificar_Jugador.getContentPane().add(jSeparator41, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 220, 10));
 
         jLabel61.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1044,6 +966,13 @@ public class main extends javax.swing.JFrame {
         jLabel53.setText("Instrucciones: Para poder modificar exitosamente ingrese el ID del jugador a modificar  ");
         Modificar_Jugador.getContentPane().add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, -1, -1));
 
+        PM_id.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                PM_idItemStateChanged(evt);
+            }
+        });
+        Modificar_Jugador.getContentPane().add(PM_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 220, -1));
+
         jbl_IMAGEN_FONDO10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO10.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1059,20 +988,25 @@ public class main extends javax.swing.JFrame {
         jButton23.setOpaque(false);
         Modificar_Entrenador.getContentPane().add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
-        jButton24.setText("Crear");
+        jButton24.setText("Modificar");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
         Modificar_Entrenador.getContentPane().add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
 
-        jTextField37.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField37.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField37.setBorder(null);
-        jTextField37.setOpaque(false);
-        Modificar_Entrenador.getContentPane().add(jTextField37, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
+        EM_pesoExtra.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        EM_pesoExtra.setForeground(new java.awt.Color(255, 255, 255));
+        EM_pesoExtra.setBorder(null);
+        EM_pesoExtra.setOpaque(false);
+        Modificar_Entrenador.getContentPane().add(EM_pesoExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
 
-        jTextField44.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField44.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField44.setBorder(null);
-        jTextField44.setOpaque(false);
-        Modificar_Entrenador.getContentPane().add(jTextField44, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
+        EM_peso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        EM_peso.setForeground(new java.awt.Color(255, 255, 255));
+        EM_peso.setBorder(null);
+        EM_peso.setOpaque(false);
+        Modificar_Entrenador.getContentPane().add(EM_peso, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
         Modificar_Entrenador.getContentPane().add(jSeparator37, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 220, -1));
         Modificar_Entrenador.getContentPane().add(jSeparator42, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
 
@@ -1085,35 +1019,24 @@ public class main extends javax.swing.JFrame {
         jLabel64.setForeground(new java.awt.Color(255, 255, 255));
         jLabel64.setText("Peso Base:");
         Modificar_Entrenador.getContentPane().add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
-        Modificar_Entrenador.getContentPane().add(jDateChooser8, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 150, -1));
+        Modificar_Entrenador.getContentPane().add(EM_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 150, -1));
 
         jLabel65.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel65.setForeground(new java.awt.Color(255, 255, 255));
         jLabel65.setText("Fecha de Nacimiento:");
         Modificar_Entrenador.getContentPane().add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, -1, -1));
 
-        jTextField45.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField45.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField45.setBorder(null);
-        jTextField45.setOpaque(false);
-        Modificar_Entrenador.getContentPane().add(jTextField45, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 220, 20));
+        EM_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        EM_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        EM_nombre.setBorder(null);
+        EM_nombre.setOpaque(false);
+        Modificar_Entrenador.getContentPane().add(EM_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 220, 20));
         Modificar_Entrenador.getContentPane().add(jSeparator43, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, 220, 10));
 
         jLabel66.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel66.setForeground(new java.awt.Color(255, 255, 255));
         jLabel66.setText("Nombre:");
         Modificar_Entrenador.getContentPane().add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, -1, -1));
-
-        jTextField46.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField46.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField46.setBorder(null);
-        jTextField46.setOpaque(false);
-        jTextField46.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField46ActionPerformed(evt);
-            }
-        });
-        Modificar_Entrenador.getContentPane().add(jTextField46, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 220, 20));
         Modificar_Entrenador.getContentPane().add(jSeparator44, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 220, 10));
 
         jLabel67.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1134,6 +1057,13 @@ public class main extends javax.swing.JFrame {
         jLabel70.setText("e ingrese en los campos SOLAMENTE los datos que van a ser modificados");
         Modificar_Entrenador.getContentPane().add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
 
+        EM_id.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                EM_idItemStateChanged(evt);
+            }
+        });
+        Modificar_Entrenador.getContentPane().add(EM_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 220, -1));
+
         jbl_IMAGEN_FONDO11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO11.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1149,20 +1079,25 @@ public class main extends javax.swing.JFrame {
         jButton25.setOpaque(false);
         Modificar_Arbitro.getContentPane().add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
-        jButton26.setText("Crear");
+        jButton26.setText("Modificar");
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
         Modificar_Arbitro.getContentPane().add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
 
-        jTextField47.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField47.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField47.setBorder(null);
-        jTextField47.setOpaque(false);
-        Modificar_Arbitro.getContentPane().add(jTextField47, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
+        AM_pesoExtra.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        AM_pesoExtra.setForeground(new java.awt.Color(255, 255, 255));
+        AM_pesoExtra.setBorder(null);
+        AM_pesoExtra.setOpaque(false);
+        Modificar_Arbitro.getContentPane().add(AM_pesoExtra, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
 
-        jTextField48.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField48.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField48.setBorder(null);
-        jTextField48.setOpaque(false);
-        Modificar_Arbitro.getContentPane().add(jTextField48, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
+        AM_peso.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        AM_peso.setForeground(new java.awt.Color(255, 255, 255));
+        AM_peso.setBorder(null);
+        AM_peso.setOpaque(false);
+        Modificar_Arbitro.getContentPane().add(AM_peso, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
         Modificar_Arbitro.getContentPane().add(jSeparator45, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 220, -1));
         Modificar_Arbitro.getContentPane().add(jSeparator46, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
 
@@ -1175,35 +1110,24 @@ public class main extends javax.swing.JFrame {
         jLabel72.setForeground(new java.awt.Color(255, 255, 255));
         jLabel72.setText("Peso Base:");
         Modificar_Arbitro.getContentPane().add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
-        Modificar_Arbitro.getContentPane().add(jDateChooser9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 130, -1));
+        Modificar_Arbitro.getContentPane().add(AM_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 130, -1));
 
         jLabel73.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel73.setForeground(new java.awt.Color(255, 255, 255));
         jLabel73.setText("Fecha de Nacimiento:");
         Modificar_Arbitro.getContentPane().add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, -1, -1));
 
-        jTextField49.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField49.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField49.setBorder(null);
-        jTextField49.setOpaque(false);
-        Modificar_Arbitro.getContentPane().add(jTextField49, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
+        AM_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        AM_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        AM_nombre.setBorder(null);
+        AM_nombre.setOpaque(false);
+        Modificar_Arbitro.getContentPane().add(AM_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
         Modificar_Arbitro.getContentPane().add(jSeparator47, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, -1));
 
         jLabel74.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel74.setForeground(new java.awt.Color(255, 255, 255));
         jLabel74.setText("Nombre:");
         Modificar_Arbitro.getContentPane().add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
-
-        jTextField50.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField50.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField50.setBorder(null);
-        jTextField50.setOpaque(false);
-        jTextField50.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField50ActionPerformed(evt);
-            }
-        });
-        Modificar_Arbitro.getContentPane().add(jTextField50, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 20));
         Modificar_Arbitro.getContentPane().add(jSeparator48, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 220, 10));
 
         jLabel75.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1224,6 +1148,13 @@ public class main extends javax.swing.JFrame {
         jLabel78.setText("e ingrese en los campos SOLAMENTE los datos que van a ser modificados");
         Modificar_Arbitro.getContentPane().add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
 
+        AM_id.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                AM_idItemStateChanged(evt);
+            }
+        });
+        Modificar_Arbitro.getContentPane().add(AM_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 220, -1));
+
         jbl_IMAGEN_FONDO12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO12.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1239,7 +1170,7 @@ public class main extends javax.swing.JFrame {
         jButton27.setOpaque(false);
         Modificar_Club.getContentPane().add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
-        jButton28.setText("Crear");
+        jButton28.setText("Modificar");
         jButton28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton28ActionPerformed(evt);
@@ -1247,28 +1178,17 @@ public class main extends javax.swing.JFrame {
         });
         Modificar_Club.getContentPane().add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 507, 190, -1));
 
-        jTextField51.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField51.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField51.setBorder(null);
-        jTextField51.setOpaque(false);
-        Modificar_Club.getContentPane().add(jTextField51, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 220, 20));
+        CM_nombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        CM_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        CM_nombre.setBorder(null);
+        CM_nombre.setOpaque(false);
+        Modificar_Club.getContentPane().add(CM_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 220, 20));
         Modificar_Club.getContentPane().add(jSeparator49, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 220, 10));
 
         jLabel79.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel79.setForeground(new java.awt.Color(255, 255, 255));
         jLabel79.setText("Nombre:");
         Modificar_Club.getContentPane().add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, -1, -1));
-
-        jTextField52.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField52.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField52.setBorder(null);
-        jTextField52.setOpaque(false);
-        jTextField52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField52ActionPerformed(evt);
-            }
-        });
-        Modificar_Club.getContentPane().add(jTextField52, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 220, 20));
         Modificar_Club.getContentPane().add(jSeparator50, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 220, 10));
 
         jLabel80.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1289,271 +1209,103 @@ public class main extends javax.swing.JFrame {
         jLabel83.setText("e ingrese en los campos SOLAMENTE los datos que van a ser modificados");
         Modificar_Club.getContentPane().add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
 
+        CM_id.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                CM_idItemStateChanged(evt);
+            }
+        });
+        Modificar_Club.getContentPane().add(CM_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 220, -1));
+
         jbl_IMAGEN_FONDO13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO13.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
         Modificar_Club.getContentPane().add(jbl_IMAGEN_FONDO13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
 
-        Modificar_Equipo.setIconImage(null);
-        Modificar_Equipo.setIconImages(null);
-        Modificar_Equipo.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Modificar_Equipo.getContentPane().add(jSeparator51, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 220, 30));
-
-        jTextField53.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField53.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField53.setBorder(null);
-        jTextField53.setOpaque(false);
-        Modificar_Equipo.getContentPane().add(jTextField53, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 360, 220, 20));
-
-        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton29.setText("Atras");
-        jButton29.setBorder(null);
-        jButton29.setOpaque(false);
-        Modificar_Equipo.getContentPane().add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
-
-        jButton30.setText("Crear");
-        Modificar_Equipo.getContentPane().add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
-
-        jTextField54.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField54.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField54.setBorder(null);
-        jTextField54.setOpaque(false);
-        Modificar_Equipo.getContentPane().add(jTextField54, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
-
-        jLabel84.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel84.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel84.setText("ID entrenador:");
-        Modificar_Equipo.getContentPane().add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, -1));
-
-        jTextField55.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField55.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField55.setBorder(null);
-        jTextField55.setOpaque(false);
-        Modificar_Equipo.getContentPane().add(jTextField55, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 220, 20));
-        Modificar_Equipo.getContentPane().add(jSeparator52, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 220, -1));
-
-        jLabel85.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel85.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel85.setText("Nombre:");
-        Modificar_Equipo.getContentPane().add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, -1, -1));
-
-        jTextField56.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField56.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField56.setBorder(null);
-        jTextField56.setOpaque(false);
-        jTextField56.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField56ActionPerformed(evt);
-            }
-        });
-        Modificar_Equipo.getContentPane().add(jTextField56, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 220, 20));
-        Modificar_Equipo.getContentPane().add(jSeparator53, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 220, 10));
-
-        jLabel86.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel86.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel86.setText("ID");
-        Modificar_Equipo.getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
-
-        jLabel87.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        jLabel87.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel87.setText("Modificar Equipo");
-        Modificar_Equipo.getContentPane().add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, -1, -1));
-
-        jLabel88.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel88.setText("Instrucciones: Para poder modificar exitosamente ingrese el ID del Equipo a modificar  ");
-        Modificar_Equipo.getContentPane().add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, -1, -1));
-
-        jLabel89.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel89.setText("e ingrese en los campos SOLAMENTE los datos que van a ser modificados");
-        Modificar_Equipo.getContentPane().add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, -1, -1));
-
-        jbl_IMAGEN_FONDO14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jbl_IMAGEN_FONDO14.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_IMAGEN_FONDO14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Modificar_Equipo.getContentPane().add(jbl_IMAGEN_FONDO14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
-
         Modificar_Quiniela.setIconImage(null);
         Modificar_Quiniela.setIconImages(null);
         Modificar_Quiniela.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Modificar_Quiniela.getContentPane().add(jDateChooser10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, 220, -1));
-
-        jLabel90.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel90.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel90.setText("Fecha fin:");
-        Modificar_Quiniela.getContentPane().add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, -1, -1));
-
-        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton31.setText("Atras");
-        jButton31.setBorder(null);
-        jButton31.setOpaque(false);
-        Modificar_Quiniela.getContentPane().add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
-
-        jButton32.setText("Crear");
-        Modificar_Quiniela.getContentPane().add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
-
-        jTextField57.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField57.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField57.setBorder(null);
-        jTextField57.setOpaque(false);
-        Modificar_Quiniela.getContentPane().add(jTextField57, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 220, 20));
-
-        jTextField58.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField58.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField58.setBorder(null);
-        jTextField58.setOpaque(false);
-        Modificar_Quiniela.getContentPane().add(jTextField58, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 220, 20));
-        Modificar_Quiniela.getContentPane().add(jSeparator54, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 460, 220, -1));
-        Modificar_Quiniela.getContentPane().add(jSeparator55, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
-
-        jLabel91.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel91.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel91.setText("Ganancia:");
-        Modificar_Quiniela.getContentPane().add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, -1, -1));
-
-        jLabel92.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel92.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel92.setText("Inversión:");
-        Modificar_Quiniela.getContentPane().add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
-        Modificar_Quiniela.getContentPane().add(jDateChooser11, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, -1));
-
-        jLabel93.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel93.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel93.setText("Fecha inicio:");
-        Modificar_Quiniela.getContentPane().add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, -1, -1));
-
-        jTextField59.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField59.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField59.setBorder(null);
-        jTextField59.setOpaque(false);
-        jTextField59.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField59ActionPerformed(evt);
-            }
-        });
-        Modificar_Quiniela.getContentPane().add(jTextField59, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 20));
-        Modificar_Quiniela.getContentPane().add(jSeparator56, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 220, 10));
-
-        jLabel94.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel94.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel94.setText("ID:");
-        Modificar_Quiniela.getContentPane().add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, -1, -1));
-
-        jLabel95.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        jLabel95.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel95.setText("Modificar Quiniela");
-        Modificar_Quiniela.getContentPane().add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
-
-        jLabel96.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel96.setText("Instrucciones: Para poder modificar exitosamente ingrese el ID de la quiniela a modificar  ");
-        Modificar_Quiniela.getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, -1, -1));
-
-        jLabel97.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel97.setText("e ingrese en los campos SOLAMENTE los datos que van a ser modificados");
-        Modificar_Quiniela.getContentPane().add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
-
-        jbl_IMAGEN_FONDO15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jbl_IMAGEN_FONDO15.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_IMAGEN_FONDO15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Modificar_Quiniela.getContentPane().add(jbl_IMAGEN_FONDO15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
-
-        Modificar_Prediccion.setIconImage(null);
-        Modificar_Prediccion.setIconImages(null);
-        Modificar_Prediccion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        Modificar_Prediccion.getContentPane().add(jSeparator57, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, 10));
-
-        jTextField60.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField60.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField60.setBorder(null);
-        jTextField60.setOpaque(false);
-        jTextField60.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField60ActionPerformed(evt);
-            }
-        });
-        Modificar_Prediccion.getContentPane().add(jTextField60, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, 20));
-        Modificar_Prediccion.getContentPane().add(jSpinner3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, 20));
-        Modificar_Prediccion.getContentPane().add(jSpinner4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, 220, 20));
+        Modificar_Quiniela.getContentPane().add(jSeparator57, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 220, 10));
 
         jLabel98.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel98.setForeground(new java.awt.Color(255, 255, 255));
         jLabel98.setText("Goles Visita:");
-        Modificar_Prediccion.getContentPane().add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, -1));
+        Modificar_Quiniela.getContentPane().add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, -1));
 
         jLabel99.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel99.setForeground(new java.awt.Color(255, 255, 255));
         jLabel99.setText("Goles Local:");
-        Modificar_Prediccion.getContentPane().add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, -1));
-        Modificar_Prediccion.getContentPane().add(jSeparator58, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, 220, 10));
+        Modificar_Quiniela.getContentPane().add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, -1));
+        Modificar_Quiniela.getContentPane().add(jSeparator58, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, 220, 10));
 
-        jTextField61.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField61.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField61.setBorder(null);
-        jTextField61.setOpaque(false);
-        jTextField61.addActionListener(new java.awt.event.ActionListener() {
+        QM_monto.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        QM_monto.setForeground(new java.awt.Color(255, 255, 255));
+        QM_monto.setBorder(null);
+        QM_monto.setOpaque(false);
+        QM_monto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField61ActionPerformed(evt);
+                QM_montoActionPerformed(evt);
             }
         });
-        Modificar_Prediccion.getContentPane().add(jTextField61, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 220, 20));
+        Modificar_Quiniela.getContentPane().add(QM_monto, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 220, 20));
 
         jLabel100.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel100.setForeground(new java.awt.Color(255, 255, 255));
         jLabel100.setText("Monto:");
-        Modificar_Prediccion.getContentPane().add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
+        Modificar_Quiniela.getContentPane().add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
 
         jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
         jButton33.setText("Atras");
         jButton33.setBorder(null);
         jButton33.setOpaque(false);
-        Modificar_Prediccion.getContentPane().add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
+        Modificar_Quiniela.getContentPane().add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
-        jButton34.setText("Crear");
+        jButton34.setText("Modificar");
         jButton34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton34ActionPerformed(evt);
             }
         });
-        Modificar_Prediccion.getContentPane().add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 507, 190, -1));
+        Modificar_Quiniela.getContentPane().add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 507, 190, -1));
 
         jLabel101.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel101.setForeground(new java.awt.Color(255, 255, 255));
         jLabel101.setText("ID Partido:");
-        Modificar_Prediccion.getContentPane().add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, -1, -1));
-
-        jTextField62.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField62.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField62.setBorder(null);
-        jTextField62.setOpaque(false);
-        jTextField62.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField62ActionPerformed(evt);
-            }
-        });
-        Modificar_Prediccion.getContentPane().add(jTextField62, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 20));
-        Modificar_Prediccion.getContentPane().add(jSeparator59, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 220, 10));
+        Modificar_Quiniela.getContentPane().add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, -1, -1));
+        Modificar_Quiniela.getContentPane().add(jSeparator59, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 220, 10));
 
         jLabel102.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel102.setForeground(new java.awt.Color(255, 255, 255));
         jLabel102.setText("ID:");
-        Modificar_Prediccion.getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, -1, -1));
+        Modificar_Quiniela.getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, -1, -1));
 
         jLabel103.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         jLabel103.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel103.setText("Modificar Predicción");
-        Modificar_Prediccion.getContentPane().add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
+        jLabel103.setText("Modificar Quiniela");
+        Modificar_Quiniela.getContentPane().add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
 
         jLabel104.setForeground(new java.awt.Color(153, 153, 153));
         jLabel104.setText("Instrucciones: Para poder modificar exitosamente ingrese el ID de la predicción a modificar  ");
-        Modificar_Prediccion.getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, -1, -1));
+        Modificar_Quiniela.getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, -1, -1));
 
         jLabel105.setForeground(new java.awt.Color(153, 153, 153));
         jLabel105.setText("e ingrese en los campos SOLAMENTE los datos que van a ser modificados");
-        Modificar_Prediccion.getContentPane().add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
+        Modificar_Quiniela.getContentPane().add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
+
+        QM_id.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                QM_idItemStateChanged(evt);
+            }
+        });
+        Modificar_Quiniela.getContentPane().add(QM_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 220, -1));
+        Modificar_Quiniela.getContentPane().add(QM_golesVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
+        Modificar_Quiniela.getContentPane().add(QM_golesLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, 220, -1));
+
+        Modificar_Quiniela.getContentPane().add(QM_partido, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 220, -1));
 
         jbl_IMAGEN_FONDO16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO16.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Modificar_Prediccion.getContentPane().add(jbl_IMAGEN_FONDO16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
+        Modificar_Quiniela.getContentPane().add(jbl_IMAGEN_FONDO16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
 
         Eliminar_Jugador.setIconImage(null);
         Eliminar_Jugador.setIconImages(null);
@@ -1566,6 +1318,11 @@ public class main extends javax.swing.JFrame {
         Eliminar_Jugador.getContentPane().add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton36.setText("Eliminar");
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton36ActionPerformed(evt);
+            }
+        });
         Eliminar_Jugador.getContentPane().add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
         Eliminar_Jugador.getContentPane().add(jSeparator63, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
 
@@ -1576,15 +1333,14 @@ public class main extends javax.swing.JFrame {
 
         jLabel111.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         jLabel111.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel111.setText("Eliminar Entrenador");
+        jLabel111.setText("Eliminar Jugador");
         Eliminar_Jugador.getContentPane().add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, -1, -1));
 
         jLabel112.setForeground(new java.awt.Color(153, 153, 153));
         jLabel112.setText("Instrucciones: Seleccione el ID del jugador a borrar  ");
         Eliminar_Jugador.getContentPane().add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Eliminar_Jugador.getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
+        Eliminar_Jugador.getContentPane().add(EJ_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
 
         jbl_IMAGEN_FONDO17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO17.setForeground(new java.awt.Color(255, 255, 255));
@@ -1602,6 +1358,11 @@ public class main extends javax.swing.JFrame {
         Eliminar_Entrenador.getContentPane().add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton38.setText("Eliminar");
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton38ActionPerformed(evt);
+            }
+        });
         Eliminar_Entrenador.getContentPane().add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
         Eliminar_Entrenador.getContentPane().add(jSeparator64, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
 
@@ -1612,15 +1373,14 @@ public class main extends javax.swing.JFrame {
 
         jLabel114.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         jLabel114.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel114.setText("Eliminar Jugador");
+        jLabel114.setText("Eliminar Entrenador");
         Eliminar_Entrenador.getContentPane().add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, -1, -1));
 
         jLabel115.setForeground(new java.awt.Color(153, 153, 153));
         jLabel115.setText("Instrucciones: Seleccione el ID del Entrenador a borrar  ");
         Eliminar_Entrenador.getContentPane().add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Eliminar_Entrenador.getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
+        Eliminar_Entrenador.getContentPane().add(EE_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
 
         jbl_IMAGEN_FONDO18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO18.setForeground(new java.awt.Color(255, 255, 255));
@@ -1638,6 +1398,11 @@ public class main extends javax.swing.JFrame {
         Eliminar_Arbitro.getContentPane().add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton40.setText("Eliminar");
+        jButton40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton40ActionPerformed(evt);
+            }
+        });
         Eliminar_Arbitro.getContentPane().add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
         Eliminar_Arbitro.getContentPane().add(jSeparator65, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
 
@@ -1655,8 +1420,7 @@ public class main extends javax.swing.JFrame {
         jLabel118.setText("Instrucciones: Seleccione el ID del Arbitro a borrar  ");
         Eliminar_Arbitro.getContentPane().add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Eliminar_Arbitro.getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
+        Eliminar_Arbitro.getContentPane().add(EA_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
 
         jbl_IMAGEN_FONDO19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO19.setForeground(new java.awt.Color(255, 255, 255));
@@ -1674,6 +1438,11 @@ public class main extends javax.swing.JFrame {
         Eliminar_Club.getContentPane().add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton42.setText("Eliminar");
+        jButton42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton42ActionPerformed(evt);
+            }
+        });
         Eliminar_Club.getContentPane().add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
         Eliminar_Club.getContentPane().add(jSeparator66, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
 
@@ -1691,193 +1460,52 @@ public class main extends javax.swing.JFrame {
         jLabel121.setText("Instrucciones: Seleccione el ID del Club a borrar  ");
         Eliminar_Club.getContentPane().add(jLabel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, -1, -1));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Eliminar_Club.getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
+        Eliminar_Club.getContentPane().add(EC_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
 
         jbl_IMAGEN_FONDO20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO20.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
         Eliminar_Club.getContentPane().add(jbl_IMAGEN_FONDO20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
 
-        Eliminar_Equipo.setIconImage(null);
-        Eliminar_Equipo.setIconImages(null);
-        Eliminar_Equipo.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton43.setText("Atras");
-        jButton43.setBorder(null);
-        jButton43.setOpaque(false);
-        Eliminar_Equipo.getContentPane().add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
-
-        jButton44.setText("Eliminar");
-        Eliminar_Equipo.getContentPane().add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
-        Eliminar_Equipo.getContentPane().add(jSeparator67, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
-
-        jLabel122.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel122.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel122.setText("ID:");
-        Eliminar_Equipo.getContentPane().add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
-
-        jLabel123.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        jLabel123.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel123.setText("Eliminar Equipo");
-        Eliminar_Equipo.getContentPane().add(jLabel123, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
-
-        jLabel124.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel124.setText("Instrucciones: Seleccione el ID del Equipo a borrar  ");
-        Eliminar_Equipo.getContentPane().add(jLabel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
-
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Eliminar_Equipo.getContentPane().add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
-
-        jbl_IMAGEN_FONDO21.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jbl_IMAGEN_FONDO21.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_IMAGEN_FONDO21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Eliminar_Equipo.getContentPane().add(jbl_IMAGEN_FONDO21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
-
         Eliminar_Quiniela.setIconImage(null);
         Eliminar_Quiniela.setIconImages(null);
         Eliminar_Quiniela.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton45.setText("Atras");
-        jButton45.setBorder(null);
-        jButton45.setOpaque(false);
-        Eliminar_Quiniela.getContentPane().add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
-
-        jButton46.setText("Eliminar");
-        Eliminar_Quiniela.getContentPane().add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
-        Eliminar_Quiniela.getContentPane().add(jSeparator68, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
-
-        jLabel125.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel125.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel125.setText("ID:");
-        Eliminar_Quiniela.getContentPane().add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
-
-        jLabel126.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        jLabel126.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel126.setText("Eliminar Quiniela");
-        Eliminar_Quiniela.getContentPane().add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
-
-        jLabel127.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel127.setText("Instrucciones: Seleccione el ID dela quiniela a borrar  ");
-        Eliminar_Quiniela.getContentPane().add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
-
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Eliminar_Quiniela.getContentPane().add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
-
-        jbl_IMAGEN_FONDO22.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jbl_IMAGEN_FONDO22.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_IMAGEN_FONDO22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Eliminar_Quiniela.getContentPane().add(jbl_IMAGEN_FONDO22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
-
-        Eliminar_Prediccion.setIconImage(null);
-        Eliminar_Prediccion.setIconImages(null);
-        Eliminar_Prediccion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
         jButton47.setText("Atras");
         jButton47.setBorder(null);
         jButton47.setOpaque(false);
-        Eliminar_Prediccion.getContentPane().add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
+        Eliminar_Quiniela.getContentPane().add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton48.setText("Eliminar");
-        Eliminar_Prediccion.getContentPane().add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
-        Eliminar_Prediccion.getContentPane().add(jSeparator69, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
+        jButton48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton48ActionPerformed(evt);
+            }
+        });
+        Eliminar_Quiniela.getContentPane().add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
+        Eliminar_Quiniela.getContentPane().add(jSeparator69, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
 
         jLabel128.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel128.setForeground(new java.awt.Color(255, 255, 255));
         jLabel128.setText("ID:");
-        Eliminar_Prediccion.getContentPane().add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
+        Eliminar_Quiniela.getContentPane().add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
 
         jLabel129.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         jLabel129.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel129.setText("Eliminar Predicción");
-        Eliminar_Prediccion.getContentPane().add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, -1, -1));
+        jLabel129.setText("Eliminar Quiniela");
+        Eliminar_Quiniela.getContentPane().add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, -1, -1));
 
         jLabel130.setForeground(new java.awt.Color(153, 153, 153));
         jLabel130.setText("Instrucciones: Seleccione el ID de la predicción a borrar  ");
-        Eliminar_Prediccion.getContentPane().add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
+        Eliminar_Quiniela.getContentPane().add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Eliminar_Prediccion.getContentPane().add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
+        Eliminar_Quiniela.getContentPane().add(EQ_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
 
         jbl_IMAGEN_FONDO23.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO23.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Eliminar_Prediccion.getContentPane().add(jbl_IMAGEN_FONDO23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
-
-        Eliminar_Equipojugador.setIconImage(null);
-        Eliminar_Equipojugador.setIconImages(null);
-        Eliminar_Equipojugador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton49.setText("Atras");
-        jButton49.setBorder(null);
-        jButton49.setOpaque(false);
-        Eliminar_Equipojugador.getContentPane().add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
-
-        jButton50.setText("Eliminar");
-        Eliminar_Equipojugador.getContentPane().add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
-        Eliminar_Equipojugador.getContentPane().add(jSeparator70, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
-
-        jLabel131.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel131.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel131.setText("ID:");
-        Eliminar_Equipojugador.getContentPane().add(jLabel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
-
-        jLabel132.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        jLabel132.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel132.setText("Eliminar Equipo Jugador");
-        Eliminar_Equipojugador.getContentPane().add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
-
-        jLabel133.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel133.setText("Instrucciones: Seleccione el ID del Equipo jugador a borrar  ");
-        Eliminar_Equipojugador.getContentPane().add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, -1, -1));
-
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Eliminar_Equipojugador.getContentPane().add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
-
-        jbl_IMAGEN_FONDO24.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jbl_IMAGEN_FONDO24.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_IMAGEN_FONDO24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Eliminar_Equipojugador.getContentPane().add(jbl_IMAGEN_FONDO24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
-
-        Eliminar_Clubjugador.setIconImage(null);
-        Eliminar_Clubjugador.setIconImages(null);
-        Eliminar_Clubjugador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton51.setText("Atras");
-        jButton51.setBorder(null);
-        jButton51.setOpaque(false);
-        Eliminar_Clubjugador.getContentPane().add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
-
-        jButton52.setText("Eliminar");
-        Eliminar_Clubjugador.getContentPane().add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 190, 20));
-        Eliminar_Clubjugador.getContentPane().add(jSeparator71, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 220, 10));
-
-        jLabel134.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel134.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel134.setText("ID:");
-        Eliminar_Clubjugador.getContentPane().add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
-
-        jLabel135.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        jLabel135.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel135.setText("Eliminar Club Jugador");
-        Eliminar_Clubjugador.getContentPane().add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
-
-        jLabel136.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel136.setText("Instrucciones: Seleccione el ID del Club jugador a borrar  ");
-        Eliminar_Clubjugador.getContentPane().add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, -1, -1));
-
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Eliminar_Clubjugador.getContentPane().add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
-
-        jbl_IMAGEN_FONDO25.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jbl_IMAGEN_FONDO25.setForeground(new java.awt.Color(255, 255, 255));
-        jbl_IMAGEN_FONDO25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
-        Eliminar_Clubjugador.getContentPane().add(jbl_IMAGEN_FONDO25, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
+        Eliminar_Quiniela.getContentPane().add(jbl_IMAGEN_FONDO23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quinielas de Futbol");
@@ -1999,15 +1627,6 @@ public class main extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem8);
 
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/equipo.png"))); // NOI18N
-        jMenuItem9.setText("Equipo");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem9);
-
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/prediccion.png"))); // NOI18N
         jMenuItem11.setText("Quiniela");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
@@ -2066,15 +1685,6 @@ public class main extends javax.swing.JFrame {
             }
         });
         jMenu3.add(jMenuItem18);
-
-        jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/futbodl.png"))); // NOI18N
-        jMenuItem20.setText("Club Jugador");
-        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem20ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem20);
 
         jMenuBar1.add(jMenu3);
 
@@ -2139,23 +1749,51 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("arbitro");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            AM_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }        // TODO add your handling code here:
         Modificar_Arbitro.setModal(true);
         Modificar_Arbitro.pack();
         Modificar_Arbitro.setLocationRelativeTo(this);
         Modificar_Arbitro.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
-        Modificar_Equipo.setModal(true);
-        Modificar_Equipo.pack();
-        Modificar_Equipo.setLocationRelativeTo(this);
-        Modificar_Equipo.setVisible(true);
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
-
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EC_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }          // TODO add your handling code here:
         Eliminar_Club.setModal(true);
         Eliminar_Club.pack();
         Eliminar_Club.setLocationRelativeTo(this);
@@ -2290,49 +1928,97 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton20ActionPerformed
 
-    private void jTextField43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField43ActionPerformed
-
-    private void jTextField46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField46ActionPerformed
-
-    private void jTextField50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField50ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField50ActionPerformed
-
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+            String identidad = CM_id.getSelectedItem() + "";
+            String nombre = CM_nombre.getText();
+
+            // Construir la consulta para encontrar al club a modificar
+            Document query = new Document("identidad", identidad);
+
+            // Construir los nuevos valores a actualizar
+            Document update = new Document("$set", new Document()
+                    .append("nombre", nombre));
+
+            // Ejecutar la actualización del club
+            UpdateResult result = collection.updateOne(query, update);
+
+            if (result.getModifiedCount() > 0) {
+                JOptionPane.showMessageDialog(null, "Club modificado correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontró el club con el ID especificado.");
+            }
+
+            System.out.println("Clubes existentes:");
+            for (Document doc : collection.find()) {
+                System.out.println(doc.toJson());
+            }
+
+            // Resto del código para limpiar los campos
+            CM_id.setSelectedItem(null);
+            CM_nombre.setText("");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton28ActionPerformed
 
-    private void jTextField52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField52ActionPerformed
+    private void QM_montoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QM_montoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField52ActionPerformed
-
-    private void jTextField56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField56ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField56ActionPerformed
-
-    private void jTextField59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField59ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField59ActionPerformed
-
-    private void jTextField60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField60ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField60ActionPerformed
-
-    private void jTextField61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField61ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField61ActionPerformed
+    }//GEN-LAST:event_QM_montoActionPerformed
 
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("quiniela");
+
+            String id = QM_id.getSelectedItem() + "";
+            String partidoId = QM_partido.getSelectedItem() + "";
+            double monto = Double.parseDouble(QM_monto.getText());
+            int golesLocal = Integer.parseInt(QM_golesLocal.getText());
+            int golesVisita = Integer.parseInt(QM_golesVisita.getText());
+
+            // Construir la consulta para encontrar la quiniela a modificar
+            Document query = new Document("id", id);
+
+            // Construir los nuevos valores a actualizar
+            Document update = new Document("$set", new Document()
+                    .append("partido", partidoId)
+                    .append("monto", monto)
+                    .append("golesLocal", golesLocal)
+                    .append("golesVisita", golesVisita));
+
+            // Ejecutar la actualización de la quiniela
+            UpdateResult result = collection.updateOne(query, update);
+
+            if (result.getModifiedCount() > 0) {
+                JOptionPane.showMessageDialog(null, "Quiniela modificada correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontró la quiniela con el ID especificado.");
+            }
+
+            System.out.println("Quinielas existentes:");
+            for (Document doc : collection.find()) {
+                System.out.println(doc.toJson());
+            }
+
+            // Resto del código para limpiar los campos
+            QM_id.setSelectedItem(null);
+            QM_partido.setSelectedItem(null);
+            QM_monto.setText("");
+            QM_golesLocal.setText("");
+            QM_golesVisita.setText("");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton34ActionPerformed
-
-    private void jTextField62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField62ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField62ActionPerformed
 
     private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
         // TODO add your handling code here:
@@ -2371,7 +2057,25 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBoxMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("jugadores");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            PM_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         Modificar_Jugador.setModal(true);
         Modificar_Jugador.pack();
         Modificar_Jugador.setLocationRelativeTo(this);
@@ -2379,7 +2083,25 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("entrenadores");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EM_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         Modificar_Entrenador.setModal(true);
         Modificar_Entrenador.pack();
         Modificar_Entrenador.setLocationRelativeTo(this);
@@ -2387,7 +2109,25 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            CM_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }        // TODO add your handling code here:
         Modificar_Club.setModal(true);
         Modificar_Club.pack();
         Modificar_Club.setLocationRelativeTo(this);
@@ -2395,15 +2135,74 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        // TODO add your handling code here:
-        Modificar_Prediccion.setModal(true);
-        Modificar_Prediccion.pack();
-        Modificar_Prediccion.setLocationRelativeTo(this);
-        Modificar_Prediccion.setVisible(true);
+        {
+            String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+            MongoClientURI uri = new MongoClientURI(connectionString);
+            try (MongoClient mongoClient = new MongoClient(uri)) {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("quiniela");
+                List<String> identidades = new ArrayList<>();
+
+                for (Document doc : collection.find()) {
+                    String identidad = doc.getString("id");
+                    identidades.add(identidad);
+                }
+
+                DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+                QM_id.setModel(comboBoxModel);
+
+                // Resto del código...
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+        {
+            String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+            MongoClientURI uri = new MongoClientURI(connectionString);
+            try (MongoClient mongoClient = new MongoClient(uri)) {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("partido");
+                List<String> identidades = new ArrayList<>();
+
+                for (Document doc : collection.find()) {
+                    String identidad = doc.getString("id");
+                    identidades.add(identidad);
+                }
+
+                DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+                QM_partido.setModel(comboBoxModel);
+
+                // Resto del código...
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+        Modificar_Quiniela.setModal(true);
+        Modificar_Quiniela.pack();
+        Modificar_Quiniela.setLocationRelativeTo(this);
+        Modificar_Quiniela.setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("jugadores");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EJ_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }        // TODO add your handling code here:
         Eliminar_Jugador.setModal(true);
         Eliminar_Jugador.pack();
         Eliminar_Jugador.setLocationRelativeTo(this);
@@ -2411,7 +2210,25 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("entrenadores");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EE_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }          // TODO add your handling code here:
         Eliminar_Entrenador.setModal(true);
         Eliminar_Entrenador.pack();
         Eliminar_Entrenador.setLocationRelativeTo(this);
@@ -2419,7 +2236,25 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("arbitro");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EA_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }          // TODO add your handling code here:
         Eliminar_Arbitro.setModal(true);
         Eliminar_Arbitro.pack();
         Eliminar_Arbitro.setLocationRelativeTo(this);
@@ -2427,20 +2262,30 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
-        // TODO add your handling code here:
-        Eliminar_Prediccion.setModal(true);
-        Eliminar_Prediccion.pack();
-        Eliminar_Prediccion.setLocationRelativeTo(this);
-        Eliminar_Prediccion.setVisible(true);
-    }//GEN-LAST:event_jMenuItem18ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("quiniela");
+            List<String> identidades = new ArrayList<>();
 
-    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
-        // TODO add your handling code here:
-        Eliminar_Clubjugador.setModal(true);
-        Eliminar_Clubjugador.pack();
-        Eliminar_Clubjugador.setLocationRelativeTo(this);
-        Eliminar_Clubjugador.setVisible(true);
-    }//GEN-LAST:event_jMenuItem20ActionPerformed
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("id");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EQ_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }          // TODO add your handling code here:
+        Eliminar_Quiniela.setModal(true);
+        Eliminar_Quiniela.pack();
+        Eliminar_Quiniela.setLocationRelativeTo(this);
+        Eliminar_Quiniela.setVisible(true);
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
@@ -2734,6 +2579,576 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_quiniela_montoActionPerformed
 
+    private void PM_idItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_PM_idItemStateChanged
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("jugadores");
+            String nombre = "";
+            Date fecha = null;
+            double peso = 0;
+            double pesoExtra = 0;
+            Document query = new Document("identidad", PM_id.getSelectedItem());
+            Document jugador = collection.find(query).first();
+            if (jugador != null) {
+                nombre = jugador.getString("nombre");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                try {
+                    fecha = dateFormat.parse(jugador.getString("fechaNacimiento"));
+                } catch (ParseException ex) {
+                    ex.printStackTrace();
+                }
+                peso = jugador.getDouble("pesoBase");
+                pesoExtra = jugador.getDouble("pesoExtra");
+            }
+            PM_nombre.setText(nombre);
+            PM_date.setDate(fecha);
+            PM_peso.setText(Double.toString(peso));
+            PM_pesoExtra.setText(Double.toString(pesoExtra));
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+
+    }//GEN-LAST:event_PM_idItemStateChanged
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            if ((PM_nombre.getText().isEmpty() || PM_peso.getText().isEmpty() || PM_pesoExtra.getText().isEmpty() || PM_date.getDate() == null)) {
+                JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
+            } else {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("jugadores");
+                String identidad = PM_id.getSelectedItem() + "";
+                String nombre = PM_nombre.getText();
+                Date fechaNacimiento = PM_date.getDate();
+                double pesoBase = Double.parseDouble(PM_peso.getText());
+                double pesoExtra = Double.parseDouble(PM_pesoExtra.getText());
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                String fechaNacimientoFormatted = dateFormat.format(fechaNacimiento);
+
+                // Construir la consulta para encontrar al jugador a modificar
+                Document query = new Document("identidad", identidad);
+
+                // Construir los nuevos valores a actualizar
+                Document update = new Document("$set", new Document()
+                        .append("nombre", nombre)
+                        .append("fechaNacimiento", fechaNacimientoFormatted)
+                        .append("pesoBase", pesoBase)
+                        .append("pesoExtra", pesoExtra));
+
+                // Ejecutar la actualización del jugador
+                UpdateResult result = collection.updateOne(query, update);
+
+                if (result.getModifiedCount() > 0) {
+                    JOptionPane.showMessageDialog(null, "Jugador modificado correctamente.");
+                } else {
+                    JOptionPane.showMessageDialog(null, "No se encontró el jugador con el ID especificado.");
+                }
+
+                System.out.println("Jugadores existentes:");
+                for (Document doc : collection.find()) {
+                    System.out.println(doc.toJson());
+                }
+            }
+
+            // Resto del código para limpiar los campos
+            PM_id.setSelectedItem(null);
+            PM_nombre.setText("");
+            Calendar calendar = Calendar.getInstance();
+            java.util.Date fechaActual = calendar.getTime();
+            PM_date.setDate(fechaActual);
+            PM_peso.setText("");
+            PM_pesoExtra.setText("");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void EM_idItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_EM_idItemStateChanged
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("entrenadores");
+            String nombre = "";
+            Date fecha = null;
+            double peso = 0;
+            double pesoExtra = 0;
+            Document query = new Document("identidad", EM_id.getSelectedItem());
+            Document entrenador = collection.find(query).first();
+            if (entrenador != null) {
+                nombre = entrenador.getString("nombre");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                try {
+                    fecha = dateFormat.parse(entrenador.getString("fechaNacimiento"));
+                } catch (ParseException ex) {
+                    ex.printStackTrace();
+                }
+                peso = entrenador.getDouble("pesoBase");
+                pesoExtra = entrenador.getDouble("pesoExtra");
+            }
+            EM_nombre.setText(nombre);
+            EM_date.setDate(fecha);
+            EM_peso.setText(Double.toString(peso));
+            EM_pesoExtra.setText(Double.toString(pesoExtra));
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }//GEN-LAST:event_EM_idItemStateChanged
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            if (EM_nombre.getText().isEmpty() || EM_peso.getText().isEmpty() || EM_pesoExtra.getText().isEmpty() || EM_date.getDate() == null) {
+                JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
+            } else {
+                MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+                MongoCollection<Document> collection = database.getCollection("entrenadores");
+                String identidad = EM_id.getSelectedItem() + "";
+                String nombre = EM_nombre.getText();
+                Date fechaNacimiento = EM_date.getDate();
+                double pesoBase = Double.parseDouble(EM_peso.getText());
+                double pesoExtra = Double.parseDouble(EM_pesoExtra.getText());
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                String fechaNacimientoFormatted = dateFormat.format(fechaNacimiento);
+
+                // Construir la consulta para encontrar al entrenador a modificar
+                Document query = new Document("identidad", identidad);
+
+                // Construir los nuevos valores a actualizar
+                Document update = new Document("$set", new Document()
+                        .append("nombre", nombre)
+                        .append("fechaNacimiento", fechaNacimientoFormatted)
+                        .append("pesoBase", pesoBase)
+                        .append("pesoExtra", pesoExtra));
+
+                // Ejecutar la actualización del entrenador
+                UpdateResult result = collection.updateOne(query, update);
+
+                if (result.getModifiedCount() > 0) {
+                    JOptionPane.showMessageDialog(null, "Entrenador modificado correctamente.");
+                } else {
+                    JOptionPane.showMessageDialog(null, "No se encontró el entrenador con el ID especificado.");
+                }
+
+                System.out.println("Entrenadores existentes:");
+                for (Document doc : collection.find()) {
+                    System.out.println(doc.toJson());
+                }
+            }
+
+            // Resto del código para limpiar los campos
+            EM_id.setSelectedItem(null);
+            EM_nombre.setText("");
+            Calendar calendar = Calendar.getInstance();
+            java.util.Date fechaActual = calendar.getTime();
+            EM_date.setDate(fechaActual);
+            EM_peso.setText("");
+            EM_pesoExtra.setText("");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void AM_idItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_AM_idItemStateChanged
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("arbitro");
+            String nombre = "";
+            Date fecha = null;
+            double peso = 0;
+            double pesoExtra = 0;
+            Document query = new Document("identidad", AM_id.getSelectedItem());
+            Document arbitro = collection.find(query).first();
+            if (arbitro != null) {
+                nombre = arbitro.getString("nombre");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                try {
+                    fecha = dateFormat.parse(arbitro.getString("fechaNacimiento"));
+                } catch (ParseException ex) {
+                    ex.printStackTrace();
+                }
+                peso = arbitro.getDouble("pesoBase");
+                pesoExtra = arbitro.getDouble("pesoExtra");
+            }
+            AM_nombre.setText(nombre);
+            AM_date.setDate(fecha);
+            AM_peso.setText(Double.toString(peso));
+            AM_pesoExtra.setText(Double.toString(pesoExtra));
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }//GEN-LAST:event_AM_idItemStateChanged
+
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("arbitro");
+            String identidad = AM_id.getSelectedItem() + "";
+            String nombre = AM_nombre.getText();
+            Date fechaNacimiento = AM_date.getDate();
+            double pesoBase = Double.parseDouble(AM_peso.getText());
+            double pesoExtra = Double.parseDouble(AM_pesoExtra.getText());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            String fechaNacimientoFormatted = dateFormat.format(fechaNacimiento);
+
+            // Construir la consulta para encontrar al árbitro a modificar
+            Document query = new Document("identidad", identidad);
+
+            // Construir los nuevos valores a actualizar
+            Document update = new Document("$set", new Document()
+                    .append("nombre", nombre)
+                    .append("fechaNacimiento", fechaNacimientoFormatted)
+                    .append("pesoBase", pesoBase)
+                    .append("pesoExtra", pesoExtra));
+
+            // Ejecutar la actualización del árbitro
+            UpdateResult result = collection.updateOne(query, update);
+
+            if (result.getModifiedCount() > 0) {
+                JOptionPane.showMessageDialog(null, "Árbitro modificado correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontró el árbitro con el ID especificado.");
+            }
+
+            System.out.println("Árbitros existentes:");
+            for (Document doc : collection.find()) {
+                System.out.println(doc.toJson());
+            }
+
+            // Resto del código para limpiar los campos
+            AM_id.setSelectedItem(null);
+            AM_nombre.setText("");
+            Calendar calendar = Calendar.getInstance();
+            java.util.Date fechaActual = calendar.getTime();
+            AM_date.setDate(fechaActual);
+            AM_peso.setText("");
+            AM_pesoExtra.setText("");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton26ActionPerformed
+
+    private void CM_idItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CM_idItemStateChanged
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+            String nombre = "";
+            Document query = new Document("identidad", CM_id.getSelectedItem());
+            Document club = collection.find(query).first();
+            if (club != null) {
+                nombre = club.getString("nombre");
+            }
+            CM_nombre.setText(nombre);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CM_idItemStateChanged
+
+    private void QM_idItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_QM_idItemStateChanged
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("quiniela");
+            String id = QM_id.getSelectedItem() + "";
+            Document query = new Document("id", id);
+            Document quiniela = collection.find(query).first();
+            if (quiniela != null) {
+                double monto = quiniela.getDouble("monto");
+                int golesLocal = quiniela.getInteger("golesLocal");
+                int golesVisita = quiniela.getInteger("golesVisita");
+                String partidoId = quiniela.getString("partido");
+
+                QM_monto.setText(Double.toString(monto));
+                QM_golesLocal.setText(Integer.toString(golesLocal));
+                QM_golesVisita.setText(Integer.toString(golesVisita));
+                QM_partido.setSelectedItem(partidoId);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }//GEN-LAST:event_QM_idItemStateChanged
+
+    private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("jugadores");
+
+            String identidad = EJ_id.getSelectedItem() + "";
+
+            // Construir la consulta para encontrar al jugador a eliminar
+            Document query = new Document("identidad", identidad);
+
+            // Ejecutar la eliminación del jugador
+            DeleteResult result = collection.deleteOne(query);
+
+            if (result.getDeletedCount() > 0) {
+                JOptionPane.showMessageDialog(null, "Jugador eliminado correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontró el jugador con la identidad especificada.");
+            }
+
+            System.out.println("Jugadores existentes:");
+            for (Document doc : collection.find()) {
+                System.out.println(doc.toJson());
+            }
+
+            // Resto del código para limpiar los campos
+            EJ_id.setSelectedItem(null);
+            {
+
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton36ActionPerformed
+
+    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("entrenadores");
+
+            String identidad = EE_id.getSelectedItem() + "";
+
+            // Construir la consulta para encontrar al entrenador a eliminar
+            Document query = new Document("identidad", identidad);
+
+            // Ejecutar la eliminación del entrenador
+            DeleteResult result = collection.deleteOne(query);
+
+            if (result.getDeletedCount() > 0) {
+                JOptionPane.showMessageDialog(null, "Entrenador eliminado correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontró el entrenador con la identidad especificada.");
+            }
+
+            System.out.println("Entrenadores existentes:");
+            for (Document doc : collection.find()) {
+                System.out.println(doc.toJson());
+            }
+
+            // Resto del código para limpiar los campos
+            EE_id.setSelectedItem(null);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("jugadores");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EJ_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("entrenadores");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EE_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton38ActionPerformed
+
+    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("arbitro");
+
+            String identidad = EA_id.getSelectedItem() + "";
+
+            // Construir la consulta para encontrar al árbitro a eliminar
+            Document query = new Document("identidad", identidad);
+
+            // Ejecutar la eliminación del árbitro
+            DeleteResult result = collection.deleteOne(query);
+
+            if (result.getDeletedCount() > 0) {
+                JOptionPane.showMessageDialog(null, "Árbitro eliminado correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontró el árbitro con la identidad especificada.");
+            }
+
+            System.out.println("Árbitros existentes:");
+            for (Document doc : collection.find()) {
+                System.out.println(doc.toJson());
+            }
+
+            // Resto del código para limpiar los campos
+            EA_id.setSelectedItem(null);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("arbitro");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EA_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton40ActionPerformed
+
+    private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+
+            String identidad = EC_id.getSelectedItem() + "";
+
+            // Construir la consulta para encontrar al club a eliminar
+            Document query = new Document("identidad", identidad);
+
+            // Ejecutar la eliminación del club
+            DeleteResult result = collection.deleteOne(query);
+
+            if (result.getDeletedCount() > 0) {
+                JOptionPane.showMessageDialog(null, "Club eliminado correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontró el club con la identidad especificada.");
+            }
+
+            System.out.println("Clubes existentes:");
+            for (Document doc : collection.find()) {
+                System.out.println(doc.toJson());
+            }
+
+            // Resto del código para limpiar los campos
+            EC_id.setSelectedItem(null);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("identidad");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EC_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton42ActionPerformed
+
+    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("quiniela");
+
+            String identidad = EQ_id.getSelectedItem() + "";
+
+            // Construir la consulta para encontrar la quiniela a eliminar
+            Document query = new Document("id", identidad);
+
+            // Ejecutar la eliminación de la quiniela
+            DeleteResult result = collection.deleteOne(query);
+
+            if (result.getDeletedCount() > 0) {
+                JOptionPane.showMessageDialog(null, "Quiniela eliminada correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(null, "No se encontró la quiniela con la identidad especificada.");
+            }
+
+            System.out.println("Quinielas existentes:");
+            for (Document doc : collection.find()) {
+                System.out.println(doc.toJson());
+            }
+
+            // Resto del código para limpiar los campos
+            EQ_id.setSelectedItem(null);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("quiniela");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("id");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            EQ_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton48ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -2775,29 +3190,50 @@ public class main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser AM_date;
+    private javax.swing.JComboBox<String> AM_id;
+    private javax.swing.JTextField AM_nombre;
+    private javax.swing.JTextField AM_peso;
+    private javax.swing.JTextField AM_pesoExtra;
     private javax.swing.JComboBox<String> CJ_club;
     private javax.swing.JComboBox<String> CJ_player;
+    private javax.swing.JComboBox<String> CM_id;
+    private javax.swing.JTextField CM_nombre;
     private com.toedter.calendar.JDateChooser DT_date;
     private javax.swing.JTextField DT_id;
     private javax.swing.JTextField DT_nombre;
     private javax.swing.JTextField DT_peso;
     private javax.swing.JTextField DT_pesoExtra;
+    private javax.swing.JComboBox<String> EA_id;
+    private javax.swing.JComboBox<String> EC_id;
+    private javax.swing.JComboBox<String> EE_id;
+    private javax.swing.JComboBox<String> EJ_id;
+    private com.toedter.calendar.JDateChooser EM_date;
+    private javax.swing.JComboBox<String> EM_id;
+    private javax.swing.JTextField EM_nombre;
+    private javax.swing.JTextField EM_peso;
+    private javax.swing.JTextField EM_pesoExtra;
+    private javax.swing.JComboBox<String> EQ_id;
     private javax.swing.JDialog Eliminar_Arbitro;
     private javax.swing.JDialog Eliminar_Club;
-    private javax.swing.JDialog Eliminar_Clubjugador;
     private javax.swing.JDialog Eliminar_Entrenador;
-    private javax.swing.JDialog Eliminar_Equipo;
-    private javax.swing.JDialog Eliminar_Equipojugador;
     private javax.swing.JDialog Eliminar_Jugador;
-    private javax.swing.JDialog Eliminar_Prediccion;
     private javax.swing.JDialog Eliminar_Quiniela;
     private javax.swing.JDialog Modificar_Arbitro;
     private javax.swing.JDialog Modificar_Club;
     private javax.swing.JDialog Modificar_Entrenador;
-    private javax.swing.JDialog Modificar_Equipo;
     private javax.swing.JDialog Modificar_Jugador;
-    private javax.swing.JDialog Modificar_Prediccion;
     private javax.swing.JDialog Modificar_Quiniela;
+    private com.toedter.calendar.JDateChooser PM_date;
+    private javax.swing.JComboBox<String> PM_id;
+    private javax.swing.JTextField PM_nombre;
+    private javax.swing.JTextField PM_peso;
+    private javax.swing.JTextField PM_pesoExtra;
+    private javax.swing.JTextField QM_golesLocal;
+    private javax.swing.JTextField QM_golesVisita;
+    private javax.swing.JComboBox<String> QM_id;
+    private javax.swing.JTextField QM_monto;
+    private javax.swing.JComboBox<String> QM_partido;
     private javax.swing.JDialog Registro_Arbitro;
     private javax.swing.JDialog Registro_Club;
     private javax.swing.JDialog Registro_Clubjugador;
@@ -2829,11 +3265,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton33;
     private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton35;
@@ -2845,17 +3277,9 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
-    private javax.swing.JButton jButton46;
     private javax.swing.JButton jButton47;
     private javax.swing.JButton jButton48;
-    private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton50;
-    private javax.swing.JButton jButton51;
-    private javax.swing.JButton jButton52;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -2863,20 +3287,6 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
-    private com.toedter.calendar.JDateChooser jDateChooser10;
-    private com.toedter.calendar.JDateChooser jDateChooser11;
-    private com.toedter.calendar.JDateChooser jDateChooser7;
-    private com.toedter.calendar.JDateChooser jDateChooser8;
-    private com.toedter.calendar.JDateChooser jDateChooser9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -2899,22 +3309,10 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel120;
     private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
-    private javax.swing.JLabel jLabel123;
-    private javax.swing.JLabel jLabel124;
-    private javax.swing.JLabel jLabel125;
-    private javax.swing.JLabel jLabel126;
-    private javax.swing.JLabel jLabel127;
     private javax.swing.JLabel jLabel128;
     private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel130;
-    private javax.swing.JLabel jLabel131;
-    private javax.swing.JLabel jLabel132;
-    private javax.swing.JLabel jLabel133;
-    private javax.swing.JLabel jLabel134;
-    private javax.swing.JLabel jLabel135;
-    private javax.swing.JLabel jLabel136;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -2979,21 +3377,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
-    private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel85;
-    private javax.swing.JLabel jLabel86;
-    private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
-    private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JMenu jMenu1;
@@ -3008,13 +3392,11 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem20;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -3051,12 +3433,6 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator49;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator50;
-    private javax.swing.JSeparator jSeparator51;
-    private javax.swing.JSeparator jSeparator52;
-    private javax.swing.JSeparator jSeparator53;
-    private javax.swing.JSeparator jSeparator54;
-    private javax.swing.JSeparator jSeparator55;
-    private javax.swing.JSeparator jSeparator56;
     private javax.swing.JSeparator jSeparator57;
     private javax.swing.JSeparator jSeparator58;
     private javax.swing.JSeparator jSeparator59;
@@ -3065,59 +3441,23 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator64;
     private javax.swing.JSeparator jSeparator65;
     private javax.swing.JSeparator jSeparator66;
-    private javax.swing.JSeparator jSeparator67;
-    private javax.swing.JSeparator jSeparator68;
     private javax.swing.JSeparator jSeparator69;
     private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JSeparator jSeparator70;
-    private javax.swing.JSeparator jSeparator71;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JSpinner jSpinner3;
-    private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField43;
-    private javax.swing.JTextField jTextField44;
-    private javax.swing.JTextField jTextField45;
-    private javax.swing.JTextField jTextField46;
-    private javax.swing.JTextField jTextField47;
-    private javax.swing.JTextField jTextField48;
-    private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField50;
-    private javax.swing.JTextField jTextField51;
-    private javax.swing.JTextField jTextField52;
-    private javax.swing.JTextField jTextField53;
-    private javax.swing.JTextField jTextField54;
-    private javax.swing.JTextField jTextField55;
-    private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField57;
-    private javax.swing.JTextField jTextField58;
-    private javax.swing.JTextField jTextField59;
-    private javax.swing.JTextField jTextField60;
-    private javax.swing.JTextField jTextField61;
-    private javax.swing.JTextField jTextField62;
     private javax.swing.JLabel jbl_IMAGEN_FONDO;
     private javax.swing.JLabel jbl_IMAGEN_FONDO1;
     private javax.swing.JLabel jbl_IMAGEN_FONDO10;
     private javax.swing.JLabel jbl_IMAGEN_FONDO11;
     private javax.swing.JLabel jbl_IMAGEN_FONDO12;
     private javax.swing.JLabel jbl_IMAGEN_FONDO13;
-    private javax.swing.JLabel jbl_IMAGEN_FONDO14;
-    private javax.swing.JLabel jbl_IMAGEN_FONDO15;
     private javax.swing.JLabel jbl_IMAGEN_FONDO16;
     private javax.swing.JLabel jbl_IMAGEN_FONDO17;
     private javax.swing.JLabel jbl_IMAGEN_FONDO18;
     private javax.swing.JLabel jbl_IMAGEN_FONDO19;
     private javax.swing.JLabel jbl_IMAGEN_FONDO2;
     private javax.swing.JLabel jbl_IMAGEN_FONDO20;
-    private javax.swing.JLabel jbl_IMAGEN_FONDO21;
-    private javax.swing.JLabel jbl_IMAGEN_FONDO22;
     private javax.swing.JLabel jbl_IMAGEN_FONDO23;
-    private javax.swing.JLabel jbl_IMAGEN_FONDO24;
-    private javax.swing.JLabel jbl_IMAGEN_FONDO25;
     private javax.swing.JLabel jbl_IMAGEN_FONDO3;
     private javax.swing.JLabel jbl_IMAGEN_FONDO6;
     private javax.swing.JLabel jbl_IMAGEN_FONDO7;
