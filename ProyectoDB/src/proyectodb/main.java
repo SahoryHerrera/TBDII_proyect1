@@ -313,6 +313,52 @@ public class main extends javax.swing.JFrame {
         jLabel130 = new javax.swing.JLabel();
         EQ_id = new javax.swing.JComboBox<>();
         jbl_IMAGEN_FONDO23 = new javax.swing.JLabel();
+        Listar_Jugador = new javax.swing.JDialog();
+        jLabel21 = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        LT_Jugador = new javax.swing.JTable();
+        Jbl_FONDO = new javax.swing.JLabel();
+        Listar_Entrenador = new javax.swing.JDialog();
+        jLabel22 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        LT_Entrenador = new javax.swing.JTable();
+        Jbl_FONDO1 = new javax.swing.JLabel();
+        Listar_Arbitro = new javax.swing.JDialog();
+        jLabel27 = new javax.swing.JLabel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        LT_Arbitro = new javax.swing.JTable();
+        Jbl_FONDO2 = new javax.swing.JLabel();
+        Listar_Club = new javax.swing.JDialog();
+        jLabel28 = new javax.swing.JLabel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        LT_Club = new javax.swing.JTable();
+        Jbl_FONDO3 = new javax.swing.JLabel();
+        Listar_Clubjugador = new javax.swing.JDialog();
+        jLabel29 = new javax.swing.JLabel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        LT_club_jugador = new javax.swing.JTable();
+        Jbl_FONDO4 = new javax.swing.JLabel();
+        Listar_Partido = new javax.swing.JDialog();
+        jLabel31 = new javax.swing.JLabel();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        LT_Partidos = new javax.swing.JTable();
+        Jbl_FONDO5 = new javax.swing.JLabel();
+        Listar_Ganadores = new javax.swing.JDialog();
+        jLabel32 = new javax.swing.JLabel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        LT_Partidos1 = new javax.swing.JTable();
+        Jbl_FONDO6 = new javax.swing.JLabel();
+        Resultado_quiniela = new javax.swing.JDialog();
+        lbl_nombrevisita = new javax.swing.JLabel();
+        lbl_golesvisita_quiniela = new javax.swing.JLabel();
+        lbl_nombrelocal = new javax.swing.JLabel();
+        lbl_golesvisita_partido = new javax.swing.JLabel();
+        lbl_goleslocal_quiniela = new javax.swing.JLabel();
+        lbl_resultados = new javax.swing.JLabel();
+        lbl_goleslocal_partido = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        lbl_Fondo_Imagen = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
         jbl_fondo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -335,6 +381,14 @@ public class main extends javax.swing.JFrame {
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem18 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
 
         Registro_Jugador.setIconImage(null);
         Registro_Jugador.setIconImages(null);
@@ -1670,10 +1724,233 @@ public class main extends javax.swing.JFrame {
         jbl_IMAGEN_FONDO23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
         Eliminar_Quiniela.getContentPane().add(jbl_IMAGEN_FONDO23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 600));
 
+        Listar_Jugador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel21.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("Lista de Jugadores");
+        Listar_Jugador.getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, 70));
+
+        LT_Jugador.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        LT_Jugador.setEnabled(false);
+        LT_Jugador.setOpaque(false);
+        jScrollPane8.setViewportView(LT_Jugador);
+
+        Listar_Jugador.getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Jbl_FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
+        Listar_Jugador.getContentPane().add(Jbl_FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+
+        Listar_Entrenador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Lista de Entrenador");
+        Listar_Entrenador.getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, 70));
+
+        LT_Entrenador.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        LT_Entrenador.setEnabled(false);
+        LT_Entrenador.setOpaque(false);
+        jScrollPane9.setViewportView(LT_Entrenador);
+
+        Listar_Entrenador.getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Jbl_FONDO1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
+        Listar_Entrenador.getContentPane().add(Jbl_FONDO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+
+        Listar_Arbitro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel27.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("Lista de Arbitro");
+        Listar_Arbitro.getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, -1, 70));
+
+        LT_Arbitro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        LT_Arbitro.setEnabled(false);
+        LT_Arbitro.setOpaque(false);
+        jScrollPane10.setViewportView(LT_Arbitro);
+
+        Listar_Arbitro.getContentPane().add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Jbl_FONDO2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
+        Listar_Arbitro.getContentPane().add(Jbl_FONDO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+
+        Listar_Club.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel28.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("Lista de Club");
+        Listar_Club.getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, -1, 70));
+
+        LT_Club.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        LT_Club.setEnabled(false);
+        LT_Club.setOpaque(false);
+        jScrollPane11.setViewportView(LT_Club);
+
+        Listar_Club.getContentPane().add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Jbl_FONDO3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
+        Listar_Club.getContentPane().add(Jbl_FONDO3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+
+        Listar_Clubjugador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel29.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setText("Lista de Club jugador");
+        Listar_Clubjugador.getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, -1, 70));
+
+        LT_club_jugador.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        LT_club_jugador.setEnabled(false);
+        LT_club_jugador.setOpaque(false);
+        jScrollPane12.setViewportView(LT_club_jugador);
+
+        Listar_Clubjugador.getContentPane().add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Jbl_FONDO4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
+        Listar_Clubjugador.getContentPane().add(Jbl_FONDO4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+
+        Listar_Partido.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel31.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setText("Lista de Partidos");
+        Listar_Partido.getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, -1, 70));
+
+        LT_Partidos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        LT_Partidos.setEnabled(false);
+        LT_Partidos.setOpaque(false);
+        jScrollPane13.setViewportView(LT_Partidos);
+
+        Listar_Partido.getContentPane().add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Jbl_FONDO5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
+        Listar_Partido.getContentPane().add(Jbl_FONDO5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+
+        Listar_Ganadores.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel32.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel32.setText("Lista de Ganadores Quiniela");
+        Listar_Ganadores.getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, -1, 70));
+
+        LT_Partidos1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        LT_Partidos1.setEnabled(false);
+        LT_Partidos1.setOpaque(false);
+        jScrollPane14.setViewportView(LT_Partidos1);
+
+        Listar_Ganadores.getContentPane().add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Jbl_FONDO6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
+        Listar_Ganadores.getContentPane().add(Jbl_FONDO6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+
+        Resultado_quiniela.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbl_nombrevisita.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_nombrevisita.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_nombrevisita.setText("jLabel33");
+        Resultado_quiniela.getContentPane().add(lbl_nombrevisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 90, -1));
+
+        lbl_golesvisita_quiniela.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_golesvisita_quiniela.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_golesvisita_quiniela.setText("jLabel33");
+        Resultado_quiniela.getContentPane().add(lbl_golesvisita_quiniela, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 60, -1));
+
+        lbl_nombrelocal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_nombrelocal.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_nombrelocal.setText("jLabel33");
+        Resultado_quiniela.getContentPane().add(lbl_nombrelocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 90, -1));
+
+        lbl_golesvisita_partido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_golesvisita_partido.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_golesvisita_partido.setText("jLabel33");
+        Resultado_quiniela.getContentPane().add(lbl_golesvisita_partido, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 60, -1));
+
+        lbl_goleslocal_quiniela.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_goleslocal_quiniela.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_goleslocal_quiniela.setText("jLabel33");
+        Resultado_quiniela.getContentPane().add(lbl_goleslocal_quiniela, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 60, -1));
+
+        lbl_resultados.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_resultados.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_resultados.setText("jLabel33");
+        Resultado_quiniela.getContentPane().add(lbl_resultados, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 600, 60, -1));
+
+        lbl_goleslocal_partido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_goleslocal_partido.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_goleslocal_partido.setText("jLabel33");
+        Resultado_quiniela.getContentPane().add(lbl_goleslocal_partido, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 60, -1));
+
+        Resultado_quiniela.getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 310, 30));
+
+        lbl_Fondo_Imagen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_Fondo_Imagen.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_Fondo_Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ganadores_quiniela.png"))); // NOI18N
+        Resultado_quiniela.getContentPane().add(lbl_Fondo_Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quinielas de Futbol");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton9.setText("Resultados");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 350, 220, 30));
 
         jbl_fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vs.png"))); // NOI18N
+        getContentPane().add(jbl_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jMenuBar1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jMenuBar1.setPreferredSize(new java.awt.Dimension(105, 40));
@@ -1851,18 +2128,43 @@ public class main extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        setJMenuBar(jMenuBar1);
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/portapapeles.png"))); // NOI18N
+        jMenu4.setText("Listar");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jbl_fondo)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jbl_fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jMenuItem1.setText("Jugador");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem1);
+
+        jMenuItem3.setText("Entrenador");
+        jMenu4.add(jMenuItem3);
+
+        jMenuItem9.setText("Arbitro");
+        jMenu4.add(jMenuItem9);
+
+        jMenuItem10.setText("Club");
+        jMenu4.add(jMenuItem10);
+
+        jMenuItem17.setText("Quiniela");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem17);
+
+        jMenuItem19.setText("Club Jugador");
+        jMenu4.add(jMenuItem19);
+
+        jMenuItem20.setText("Partido");
+        jMenu4.add(jMenuItem20);
+
+        jMenuBar1.add(jMenu4);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -3495,6 +3797,22 @@ public class main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton48ActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+         Resultado_quiniela.setModal(true);
+        Resultado_quiniela.pack();
+        Resultado_quiniela.setLocationRelativeTo(this);
+        Resultado_quiniela.setVisible(true);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -3565,6 +3883,27 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JDialog Eliminar_Entrenador;
     private javax.swing.JDialog Eliminar_Jugador;
     private javax.swing.JDialog Eliminar_Quiniela;
+    private javax.swing.JLabel Jbl_FONDO;
+    private javax.swing.JLabel Jbl_FONDO1;
+    private javax.swing.JLabel Jbl_FONDO2;
+    private javax.swing.JLabel Jbl_FONDO3;
+    private javax.swing.JLabel Jbl_FONDO4;
+    private javax.swing.JLabel Jbl_FONDO5;
+    private javax.swing.JLabel Jbl_FONDO6;
+    private javax.swing.JTable LT_Arbitro;
+    private javax.swing.JTable LT_Club;
+    private javax.swing.JTable LT_Entrenador;
+    private javax.swing.JTable LT_Jugador;
+    private javax.swing.JTable LT_Partidos;
+    private javax.swing.JTable LT_Partidos1;
+    private javax.swing.JTable LT_club_jugador;
+    private javax.swing.JDialog Listar_Arbitro;
+    private javax.swing.JDialog Listar_Club;
+    private javax.swing.JDialog Listar_Clubjugador;
+    private javax.swing.JDialog Listar_Entrenador;
+    private javax.swing.JDialog Listar_Ganadores;
+    private javax.swing.JDialog Listar_Jugador;
+    private javax.swing.JDialog Listar_Partido;
     private javax.swing.JDialog Modificar_Arbitro;
     private javax.swing.JDialog Modificar_Club;
     private javax.swing.JDialog Modificar_Entrenador;
@@ -3587,6 +3926,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JDialog Registro_Jugador;
     private javax.swing.JDialog Registro_Partido;
     private javax.swing.JDialog Registro_Quiniela;
+    private javax.swing.JDialog Resultado_quiniela;
     private javax.swing.JTable TB_arbitros;
     private javax.swing.JTable TB_club;
     private javax.swing.JTable TB_entrenadores;
@@ -3635,10 +3975,12 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem4;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -3672,12 +4014,19 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
@@ -3735,27 +4084,42 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -3823,6 +4187,14 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jbl_IMAGEN_FONDO7;
     private javax.swing.JLabel jbl_IMAGEN_FONDO9;
     private javax.swing.JLabel jbl_fondo;
+    private javax.swing.JLabel lbl_Fondo_Imagen;
+    private javax.swing.JLabel lbl_goleslocal_partido;
+    private javax.swing.JLabel lbl_goleslocal_quiniela;
+    private javax.swing.JLabel lbl_golesvisita_partido;
+    private javax.swing.JLabel lbl_golesvisita_quiniela;
+    private javax.swing.JLabel lbl_nombrelocal;
+    private javax.swing.JLabel lbl_nombrevisita;
+    private javax.swing.JLabel lbl_resultados;
     private javax.swing.JComboBox<String> partido_arbitro1;
     private javax.swing.JComboBox<String> partido_arbitro2;
     private javax.swing.JComboBox<String> partido_arbitro3;
