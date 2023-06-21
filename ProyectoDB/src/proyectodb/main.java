@@ -92,14 +92,14 @@ public class main extends javax.swing.JFrame {
         club_nombre = new javax.swing.JTextField();
         jSeparator15 = new javax.swing.JSeparator();
         jLabel23 = new javax.swing.JLabel();
-        club_id = new javax.swing.JTextField();
         jSeparator16 = new javax.swing.JSeparator();
-        jLabel24 = new javax.swing.JLabel();
+        lbl_id = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         club_entrenador = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         TB_entrenadores = new javax.swing.JTable();
+        jLabel41 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO3 = new javax.swing.JLabel();
         Registro_Quiniela = new javax.swing.JDialog();
         jSeparator23 = new javax.swing.JSeparator();
@@ -111,15 +111,15 @@ public class main extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
-        quiniela_id = new javax.swing.JTextField();
         jSeparator22 = new javax.swing.JSeparator();
-        jLabel35 = new javax.swing.JLabel();
+        NQ_id = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         quiniela_partido = new javax.swing.JComboBox<>();
         quiniela_golesVisita = new javax.swing.JTextField();
         quiniela_golesLocal = new javax.swing.JTextField();
         jScrollPane7 = new javax.swing.JScrollPane();
         TB_partidos = new javax.swing.JTable();
+        jLabel50 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO6 = new javax.swing.JLabel();
         Registro_Partido = new javax.swing.JDialog();
         jLabel47 = new javax.swing.JLabel();
@@ -135,9 +135,8 @@ public class main extends javax.swing.JFrame {
         jLabel30 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        partido_id = new javax.swing.JTextField();
         jSeparator28 = new javax.swing.JSeparator();
-        jLabel43 = new javax.swing.JLabel();
+        lb_partido = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         jSeparator30 = new javax.swing.JSeparator();
@@ -154,6 +153,7 @@ public class main extends javax.swing.JFrame {
         TB_arbitros = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         TB_equipos = new javax.swing.JTable();
+        jLabel51 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO7 = new javax.swing.JLabel();
         Registro_Clubjugador = new javax.swing.JDialog();
         jButton19 = new javax.swing.JButton();
@@ -343,20 +343,25 @@ public class main extends javax.swing.JFrame {
         jScrollPane13 = new javax.swing.JScrollPane();
         LT_Partidos = new javax.swing.JTable();
         Jbl_FONDO5 = new javax.swing.JLabel();
-        Listar_Ganadores = new javax.swing.JDialog();
+        Listar_Quiniela = new javax.swing.JDialog();
         jLabel32 = new javax.swing.JLabel();
         jScrollPane14 = new javax.swing.JScrollPane();
-        LT_Partidos1 = new javax.swing.JTable();
+        LT_Quiniela = new javax.swing.JTable();
         Jbl_FONDO6 = new javax.swing.JLabel();
+        Listar_Ganadores = new javax.swing.JDialog();
+        jLabel33 = new javax.swing.JLabel();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        LT_ganadorQuinielas = new javax.swing.JTable();
+        Jbl_FONDO7 = new javax.swing.JLabel();
         Resultado_quiniela = new javax.swing.JDialog();
-        lbl_nombrevisita = new javax.swing.JLabel();
-        lbl_golesvisita_quiniela = new javax.swing.JLabel();
-        lbl_nombrelocal = new javax.swing.JLabel();
-        lbl_golesvisita_partido = new javax.swing.JLabel();
-        lbl_goleslocal_quiniela = new javax.swing.JLabel();
-        lbl_resultados = new javax.swing.JLabel();
-        lbl_goleslocal_partido = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        NE_visita = new javax.swing.JLabel();
+        GQ_visita = new javax.swing.JLabel();
+        NE_local = new javax.swing.JLabel();
+        GR_visita = new javax.swing.JLabel();
+        GQ_local = new javax.swing.JLabel();
+        Mensaje = new javax.swing.JLabel();
+        GR_local = new javax.swing.JLabel();
+        JQ_id = new javax.swing.JComboBox<>();
         lbl_Fondo_Imagen = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
         jbl_fondo = new javax.swing.JLabel();
@@ -389,6 +394,7 @@ public class main extends javax.swing.JFrame {
         jMenuItem17 = new javax.swing.JMenuItem();
         jMenuItem19 = new javax.swing.JMenuItem();
         jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
 
         Registro_Jugador.setIconImage(null);
         Registro_Jugador.setIconImages(null);
@@ -680,23 +686,11 @@ public class main extends javax.swing.JFrame {
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("ID_entrenador:");
         Registro_Club.getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, -1, -1));
-
-        club_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        club_id.setForeground(new java.awt.Color(255, 255, 255));
-        club_id.setBorder(null);
-        club_id.setOpaque(false);
-        club_id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                club_idActionPerformed(evt);
-            }
-        });
-        Registro_Club.getContentPane().add(club_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
         Registro_Club.getContentPane().add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
 
-        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("ID:");
-        Registro_Club.getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, -1));
+        lbl_id.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lbl_id.setForeground(new java.awt.Color(255, 255, 255));
+        Registro_Club.getContentPane().add(lbl_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
 
         jLabel25.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
@@ -738,6 +732,11 @@ public class main extends javax.swing.JFrame {
         jScrollPane1.setViewportView(TB_entrenadores);
 
         Registro_Club.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 350, 550));
+
+        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel41.setText("ID:");
+        Registro_Club.getContentPane().add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, -1));
 
         jbl_IMAGEN_FONDO3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO3.setForeground(new java.awt.Color(255, 255, 255));
@@ -794,23 +793,11 @@ public class main extends javax.swing.JFrame {
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText("ID Partido:");
         Registro_Quiniela.getContentPane().add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 270, -1, -1));
-
-        quiniela_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        quiniela_id.setForeground(new java.awt.Color(255, 255, 255));
-        quiniela_id.setBorder(null);
-        quiniela_id.setOpaque(false);
-        quiniela_id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quiniela_idActionPerformed(evt);
-            }
-        });
-        Registro_Quiniela.getContentPane().add(quiniela_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 220, 20));
         Registro_Quiniela.getContentPane().add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 220, 220, 10));
 
-        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel35.setText("ID:");
-        Registro_Quiniela.getContentPane().add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, -1));
+        NQ_id.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NQ_id.setForeground(new java.awt.Color(255, 255, 255));
+        Registro_Quiniela.getContentPane().add(NQ_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 210, 20));
 
         jLabel36.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
@@ -848,6 +835,11 @@ public class main extends javax.swing.JFrame {
         jScrollPane7.setViewportView(TB_partidos);
 
         Registro_Quiniela.getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 400, 560));
+
+        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel50.setText("ID:");
+        Registro_Quiniela.getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, -1));
 
         jbl_IMAGEN_FONDO6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO6.setForeground(new java.awt.Color(255, 255, 255));
@@ -911,23 +903,11 @@ public class main extends javax.swing.JFrame {
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setText("ID Equipo Local:");
         Registro_Partido.getContentPane().add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 120, -1));
-
-        partido_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        partido_id.setForeground(new java.awt.Color(255, 255, 255));
-        partido_id.setBorder(null);
-        partido_id.setOpaque(false);
-        partido_id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                partido_idActionPerformed(evt);
-            }
-        });
-        Registro_Partido.getContentPane().add(partido_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 220, 30));
         Registro_Partido.getContentPane().add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 220, 10));
 
-        jLabel43.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel43.setText("ID:");
-        Registro_Partido.getContentPane().add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, -1, -1));
+        lb_partido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lb_partido.setForeground(new java.awt.Color(255, 255, 255));
+        Registro_Partido.getContentPane().add(lb_partido, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 220, 20));
 
         jLabel44.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
@@ -1005,6 +985,11 @@ public class main extends javax.swing.JFrame {
         jScrollPane2.setViewportView(TB_equipos);
 
         Registro_Partido.getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 310, 260));
+
+        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel51.setText("ID:");
+        Registro_Partido.getContentPane().add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, -1, -1));
 
         jbl_IMAGEN_FONDO7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO7.setForeground(new java.awt.Color(255, 255, 255));
@@ -1868,14 +1853,14 @@ public class main extends javax.swing.JFrame {
         Jbl_FONDO5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
         Listar_Partido.getContentPane().add(Jbl_FONDO5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
 
-        Listar_Ganadores.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Listar_Quiniela.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel32.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel32.setText("Lista de Ganadores Quiniela");
-        Listar_Ganadores.getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, -1, 70));
+        jLabel32.setText("Lista de Quiniela");
+        Listar_Quiniela.getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, 70));
 
-        LT_Partidos1.setModel(new javax.swing.table.DefaultTableModel(
+        LT_Quiniela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -1883,53 +1868,82 @@ public class main extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        LT_Partidos1.setEnabled(false);
-        LT_Partidos1.setOpaque(false);
-        jScrollPane14.setViewportView(LT_Partidos1);
+        LT_Quiniela.setEnabled(false);
+        LT_Quiniela.setOpaque(false);
+        jScrollPane14.setViewportView(LT_Quiniela);
 
-        Listar_Ganadores.getContentPane().add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+        Listar_Quiniela.getContentPane().add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
 
         Jbl_FONDO6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
-        Listar_Ganadores.getContentPane().add(Jbl_FONDO6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+        Listar_Quiniela.getContentPane().add(Jbl_FONDO6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+
+        Listar_Ganadores.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel33.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText("Lista de Quiniela");
+        Listar_Ganadores.getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, 70));
+
+        LT_ganadorQuinielas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        LT_ganadorQuinielas.setEnabled(false);
+        LT_ganadorQuinielas.setOpaque(false);
+        jScrollPane15.setViewportView(LT_ganadorQuinielas);
+
+        Listar_Ganadores.getContentPane().add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Jbl_FONDO7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
+        Listar_Ganadores.getContentPane().add(Jbl_FONDO7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
 
         Resultado_quiniela.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_nombrevisita.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_nombrevisita.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_nombrevisita.setText("jLabel33");
-        Resultado_quiniela.getContentPane().add(lbl_nombrevisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 90, -1));
+        NE_visita.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NE_visita.setForeground(new java.awt.Color(255, 255, 255));
+        NE_visita.setText("Visita");
+        Resultado_quiniela.getContentPane().add(NE_visita, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 90, -1));
 
-        lbl_golesvisita_quiniela.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_golesvisita_quiniela.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_golesvisita_quiniela.setText("jLabel33");
-        Resultado_quiniela.getContentPane().add(lbl_golesvisita_quiniela, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 60, -1));
+        GQ_visita.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GQ_visita.setForeground(new java.awt.Color(255, 255, 255));
+        GQ_visita.setText("0");
+        Resultado_quiniela.getContentPane().add(GQ_visita, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 60, -1));
 
-        lbl_nombrelocal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_nombrelocal.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_nombrelocal.setText("jLabel33");
-        Resultado_quiniela.getContentPane().add(lbl_nombrelocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 90, -1));
+        NE_local.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        NE_local.setForeground(new java.awt.Color(255, 255, 255));
+        NE_local.setText("Local");
+        Resultado_quiniela.getContentPane().add(NE_local, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 90, -1));
 
-        lbl_golesvisita_partido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_golesvisita_partido.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_golesvisita_partido.setText("jLabel33");
-        Resultado_quiniela.getContentPane().add(lbl_golesvisita_partido, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 60, -1));
+        GR_visita.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GR_visita.setForeground(new java.awt.Color(255, 255, 255));
+        GR_visita.setText("0");
+        Resultado_quiniela.getContentPane().add(GR_visita, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, 60, -1));
 
-        lbl_goleslocal_quiniela.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_goleslocal_quiniela.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_goleslocal_quiniela.setText("jLabel33");
-        Resultado_quiniela.getContentPane().add(lbl_goleslocal_quiniela, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 60, -1));
+        GQ_local.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GQ_local.setForeground(new java.awt.Color(255, 255, 255));
+        GQ_local.setText("0");
+        Resultado_quiniela.getContentPane().add(GQ_local, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 60, -1));
 
-        lbl_resultados.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_resultados.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_resultados.setText("jLabel33");
-        Resultado_quiniela.getContentPane().add(lbl_resultados, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 600, 60, -1));
+        Mensaje.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Mensaje.setForeground(new java.awt.Color(255, 255, 255));
+        Mensaje.setText("Mensaje...");
+        Resultado_quiniela.getContentPane().add(Mensaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 600, 280, -1));
 
-        lbl_goleslocal_partido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lbl_goleslocal_partido.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_goleslocal_partido.setText("jLabel33");
-        Resultado_quiniela.getContentPane().add(lbl_goleslocal_partido, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 60, -1));
+        GR_local.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GR_local.setForeground(new java.awt.Color(255, 255, 255));
+        GR_local.setText("0");
+        Resultado_quiniela.getContentPane().add(GR_local, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 60, -1));
 
-        Resultado_quiniela.getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 310, 30));
+        JQ_id.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                JQ_idItemStateChanged(evt);
+            }
+        });
+        Resultado_quiniela.getContentPane().add(JQ_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 310, 30));
 
         lbl_Fondo_Imagen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_Fondo_Imagen.setForeground(new java.awt.Color(255, 255, 255));
@@ -2140,12 +2154,27 @@ public class main extends javax.swing.JFrame {
         jMenu4.add(jMenuItem1);
 
         jMenuItem3.setText("Entrenador");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem3);
 
         jMenuItem9.setText("Arbitro");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem9);
 
         jMenuItem10.setText("Club");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem10);
 
         jMenuItem17.setText("Quiniela");
@@ -2157,10 +2186,28 @@ public class main extends javax.swing.JFrame {
         jMenu4.add(jMenuItem17);
 
         jMenuItem19.setText("Club Jugador");
+        jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem19ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem19);
 
         jMenuItem20.setText("Partido");
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem20ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem20);
+
+        jMenuItem21.setText("Ganadores");
+        jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem21ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem21);
 
         jMenuBar1.add(jMenu4);
 
@@ -2237,7 +2284,26 @@ public class main extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+//
 
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("quiniela");
+
+            // Obtener el último ID de la tabla quiniela
+            Document lastQuiniela = collection.find().sort(new Document("id", -1)).first();
+            String lastId = lastQuiniela != null ? lastQuiniela.getString("id") : "Q0";
+
+            // Obtener el número de ID y aumentarlo en 1
+            int lastIdNumber = Integer.parseInt(lastId.substring(1));
+            String newId = "Q" + (lastIdNumber + 1);
+
+            NQ_id.setText(newId);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+//
         Registro_Quiniela.setModal(true);
         Registro_Quiniela.pack();
         Registro_Quiniela.setLocationRelativeTo(this);
@@ -2419,44 +2485,60 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_arbitro_idActionPerformed
 
-    private void club_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_club_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_club_idActionPerformed
-
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+
         String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
         MongoClientURI uri = new MongoClientURI(connectionString);
         try (MongoClient mongoClient = new MongoClient(uri)) {
-            if (club_id.getText().equals("") || club_nombre.getText().equals("")) {
-                JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
-                club_id.setText("");
+            if (club_nombre.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Campo vacío, ingrese la información en todos los campos");
                 club_nombre.setText("");
             } else {
                 MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
                 MongoCollection<Document> collection = database.getCollection("clubes");
-                String identidad = club_id.getText();
+
+                // Obtener la cantidad de registros en la tabla clubes
+                long clubesCount = collection.countDocuments();
+
+                // Generar el valor de identidad del club
+                String identidad = "C" + (clubesCount + 1);
+
                 String nombre = club_nombre.getText();
-                String entrenadorSeleccionado = club_entrenador.getSelectedItem().toString(); // Obtener el valor seleccionado del JComboBox como String
+                String entrenadorSeleccionado = club_entrenador.getSelectedItem().toString();
                 Document club = new Document()
                         .append("identidad", identidad)
                         .append("nombre", nombre)
-                        .append("entrenador", entrenadorSeleccionado); // Agregar el valor seleccionado al documento del club
+                        .append("entrenador", entrenadorSeleccionado);
                 collection.insertOne(club);
                 JOptionPane.showMessageDialog(null, "Club creado correctamente.");
                 System.out.println("Clubes existentes:");
                 for (Document doc : collection.find()) {
                     System.out.println(doc.toJson());
                 }
-                club_id.setText("");
+                lbl_id.setText("");
                 club_nombre.setText("");
             }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
-    }//GEN-LAST:event_jButton8ActionPerformed
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
 
-    private void partido_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_partido_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_partido_idActionPerformed
+            // Obtener el último ID de la tabla clubes
+            Document lastClub = collection.find().sort(new Document("identidad", -1)).first();
+            String lastId = lastClub != null ? lastClub.getString("identidad") : "C0";
+
+            // Obtener el número de ID y aumentarlo en 1
+            int lastIdNumber = Integer.parseInt(lastId.substring(1));
+            String newId = "C" + (lastIdNumber + 1);
+
+            lbl_id.setText(newId);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
@@ -2631,6 +2713,24 @@ public class main extends javax.swing.JFrame {
             // Establecer el modelo de tabla en la JTable
             TB_entrenadores.setModel(tableModel);
 
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        // id
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+
+            // Obtener el último ID de la tabla clubes
+            Document lastClub = collection.find().sort(new Document("identidad", -1)).first();
+            String lastId = lastClub != null ? lastClub.getString("identidad") : "C0";
+
+            // Obtener el número de ID y aumentarlo en 1
+            int lastIdNumber = Integer.parseInt(lastId.substring(1));
+            String newId = "C" + (lastIdNumber + 1);
+
+            lbl_id.setText(newId);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -3126,6 +3226,24 @@ public class main extends javax.swing.JFrame {
         }
 
 //
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("partido");
+
+            // Obtener el último ID de la tabla partido
+            Document lastPartido = collection.find().sort(new Document("id", -1)).first();
+            String lastId = lastPartido != null ? lastPartido.getString("id") : "P0";
+
+            // Obtener el número de ID y aumentarlo en 1
+            int lastIdNumber = Integer.parseInt(lastId.substring(1));
+            String newId = "P" + (lastIdNumber + 1);
+
+            lb_partido.setText(newId);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+//
         Registro_Partido.setModal(true);
         Registro_Partido.pack();
         Registro_Partido.setLocationRelativeTo(this);
@@ -3136,15 +3254,23 @@ public class main extends javax.swing.JFrame {
         String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
         MongoClientURI uri = new MongoClientURI(connectionString);
         try (MongoClient mongoClient = new MongoClient(uri)) {
-            if (partido_id.getText().equals("") || partido_golesVisita.getText().equals("") || partido_golesLocal.getText().equals("") || partido_date.getDate() == null) {
+            if (partido_golesVisita.getText().equals("") || partido_golesLocal.getText().equals("") || partido_date.getDate() == null) {
                 JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
-                partido_id.setText("");
                 partido_golesVisita.setText("");
                 partido_golesLocal.setText("");
             } else {
                 MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
                 MongoCollection<Document> collection = database.getCollection("partido");
-                String id = partido_id.getText();
+
+                // Obtener el último ID de la tabla partido
+                Document lastPartido = collection.find().sort(new Document("id", -1)).first();
+                String lastId = lastPartido != null ? lastPartido.getString("id") : "P0";
+
+                // Obtener el número de ID y aumentarlo en 1
+                int lastIdNumber = Integer.parseInt(lastId.substring(1));
+                String newId = "P" + (lastIdNumber + 1);
+
+                String id = newId;
                 int golesVisita = Integer.parseInt(partido_golesVisita.getText());
                 int golesLocal = Integer.parseInt(partido_golesLocal.getText());
                 String local = partido_local.getSelectedItem().toString();
@@ -3171,39 +3297,57 @@ public class main extends javax.swing.JFrame {
                 for (Document doc : collection.find()) {
                     System.out.println(doc.toJson());
                 }
-                partido_id.setText("");
                 partido_golesVisita.setText("");
                 partido_golesLocal.setText("");
                 partido_date.setDate(null);
             }
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
-    }//GEN-LAST:event_jButton16ActionPerformed
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("partido");
 
-    private void quiniela_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quiniela_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_quiniela_idActionPerformed
+            // Obtener el último ID de la tabla partido
+            Document lastPartido = collection.find().sort(new Document("id", -1)).first();
+            String lastId = lastPartido != null ? lastPartido.getString("id") : "P0";
+
+            // Obtener el número de ID y aumentarlo en 1
+            int lastIdNumber = Integer.parseInt(lastId.substring(1));
+            String newId = "P" + (lastIdNumber + 1);
+
+            lb_partido.setText(newId);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
         MongoClientURI uri = new MongoClientURI(connectionString);
         try (MongoClient mongoClient = new MongoClient(uri)) {
-            if (quiniela_id.getText().equals("") || quiniela_monto.getText().equals("") || quiniela_golesLocal.getText().equals("") || quiniela_golesVisita.getText().equals("")) {
+            if (quiniela_monto.getText().equals("") || quiniela_golesLocal.getText().equals("") || quiniela_golesVisita.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Campos vacíos, ingrese la información en todos los campos");
-                quiniela_id.setText("");
                 quiniela_monto.setText("");
                 quiniela_golesLocal.setText("");
                 quiniela_golesVisita.setText("");
             } else {
                 MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
                 MongoCollection<Document> collection = database.getCollection("quiniela");
-                String id = quiniela_id.getText();
+
+                // Obtener el tamaño actual de la tabla quiniela
+                long quinielaCount = collection.countDocuments();
+
+                // Generar el nuevo ID de la quiniela
+                String newId = "Q" + (quinielaCount + 1);
+
                 double monto = Double.parseDouble(quiniela_monto.getText());
                 int golesLocal = Integer.parseInt(quiniela_golesLocal.getText());
                 int golesVisita = Integer.parseInt(quiniela_golesVisita.getText());
                 String partidoSeleccionado = quiniela_partido.getSelectedItem().toString();
                 Document quiniela = new Document()
-                        .append("id", id)
+                        .append("id", newId)
                         .append("monto", monto)
                         .append("golesLocal", golesLocal)
                         .append("golesVisita", golesVisita)
@@ -3214,11 +3358,29 @@ public class main extends javax.swing.JFrame {
                 for (Document doc : collection.find()) {
                     System.out.println(doc.toJson());
                 }
-                quiniela_id.setText("");
                 quiniela_monto.setText("");
                 quiniela_golesLocal.setText("");
                 quiniela_golesVisita.setText("");
+
             }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("quiniela");
+
+            // Obtener el último ID de la tabla quiniela
+            Document lastQuiniela = collection.find().sort(new Document("id", -1)).first();
+            String lastId = lastQuiniela != null ? lastQuiniela.getString("id") : "Q0";
+
+            // Obtener el número de ID y aumentarlo en 1
+            int lastIdNumber = Integer.parseInt(lastId.substring(1));
+            String newId = "Q" + (lastIdNumber + 1);
+
+            NQ_id.setText(newId);
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
 
     }//GEN-LAST:event_jButton14ActionPerformed
@@ -3798,20 +3960,444 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton48ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("jugadores");
+
+            // Obtener todos los documentos de la colección "jugador"
+            List<Document> jugadores = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("Identidad");
+            tableModel.addColumn("Nombre");
+            tableModel.addColumn("Fecha de Nacimiento");
+            tableModel.addColumn("Peso Base");
+            tableModel.addColumn("Peso Extra");
+
+            // Recorrer la lista de jugadores y agregar filas al modelo de tabla
+            for (Document jugador : jugadores) {
+                String identidad = jugador.getString("identidad");
+                String nombre = jugador.getString("nombre");
+                String fechaNacimiento = jugador.getString("fechaNacimiento");
+                double pesoBase = jugador.getDouble("pesoBase");
+                double pesoExtra = jugador.getDouble("pesoExtra");
+                tableModel.addRow(new Object[]{identidad, nombre, fechaNacimiento, pesoBase, pesoExtra});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            LT_Jugador.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Listar_Jugador.setModal(true);
+        Listar_Jugador.pack();
+        Listar_Jugador.setLocationRelativeTo(this);
+        Listar_Jugador.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
-        // TODO add your handling code here:
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("quiniela");
+
+            // Obtener todos los documentos de la colección "quiniela"
+            List<Document> quinielas = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("ID");
+            tableModel.addColumn("Monto");
+            tableModel.addColumn("Goles Local");
+            tableModel.addColumn("Goles Visita");
+            tableModel.addColumn("Partido");
+
+            // Recorrer la lista de quinielas y agregar filas al modelo de tabla
+            for (Document quiniela : quinielas) {
+                String id = quiniela.getString("id");
+                double monto = quiniela.getDouble("monto");
+                int golesLocal = quiniela.getInteger("golesLocal");
+                int golesVisita = quiniela.getInteger("golesVisita");
+                String partido = quiniela.getString("partido");
+                tableModel.addRow(new Object[]{id, monto, golesLocal, golesVisita, partido});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            LT_Quiniela.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Listar_Quiniela.setModal(true);
+        Listar_Quiniela.pack();
+        Listar_Quiniela.setLocationRelativeTo(this);
+        Listar_Quiniela.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem17ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-         Resultado_quiniela.setModal(true);
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("quiniela");
+            List<String> identidades = new ArrayList<>();
+
+            for (Document doc : collection.find()) {
+                String identidad = doc.getString("id");
+                identidades.add(identidad);
+            }
+
+            DefaultComboBoxModel<String> comboBoxModel = new DefaultComboBoxModel<>(identidades.toArray(new String[0]));
+            JQ_id.setModel(comboBoxModel);
+
+            // Resto del código...
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        Resultado_quiniela.setModal(true);
         Resultado_quiniela.pack();
         Resultado_quiniela.setLocationRelativeTo(this);
         Resultado_quiniela.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("entrenadores");
+
+            // Obtener todos los documentos de la colección "entrenador"
+            List<Document> entrenadores = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("Identidad");
+            tableModel.addColumn("Nombre");
+            tableModel.addColumn("Fecha de Nacimiento");
+            tableModel.addColumn("Peso Base");
+            tableModel.addColumn("Peso Extra");
+
+            // Recorrer la lista de entrenadores y agregar filas al modelo de tabla
+            for (Document entrenador : entrenadores) {
+                String identidad = entrenador.getString("identidad");
+                String nombre = entrenador.getString("nombre");
+                String fechaNacimiento = entrenador.getString("fechaNacimiento");
+                double pesoBase = entrenador.getDouble("pesoBase");
+                double pesoExtra = entrenador.getDouble("pesoExtra");
+                tableModel.addRow(new Object[]{identidad, nombre, fechaNacimiento, pesoBase, pesoExtra});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            LT_Entrenador.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Listar_Entrenador.setModal(true);
+        Listar_Entrenador.pack();
+        Listar_Entrenador.setLocationRelativeTo(this);
+        Listar_Entrenador.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("arbitro");
+
+            // Obtener todos los documentos de la colección "arbitro"
+            List<Document> arbitros = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("Identidad");
+            tableModel.addColumn("Nombre");
+            tableModel.addColumn("Fecha de Nacimiento");
+            tableModel.addColumn("Peso Base");
+            tableModel.addColumn("Peso Extra");
+
+            // Recorrer la lista de arbitros y agregar filas al modelo de tabla
+            for (Document arbitro : arbitros) {
+                String identidad = arbitro.getString("identidad");
+                String nombre = arbitro.getString("nombre");
+                String fechaNacimiento = arbitro.getString("fechaNacimiento");
+                double pesoBase = arbitro.getDouble("pesoBase");
+                double pesoExtra = arbitro.getDouble("pesoExtra");
+                tableModel.addRow(new Object[]{identidad, nombre, fechaNacimiento, pesoBase, pesoExtra});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            LT_Arbitro.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Listar_Arbitro.setModal(true);
+        Listar_Arbitro.pack();
+        Listar_Arbitro.setLocationRelativeTo(this);
+        Listar_Arbitro.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+
+            // Obtener todos los documentos de la colección "clubes"
+            List<Document> clubes = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("ID");
+            tableModel.addColumn("Nombre");
+            tableModel.addColumn("Entrenador");
+
+            // Recorrer la lista de clubes y agregar filas al modelo de tabla
+            for (Document club : clubes) {
+                String id = club.getString("identidad");
+                String nombre = club.getString("nombre");
+                String entrenador = club.getString("entrenador");
+                tableModel.addRow(new Object[]{id, nombre, entrenador});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            LT_Club.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Listar_Club.setModal(true);
+        Listar_Club.pack();
+        Listar_Club.setLocationRelativeTo(this);
+        Listar_Club.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
+
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("equipo_jugador");
+
+            // Obtener todos los documentos de la colección "equipo_jugador"
+            List<Document> clubJugadores = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("Club");
+            tableModel.addColumn("Jugador");
+
+            // Recorrer la lista de clubJugadores y agregar filas al modelo de tabla
+            for (Document clubJugador : clubJugadores) {
+                String club = clubJugador.getString("club");
+                String jugador = clubJugador.getString("jugador");
+                tableModel.addRow(new Object[]{club, jugador});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            LT_club_jugador.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Listar_Clubjugador.setModal(true);
+        Listar_Clubjugador.pack();
+        Listar_Clubjugador.setLocationRelativeTo(this);
+        Listar_Clubjugador.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem19ActionPerformed
+
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("partido");
+
+            // Obtener todos los documentos de la colección "partido"
+            List<Document> partidos = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("ID");
+            tableModel.addColumn("Goles Local");
+            tableModel.addColumn("Goles Visita");
+            tableModel.addColumn("Local");
+            tableModel.addColumn("Visita");
+            tableModel.addColumn("Árbitro 1");
+            tableModel.addColumn("Árbitro 2");
+            tableModel.addColumn("Árbitro 3");
+            tableModel.addColumn("Fecha de Partido");
+
+            // Recorrer la lista de partidos y agregar filas al modelo de tabla
+            for (Document partido : partidos) {
+                String id = partido.getString("id");
+                int golesLocal = partido.getInteger("golesLocal");
+                int golesVisita = partido.getInteger("golesVisita");
+                String local = partido.getString("local");
+                String visita = partido.getString("visita");
+                String arbitro1 = partido.getString("arbitro1");
+                String arbitro2 = partido.getString("arbitro2");
+                String arbitro3 = partido.getString("arbitro3");
+                String fechaPartido = partido.getString("fechaPartido");
+
+                tableModel.addRow(new Object[]{id, golesLocal, golesVisita, local, visita, arbitro1, arbitro2, arbitro3, fechaPartido});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            LT_Partidos.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Listar_Partido.setModal(true);
+        Listar_Partido.pack();
+        Listar_Partido.setLocationRelativeTo(this);
+        Listar_Partido.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
+
+    private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("ganadores_quiniela");
+
+            // Obtener todos los documentos de la colección "ganadores_quiniela"
+            List<Document> ganadores = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("ID");
+            tableModel.addColumn("Nombre");
+            tableModel.addColumn("Monto Ganado");
+
+            // Recorrer la lista de ganadores y agregar filas al modelo de tabla
+            for (Document ganador : ganadores) {
+                String id = ganador.getString("id");
+                String nombre = ganador.getString("nombre");
+                double montoGanado = ganador.getDouble("montoGanado");
+
+                tableModel.addRow(new Object[]{id, nombre, montoGanado});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            LT_ganadorQuinielas.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        Listar_Ganadores.setModal(true);
+        Listar_Ganadores.pack();
+        Listar_Ganadores.setLocationRelativeTo(this);
+        Listar_Ganadores.setVisible(true);
+    }//GEN-LAST:event_jMenuItem21ActionPerformed
+
+    private void JQ_idItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_JQ_idItemStateChanged
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+
+            // Obtener datos de la tabla quiniela
+            MongoCollection<Document> quinielaCollection = database.getCollection("quiniela");
+            String quinielaId = JQ_id.getSelectedItem() + "";
+            Document quinielaQuery = new Document("id", quinielaId);
+            Document quiniela = quinielaCollection.find(quinielaQuery).first();
+            if (quiniela != null) {
+                int golesLocal = quiniela.getInteger("golesLocal");
+                int golesVisita = quiniela.getInteger("golesVisita");
+                double montoQuiniela = quiniela.getDouble("monto");
+
+                GQ_local.setText(Integer.toString(golesLocal));
+                GQ_visita.setText(Integer.toString(golesVisita));
+
+                // Obtener datos del partido asociado a la quiniela
+                String partidoId = quiniela.getString("partido");
+                MongoCollection<Document> partidoCollection = database.getCollection("partido");
+                Document partidoQuery = new Document("id", partidoId);
+                Document partido = partidoCollection.find(partidoQuery).first();
+                if (partido != null) {
+                    int golesLocalPartido = partido.getInteger("golesLocal");
+                    int golesVisitaPartido = partido.getInteger("golesVisita");
+                    String local = partido.getString("local");
+                    String visita = partido.getString("visita");
+
+                    GR_local.setText(Integer.toString(golesLocalPartido));
+                    GR_visita.setText(Integer.toString(golesVisitaPartido));
+                    NE_local.setText(local);
+                    NE_visita.setText(visita);
+
+                    if (golesLocal == golesLocalPartido && golesVisita == golesVisitaPartido) {
+                        // Obtener datos de la tabla ganadores_quiniela
+                        MongoCollection<Document> ganadoresQuinielaCollection = database.getCollection("ganadores_quiniela");
+                        long ganadoresCount = ganadoresQuinielaCollection.countDocuments();
+
+                        // Obtener el nombre de la persona ganadora
+                        String nombreGanador = quiniela.getString("id");
+
+                        // Crear nuevo documento de ganador_quiniela
+                        Document ganadorQuiniela = new Document();
+                        ganadorQuiniela.append("id", nombreGanador);
+                        ganadorQuiniela.append("nombre", nombreGanador);
+                        double montoGanado = montoQuiniela * 10;
+                        ganadorQuiniela.append("montoGanado", montoGanado);
+
+                        // Insertar documento en la tabla ganadores_quiniela
+                        ganadoresQuinielaCollection.insertOne(ganadorQuiniela);
+
+                        // Eliminar la quiniela registrada de la tabla quiniela
+                        quinielaCollection.deleteOne(quinielaQuery);
+
+                        Mensaje.setText("¡Felicidades, " + nombreGanador + ", ganaste!");
+                    } else {
+                        Mensaje.setText("!Gracias por participar!");
+                    }
+                }
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+    }//GEN-LAST:event_JQ_idItemStateChanged
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -3883,6 +4469,11 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JDialog Eliminar_Entrenador;
     private javax.swing.JDialog Eliminar_Jugador;
     private javax.swing.JDialog Eliminar_Quiniela;
+    private javax.swing.JLabel GQ_local;
+    private javax.swing.JLabel GQ_visita;
+    private javax.swing.JLabel GR_local;
+    private javax.swing.JLabel GR_visita;
+    private javax.swing.JComboBox<String> JQ_id;
     private javax.swing.JLabel Jbl_FONDO;
     private javax.swing.JLabel Jbl_FONDO1;
     private javax.swing.JLabel Jbl_FONDO2;
@@ -3890,13 +4481,15 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel Jbl_FONDO4;
     private javax.swing.JLabel Jbl_FONDO5;
     private javax.swing.JLabel Jbl_FONDO6;
+    private javax.swing.JLabel Jbl_FONDO7;
     private javax.swing.JTable LT_Arbitro;
     private javax.swing.JTable LT_Club;
     private javax.swing.JTable LT_Entrenador;
     private javax.swing.JTable LT_Jugador;
     private javax.swing.JTable LT_Partidos;
-    private javax.swing.JTable LT_Partidos1;
+    private javax.swing.JTable LT_Quiniela;
     private javax.swing.JTable LT_club_jugador;
+    private javax.swing.JTable LT_ganadorQuinielas;
     private javax.swing.JDialog Listar_Arbitro;
     private javax.swing.JDialog Listar_Club;
     private javax.swing.JDialog Listar_Clubjugador;
@@ -3904,11 +4497,16 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JDialog Listar_Ganadores;
     private javax.swing.JDialog Listar_Jugador;
     private javax.swing.JDialog Listar_Partido;
+    private javax.swing.JDialog Listar_Quiniela;
+    private javax.swing.JLabel Mensaje;
     private javax.swing.JDialog Modificar_Arbitro;
     private javax.swing.JDialog Modificar_Club;
     private javax.swing.JDialog Modificar_Entrenador;
     private javax.swing.JDialog Modificar_Jugador;
     private javax.swing.JDialog Modificar_Quiniela;
+    private javax.swing.JLabel NE_local;
+    private javax.swing.JLabel NE_visita;
+    private javax.swing.JLabel NQ_id;
     private com.toedter.calendar.JDateChooser PM_date;
     private javax.swing.JComboBox<String> PM_id;
     private javax.swing.JTextField PM_nombre;
@@ -3939,7 +4537,6 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JTextField arbitro_peso;
     private javax.swing.JTextField arbitro_pesoExtra;
     private javax.swing.JComboBox<String> club_entrenador;
-    private javax.swing.JTextField club_id;
     private javax.swing.JTextField club_nombre;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton13;
@@ -3980,7 +4577,6 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem3;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem4;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -4017,7 +4613,6 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
@@ -4027,16 +4622,16 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
@@ -4044,6 +4639,8 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
@@ -4099,6 +4696,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
@@ -4112,6 +4710,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -4187,21 +4786,15 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jbl_IMAGEN_FONDO7;
     private javax.swing.JLabel jbl_IMAGEN_FONDO9;
     private javax.swing.JLabel jbl_fondo;
+    private javax.swing.JLabel lb_partido;
     private javax.swing.JLabel lbl_Fondo_Imagen;
-    private javax.swing.JLabel lbl_goleslocal_partido;
-    private javax.swing.JLabel lbl_goleslocal_quiniela;
-    private javax.swing.JLabel lbl_golesvisita_partido;
-    private javax.swing.JLabel lbl_golesvisita_quiniela;
-    private javax.swing.JLabel lbl_nombrelocal;
-    private javax.swing.JLabel lbl_nombrevisita;
-    private javax.swing.JLabel lbl_resultados;
+    private javax.swing.JLabel lbl_id;
     private javax.swing.JComboBox<String> partido_arbitro1;
     private javax.swing.JComboBox<String> partido_arbitro2;
     private javax.swing.JComboBox<String> partido_arbitro3;
     private com.toedter.calendar.JDateChooser partido_date;
     private javax.swing.JTextField partido_golesLocal;
     private javax.swing.JTextField partido_golesVisita;
-    private javax.swing.JTextField partido_id;
     private javax.swing.JComboBox<String> partido_local;
     private javax.swing.JComboBox<String> partido_visita;
     private com.toedter.calendar.JDateChooser player_date;
@@ -4211,7 +4804,6 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JTextField player_peso;
     private javax.swing.JTextField quiniela_golesLocal;
     private javax.swing.JTextField quiniela_golesVisita;
-    private javax.swing.JTextField quiniela_id;
     private javax.swing.JTextField quiniela_monto;
     private javax.swing.JComboBox<String> quiniela_partido;
     // End of variables declaration//GEN-END:variables
