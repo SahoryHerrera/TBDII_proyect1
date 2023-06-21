@@ -16,6 +16,7 @@ import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
+import javax.swing.table.DefaultTableModel;
 
 public class main extends javax.swing.JFrame {
 
@@ -98,7 +99,7 @@ public class main extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         club_entrenador = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TB_entrenadores = new javax.swing.JTable();
         jbl_IMAGEN_FONDO3 = new javax.swing.JLabel();
         Registro_Quiniela = new javax.swing.JDialog();
         jSeparator23 = new javax.swing.JSeparator();
@@ -117,6 +118,8 @@ public class main extends javax.swing.JFrame {
         quiniela_partido = new javax.swing.JComboBox<>();
         quiniela_golesVisita = new javax.swing.JTextField();
         quiniela_golesLocal = new javax.swing.JTextField();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        TB_partidos = new javax.swing.JTable();
         jbl_IMAGEN_FONDO6 = new javax.swing.JLabel();
         Registro_Partido = new javax.swing.JDialog();
         jLabel47 = new javax.swing.JLabel();
@@ -148,9 +151,9 @@ public class main extends javax.swing.JFrame {
         partido_arbitro1 = new javax.swing.JComboBox<>();
         partido_arbitro2 = new javax.swing.JComboBox<>();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        TB_arbitros = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        TB_equipos = new javax.swing.JTable();
         jbl_IMAGEN_FONDO7 = new javax.swing.JLabel();
         Registro_Clubjugador = new javax.swing.JDialog();
         jButton19 = new javax.swing.JButton();
@@ -163,9 +166,9 @@ public class main extends javax.swing.JFrame {
         CJ_club = new javax.swing.JComboBox<>();
         CJ_player = new javax.swing.JComboBox<>();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTable5 = new javax.swing.JTable();
+        TB_jugadores = new javax.swing.JTable();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        TB_club = new javax.swing.JTable();
         jbl_IMAGEN_FONDO9 = new javax.swing.JLabel();
         Modificar_Jugador = new javax.swing.JDialog();
         jButton21 = new javax.swing.JButton();
@@ -654,12 +657,9 @@ public class main extends javax.swing.JFrame {
         club_entrenador.setToolTipText("");
         Registro_Club.getContentPane().add(club_entrenador, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 200, -1));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TB_entrenadores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Id", "Nombre`"
@@ -680,7 +680,8 @@ public class main extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        TB_entrenadores.setEnabled(false);
+        jScrollPane1.setViewportView(TB_entrenadores);
 
         Registro_Club.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 350, 550));
 
@@ -765,6 +766,34 @@ public class main extends javax.swing.JFrame {
         Registro_Quiniela.getContentPane().add(quiniela_partido, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 220, -1));
         Registro_Quiniela.getContentPane().add(quiniela_golesVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 410, 220, -1));
         Registro_Quiniela.getContentPane().add(quiniela_golesLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 370, 220, -1));
+
+        TB_partidos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Local", "Visita"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TB_partidos.setEnabled(false);
+        jScrollPane7.setViewportView(TB_partidos);
+
+        Registro_Quiniela.getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 400, 560));
 
         jbl_IMAGEN_FONDO6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO6.setForeground(new java.awt.Color(255, 255, 255));
@@ -880,33 +909,46 @@ public class main extends javax.swing.JFrame {
 
         Registro_Partido.getContentPane().add(partido_arbitro2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, 220, -1));
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        TB_arbitros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2"
             }
-        ));
-        jScrollPane3.setViewportView(jTable3);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TB_arbitros.setEnabled(false);
+        jScrollPane3.setViewportView(TB_arbitros);
 
         Registro_Partido.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 310, 250));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        TB_equipos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2"
             }
-        ));
-        jScrollPane2.setViewportView(jTable2);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TB_equipos.setEnabled(false);
+        jScrollPane2.setViewportView(TB_equipos);
 
         Registro_Partido.getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 310, 260));
 
@@ -954,33 +996,37 @@ public class main extends javax.swing.JFrame {
 
         Registro_Clubjugador.getContentPane().add(CJ_player, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 220, -1));
 
-        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+        TB_jugadores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2"
             }
-        ));
-        jScrollPane5.setViewportView(jTable5);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TB_jugadores.setEnabled(false);
+        jScrollPane5.setViewportView(TB_jugadores);
 
         Registro_Clubjugador.getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 380, 260));
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        TB_club.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2"
             }
         ));
-        jScrollPane4.setViewportView(jTable4);
+        TB_club.setEnabled(false);
+        jScrollPane4.setViewportView(TB_club);
 
         Registro_Clubjugador.getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 380, 260));
 
@@ -1859,6 +1905,37 @@ public class main extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("partido");
+
+            // Obtener todos los documentos de la colección "partidos"
+            List<Document> partidos = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("ID");
+            tableModel.addColumn("Local");
+            tableModel.addColumn("Visita");
+
+            // Recorrer la lista de partidos y agregar filas al modelo de tabla
+            for (Document partido : partidos) {
+                String id = partido.getString("id");
+                String local = partido.getString("local");
+                String visita = partido.getString("visita");
+                tableModel.addRow(new Object[]{id, local, visita});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            TB_partidos.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
         Registro_Quiniela.setModal(true);
         Registro_Quiniela.pack();
         Registro_Quiniela.setLocationRelativeTo(this);
@@ -1960,6 +2037,68 @@ public class main extends javax.swing.JFrame {
                 ex.printStackTrace();
             }
         }
+
+        // club
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+
+            // Obtener todos los documentos de la colección "club"
+            List<Document> equipos = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("ID");
+            tableModel.addColumn("Nombre");
+
+            // Recorrer la lista de equipos y agregar filas al modelo de tabla
+            for (Document equipo : equipos) {
+                String id = equipo.getString("identidad");
+                String nombre = equipo.getString("nombre");
+                tableModel.addRow(new Object[]{id, nombre});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            TB_club.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        //jugadores
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("jugadores");
+
+            // Obtener todos los documentos de la colección "jugadores"
+            List<Document> jugadores = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("Identidad");
+            tableModel.addColumn("Nombre");
+
+            // Recorrer la lista de jugadores y agregar filas al modelo de tabla
+            for (Document jugador : jugadores) {
+                String identidad = jugador.getString("identidad");
+                String nombre = jugador.getString("nombre");
+                tableModel.addRow(new Object[]{identidad, nombre});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            TB_jugadores.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+//**
         Registro_Clubjugador.setModal(true);
         Registro_Clubjugador.pack();
         Registro_Clubjugador.setLocationRelativeTo(this);
@@ -2165,6 +2304,36 @@ public class main extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        //tabla
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("entrenadores");
+
+            // Obtener todos los documentos de la colección "entrenadores"
+            List<Document> entrenadores = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("ID");
+            tableModel.addColumn("Nombre");
+
+            // Recorrer la lista de entrenadores y agregar filas al modelo de tabla
+            for (Document entrenador : entrenadores) {
+                String id = entrenador.getString("identidad");
+                String nombre = entrenador.getString("nombre");
+                tableModel.addRow(new Object[]{id, nombre});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            TB_entrenadores.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        //
         Registro_Club.setModal(true);
         Registro_Club.pack();
         Registro_Club.setLocationRelativeTo(this);
@@ -2594,7 +2763,67 @@ public class main extends javax.swing.JFrame {
                 ex.printStackTrace();
             }
         }
-// gg
+// tabla arbitro
+        String connectionString = "mongodb+srv://admin:1234admin@cluster2023.nmsnbdo.mongodb.net/";
+        MongoClientURI uri = new MongoClientURI(connectionString);
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("arbitro");
+
+            // Obtener todos los documentos de la colección "arbitro"
+            List<Document> arbitros = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("ID");
+            tableModel.addColumn("Nombre");
+
+            // Recorrer la lista de árbitros y agregar filas al modelo de tabla
+            for (Document arbitro : arbitros) {
+                String id = arbitro.getString("identidad");
+                String nombre = arbitro.getString("nombre");
+                tableModel.addRow(new Object[]{id, nombre});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            TB_arbitros.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+// tabla equipos
+        try (MongoClient mongoClient = new MongoClient(uri)) {
+            MongoDatabase database = mongoClient.getDatabase("proyecto_tbd");
+            MongoCollection<Document> collection = database.getCollection("clubes");
+
+            // Obtener todos los documentos de la colección "club"
+            List<Document> equipos = collection.find().into(new ArrayList<>());
+
+            // Crear el modelo de tabla para la JTable
+            DefaultTableModel tableModel = new DefaultTableModel();
+
+            // Agregar las columnas al modelo de tabla
+            tableModel.addColumn("ID");
+            tableModel.addColumn("Nombre");
+
+            // Recorrer la lista de equipos y agregar filas al modelo de tabla
+            for (Document equipo : equipos) {
+                String id = equipo.getString("identidad");
+                String nombre = equipo.getString("nombre");
+                tableModel.addRow(new Object[]{id, nombre});
+            }
+
+            // Establecer el modelo de tabla en la JTable
+            TB_equipos.setModel(tableModel);
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+//
         Registro_Partido.setModal(true);
         Registro_Partido.pack();
         Registro_Partido.setLocationRelativeTo(this);
@@ -3358,6 +3587,12 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JDialog Registro_Jugador;
     private javax.swing.JDialog Registro_Partido;
     private javax.swing.JDialog Registro_Quiniela;
+    private javax.swing.JTable TB_arbitros;
+    private javax.swing.JTable TB_club;
+    private javax.swing.JTable TB_entrenadores;
+    private javax.swing.JTable TB_equipos;
+    private javax.swing.JTable TB_jugadores;
+    private javax.swing.JTable TB_partidos;
     private com.toedter.calendar.JDateChooser arbitro_date;
     private javax.swing.JTextField arbitro_id;
     private javax.swing.JTextField arbitro_nombre;
@@ -3520,6 +3755,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -3568,11 +3804,6 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTable jTable5;
     private javax.swing.JTable jTable6;
     private javax.swing.JLabel jbl_IMAGEN_FONDO;
     private javax.swing.JLabel jbl_IMAGEN_FONDO1;
