@@ -30,7 +30,6 @@ public class main extends javax.swing.JFrame {
     private void initComponents() {
 
         Registro_Jugador = new javax.swing.JDialog();
-        jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         player_persoExtra = new javax.swing.JTextField();
         player_peso = new javax.swing.JTextField();
@@ -47,9 +46,9 @@ public class main extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        Imagen_atras = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO = new javax.swing.JLabel();
         Registro_Entrenador = new javax.swing.JDialog();
-        jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         DT_pesoExtra = new javax.swing.JTextField();
         DT_peso = new javax.swing.JTextField();
@@ -66,9 +65,9 @@ public class main extends javax.swing.JFrame {
         jSeparator8 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        Imagen_atras1 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO1 = new javax.swing.JLabel();
         Registro_Arbitro = new javax.swing.JDialog();
-        jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         arbitro_pesoExtra = new javax.swing.JTextField();
         arbitro_peso = new javax.swing.JTextField();
@@ -85,9 +84,9 @@ public class main extends javax.swing.JFrame {
         jSeparator12 = new javax.swing.JSeparator();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        Imagen_atras2 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO2 = new javax.swing.JLabel();
         Registro_Club = new javax.swing.JDialog();
-        jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         club_nombre = new javax.swing.JTextField();
         jSeparator15 = new javax.swing.JSeparator();
@@ -100,6 +99,7 @@ public class main extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TB_entrenadores = new javax.swing.JTable();
         jLabel41 = new javax.swing.JLabel();
+        Imagen_atras3 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO3 = new javax.swing.JLabel();
         Registro_Quiniela = new javax.swing.JDialog();
         jSeparator23 = new javax.swing.JSeparator();
@@ -108,7 +108,6 @@ public class main extends javax.swing.JFrame {
         jSeparator19 = new javax.swing.JSeparator();
         quiniela_monto = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
-        jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
         jSeparator22 = new javax.swing.JSeparator();
@@ -120,6 +119,7 @@ public class main extends javax.swing.JFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         TB_partidos = new javax.swing.JTable();
         jLabel50 = new javax.swing.JLabel();
+        Imagen_atras4 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO6 = new javax.swing.JLabel();
         Registro_Partido = new javax.swing.JDialog();
         jLabel47 = new javax.swing.JLabel();
@@ -128,7 +128,6 @@ public class main extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jSeparator21 = new javax.swing.JSeparator();
         jLabel45 = new javax.swing.JLabel();
-        jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
         jSeparator25 = new javax.swing.JSeparator();
         jSeparator26 = new javax.swing.JSeparator();
@@ -154,9 +153,9 @@ public class main extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         TB_equipos = new javax.swing.JTable();
         jLabel51 = new javax.swing.JLabel();
+        Imagen_atras5 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO7 = new javax.swing.JLabel();
         Registro_Clubjugador = new javax.swing.JDialog();
-        jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jSeparator35 = new javax.swing.JSeparator();
         jSeparator36 = new javax.swing.JSeparator();
@@ -169,9 +168,9 @@ public class main extends javax.swing.JFrame {
         TB_jugadores = new javax.swing.JTable();
         jScrollPane4 = new javax.swing.JScrollPane();
         TB_club = new javax.swing.JTable();
+        Imagen_atras6 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO9 = new javax.swing.JLabel();
         Modificar_Jugador = new javax.swing.JDialog();
-        jButton21 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         PM_pesoExtra = new javax.swing.JTextField();
         PM_peso = new javax.swing.JTextField();
@@ -190,9 +189,9 @@ public class main extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         PM_id = new javax.swing.JComboBox<>();
+        Imagen_atras7 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO10 = new javax.swing.JLabel();
         Modificar_Entrenador = new javax.swing.JDialog();
-        jButton23 = new javax.swing.JButton();
         jButton24 = new javax.swing.JButton();
         EM_pesoExtra = new javax.swing.JTextField();
         EM_peso = new javax.swing.JTextField();
@@ -211,9 +210,9 @@ public class main extends javax.swing.JFrame {
         jLabel69 = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
         EM_id = new javax.swing.JComboBox<>();
+        Imagen_atras8 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO11 = new javax.swing.JLabel();
         Modificar_Arbitro = new javax.swing.JDialog();
-        jButton25 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
         AM_pesoExtra = new javax.swing.JTextField();
         AM_peso = new javax.swing.JTextField();
@@ -232,9 +231,9 @@ public class main extends javax.swing.JFrame {
         jLabel77 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
         AM_id = new javax.swing.JComboBox<>();
+        Imagen_atras9 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO12 = new javax.swing.JLabel();
         Modificar_Club = new javax.swing.JDialog();
-        jButton27 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
         CM_nombre = new javax.swing.JTextField();
         jSeparator49 = new javax.swing.JSeparator();
@@ -245,6 +244,7 @@ public class main extends javax.swing.JFrame {
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
         CM_id = new javax.swing.JComboBox<>();
+        Imagen_atras10 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO13 = new javax.swing.JLabel();
         Modificar_Quiniela = new javax.swing.JDialog();
         jSeparator57 = new javax.swing.JSeparator();
@@ -253,7 +253,6 @@ public class main extends javax.swing.JFrame {
         jSeparator58 = new javax.swing.JSeparator();
         QM_monto = new javax.swing.JTextField();
         jLabel100 = new javax.swing.JLabel();
-        jButton33 = new javax.swing.JButton();
         jButton34 = new javax.swing.JButton();
         jLabel101 = new javax.swing.JLabel();
         jSeparator59 = new javax.swing.JSeparator();
@@ -265,9 +264,9 @@ public class main extends javax.swing.JFrame {
         QM_golesVisita = new javax.swing.JTextField();
         QM_golesLocal = new javax.swing.JTextField();
         QM_partido = new javax.swing.JComboBox<>();
+        Imagen_atras11 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO16 = new javax.swing.JLabel();
         Eliminar_Jugador = new javax.swing.JDialog();
-        jButton35 = new javax.swing.JButton();
         jButton36 = new javax.swing.JButton();
         jSeparator63 = new javax.swing.JSeparator();
         jLabel110 = new javax.swing.JLabel();
@@ -276,82 +275,91 @@ public class main extends javax.swing.JFrame {
         EJ_id = new javax.swing.JComboBox<>();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTable6 = new javax.swing.JTable();
+        Imagen_atras12 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO17 = new javax.swing.JLabel();
         Eliminar_Entrenador = new javax.swing.JDialog();
-        jButton37 = new javax.swing.JButton();
         jButton38 = new javax.swing.JButton();
         jSeparator64 = new javax.swing.JSeparator();
         jLabel113 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
         jLabel115 = new javax.swing.JLabel();
         EE_id = new javax.swing.JComboBox<>();
+        Imagen_atras13 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO18 = new javax.swing.JLabel();
         Eliminar_Arbitro = new javax.swing.JDialog();
-        jButton39 = new javax.swing.JButton();
         jButton40 = new javax.swing.JButton();
         jSeparator65 = new javax.swing.JSeparator();
         jLabel116 = new javax.swing.JLabel();
         jLabel117 = new javax.swing.JLabel();
         jLabel118 = new javax.swing.JLabel();
         EA_id = new javax.swing.JComboBox<>();
+        Imagen_atras14 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO19 = new javax.swing.JLabel();
         Eliminar_Club = new javax.swing.JDialog();
-        jButton41 = new javax.swing.JButton();
         jButton42 = new javax.swing.JButton();
         jSeparator66 = new javax.swing.JSeparator();
         jLabel119 = new javax.swing.JLabel();
         jLabel120 = new javax.swing.JLabel();
         jLabel121 = new javax.swing.JLabel();
         EC_id = new javax.swing.JComboBox<>();
+        Imagen_atras15 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO20 = new javax.swing.JLabel();
         Eliminar_Quiniela = new javax.swing.JDialog();
-        jButton47 = new javax.swing.JButton();
         jButton48 = new javax.swing.JButton();
         jSeparator69 = new javax.swing.JSeparator();
         jLabel128 = new javax.swing.JLabel();
         jLabel129 = new javax.swing.JLabel();
         jLabel130 = new javax.swing.JLabel();
         EQ_id = new javax.swing.JComboBox<>();
+        Imagen_atras16 = new javax.swing.JLabel();
         jbl_IMAGEN_FONDO23 = new javax.swing.JLabel();
         Listar_Jugador = new javax.swing.JDialog();
         jLabel21 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
         LT_Jugador = new javax.swing.JTable();
+        Imagen_atras17 = new javax.swing.JLabel();
         Jbl_FONDO = new javax.swing.JLabel();
         Listar_Entrenador = new javax.swing.JDialog();
         jLabel22 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
         LT_Entrenador = new javax.swing.JTable();
+        Imagen_atras18 = new javax.swing.JLabel();
         Jbl_FONDO1 = new javax.swing.JLabel();
         Listar_Arbitro = new javax.swing.JDialog();
         jLabel27 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
         LT_Arbitro = new javax.swing.JTable();
+        Imagen_atras19 = new javax.swing.JLabel();
         Jbl_FONDO2 = new javax.swing.JLabel();
         Listar_Club = new javax.swing.JDialog();
         jLabel28 = new javax.swing.JLabel();
         jScrollPane11 = new javax.swing.JScrollPane();
         LT_Club = new javax.swing.JTable();
+        Imagen_atras20 = new javax.swing.JLabel();
         Jbl_FONDO3 = new javax.swing.JLabel();
         Listar_Clubjugador = new javax.swing.JDialog();
         jLabel29 = new javax.swing.JLabel();
         jScrollPane12 = new javax.swing.JScrollPane();
         LT_club_jugador = new javax.swing.JTable();
+        Imagen_atras21 = new javax.swing.JLabel();
         Jbl_FONDO4 = new javax.swing.JLabel();
         Listar_Partido = new javax.swing.JDialog();
         jLabel31 = new javax.swing.JLabel();
         jScrollPane13 = new javax.swing.JScrollPane();
         LT_Partidos = new javax.swing.JTable();
+        Imagen_atras22 = new javax.swing.JLabel();
         Jbl_FONDO5 = new javax.swing.JLabel();
         Listar_Quiniela = new javax.swing.JDialog();
         jLabel32 = new javax.swing.JLabel();
         jScrollPane14 = new javax.swing.JScrollPane();
         LT_Quiniela = new javax.swing.JTable();
+        Imagen_atras23 = new javax.swing.JLabel();
         Jbl_FONDO6 = new javax.swing.JLabel();
         Listar_Ganadores = new javax.swing.JDialog();
         jLabel33 = new javax.swing.JLabel();
         jScrollPane15 = new javax.swing.JScrollPane();
         LT_ganadorQuinielas = new javax.swing.JTable();
+        Imagen_atras24 = new javax.swing.JLabel();
         Jbl_FONDO7 = new javax.swing.JLabel();
         Resultado_quiniela = new javax.swing.JDialog();
         NE_visita = new javax.swing.JLabel();
@@ -362,6 +370,7 @@ public class main extends javax.swing.JFrame {
         Mensaje = new javax.swing.JLabel();
         GR_local = new javax.swing.JLabel();
         JQ_id = new javax.swing.JComboBox<>();
+        Imagen_atras25 = new javax.swing.JLabel();
         lbl_Fondo_Imagen = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
         jbl_fondo = new javax.swing.JLabel();
@@ -399,12 +408,6 @@ public class main extends javax.swing.JFrame {
         Registro_Jugador.setIconImage(null);
         Registro_Jugador.setIconImages(null);
         Registro_Jugador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton3.setText("Atras");
-        jButton3.setBorder(null);
-        jButton3.setOpaque(false);
-        Registro_Jugador.getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton1.setText("Crear");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -478,6 +481,14 @@ public class main extends javax.swing.JFrame {
         jLabel2.setText("Registro de Jugador");
         Registro_Jugador.getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, -1, -1));
 
+        Imagen_atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atrasMouseClicked(evt);
+            }
+        });
+        Registro_Jugador.getContentPane().add(Imagen_atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -486,12 +497,6 @@ public class main extends javax.swing.JFrame {
         Registro_Entrenador.setIconImage(null);
         Registro_Entrenador.setIconImages(null);
         Registro_Entrenador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton4.setText("Atras");
-        jButton4.setBorder(null);
-        jButton4.setOpaque(false);
-        Registro_Entrenador.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton2.setText("Crear");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -565,6 +570,14 @@ public class main extends javax.swing.JFrame {
         jLabel13.setText("Registro de Entrenador");
         Registro_Entrenador.getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
 
+        Imagen_atras1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras1MouseClicked(evt);
+            }
+        });
+        Registro_Entrenador.getContentPane().add(Imagen_atras1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO1.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -573,12 +586,6 @@ public class main extends javax.swing.JFrame {
         Registro_Arbitro.setIconImage(null);
         Registro_Arbitro.setIconImages(null);
         Registro_Arbitro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton5.setText("Atras");
-        jButton5.setBorder(null);
-        jButton5.setOpaque(false);
-        Registro_Arbitro.getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton6.setText("Crear");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -652,6 +659,14 @@ public class main extends javax.swing.JFrame {
         jLabel19.setText("Registro de Arbitro");
         Registro_Arbitro.getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 70, -1, -1));
 
+        Imagen_atras2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras2MouseClicked(evt);
+            }
+        });
+        Registro_Arbitro.getContentPane().add(Imagen_atras2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO2.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -660,12 +675,6 @@ public class main extends javax.swing.JFrame {
         Registro_Club.setIconImage(null);
         Registro_Club.setIconImages(null);
         Registro_Club.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton7.setText("Atras");
-        jButton7.setBorder(null);
-        jButton7.setOpaque(false);
-        Registro_Club.getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton8.setText("Crear");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -731,12 +740,20 @@ public class main extends javax.swing.JFrame {
         TB_entrenadores.setEnabled(false);
         jScrollPane1.setViewportView(TB_entrenadores);
 
-        Registro_Club.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 350, 550));
+        Registro_Club.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 320, 540));
 
         jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setText("ID:");
         Registro_Club.getContentPane().add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, -1));
+
+        Imagen_atras3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras3MouseClicked(evt);
+            }
+        });
+        Registro_Club.getContentPane().add(Imagen_atras3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
 
         jbl_IMAGEN_FONDO3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO3.setForeground(new java.awt.Color(255, 255, 255));
@@ -774,12 +791,6 @@ public class main extends javax.swing.JFrame {
         jLabel37.setForeground(new java.awt.Color(255, 255, 255));
         jLabel37.setText("Monto:");
         Registro_Quiniela.getContentPane().add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
-
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton13.setText("Atras");
-        jButton13.setBorder(null);
-        jButton13.setOpaque(false);
-        Registro_Quiniela.getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton14.setText("Crear");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -834,12 +845,20 @@ public class main extends javax.swing.JFrame {
         TB_partidos.setEnabled(false);
         jScrollPane7.setViewportView(TB_partidos);
 
-        Registro_Quiniela.getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 400, 560));
+        Registro_Quiniela.getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 370, 540));
 
         jLabel50.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel50.setForeground(new java.awt.Color(255, 255, 255));
         jLabel50.setText("ID:");
         Registro_Quiniela.getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, -1, -1));
+
+        Imagen_atras4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras4MouseClicked(evt);
+            }
+        });
+        Registro_Quiniela.getContentPane().add(Imagen_atras4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
 
         jbl_IMAGEN_FONDO6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO6.setForeground(new java.awt.Color(255, 255, 255));
@@ -872,12 +891,6 @@ public class main extends javax.swing.JFrame {
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setText("ID Equipo Visita:");
         Registro_Partido.getContentPane().add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 120, 20));
-
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton15.setText("Atras");
-        jButton15.setBorder(null);
-        jButton15.setOpaque(false);
-        Registro_Partido.getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 80, 40));
 
         jButton16.setText("Crear");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -991,6 +1004,14 @@ public class main extends javax.swing.JFrame {
         jLabel51.setText("ID:");
         Registro_Partido.getContentPane().add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, -1, -1));
 
+        Imagen_atras5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras5MouseClicked(evt);
+            }
+        });
+        Registro_Partido.getContentPane().add(Imagen_atras5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, -1, -1));
+
         jbl_IMAGEN_FONDO7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO7.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_ancho.png"))); // NOI18N
@@ -999,12 +1020,6 @@ public class main extends javax.swing.JFrame {
         Registro_Clubjugador.setIconImage(null);
         Registro_Clubjugador.setIconImages(null);
         Registro_Clubjugador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton19.setText("Atras");
-        jButton19.setBorder(null);
-        jButton19.setOpaque(false);
-        Registro_Clubjugador.getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton20.setText("Crear");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -1069,6 +1084,14 @@ public class main extends javax.swing.JFrame {
 
         Registro_Clubjugador.getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 380, 260));
 
+        Imagen_atras6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras6MouseClicked(evt);
+            }
+        });
+        Registro_Clubjugador.getContentPane().add(Imagen_atras6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO9.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1077,12 +1100,6 @@ public class main extends javax.swing.JFrame {
         Modificar_Jugador.setIconImage(null);
         Modificar_Jugador.setIconImages(null);
         Modificar_Jugador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton21.setText("Atras");
-        jButton21.setBorder(null);
-        jButton21.setOpaque(false);
-        Modificar_Jugador.getContentPane().add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton22.setText("Modificar");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
@@ -1160,6 +1177,14 @@ public class main extends javax.swing.JFrame {
         });
         Modificar_Jugador.getContentPane().add(PM_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 220, -1));
 
+        Imagen_atras7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras7MouseClicked(evt);
+            }
+        });
+        Modificar_Jugador.getContentPane().add(Imagen_atras7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO10.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1168,12 +1193,6 @@ public class main extends javax.swing.JFrame {
         Modificar_Entrenador.setIconImage(null);
         Modificar_Entrenador.setIconImages(null);
         Modificar_Entrenador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton23.setText("Atras");
-        jButton23.setBorder(null);
-        jButton23.setOpaque(false);
-        Modificar_Entrenador.getContentPane().add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton24.setText("Modificar");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
@@ -1251,6 +1270,14 @@ public class main extends javax.swing.JFrame {
         });
         Modificar_Entrenador.getContentPane().add(EM_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 220, -1));
 
+        Imagen_atras8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras8MouseClicked(evt);
+            }
+        });
+        Modificar_Entrenador.getContentPane().add(Imagen_atras8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO11.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1259,12 +1286,6 @@ public class main extends javax.swing.JFrame {
         Modificar_Arbitro.setIconImage(null);
         Modificar_Arbitro.setIconImages(null);
         Modificar_Arbitro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton25.setText("Atras");
-        jButton25.setBorder(null);
-        jButton25.setOpaque(false);
-        Modificar_Arbitro.getContentPane().add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton26.setText("Modificar");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
@@ -1342,6 +1363,14 @@ public class main extends javax.swing.JFrame {
         });
         Modificar_Arbitro.getContentPane().add(AM_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 220, -1));
 
+        Imagen_atras9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras9MouseClicked(evt);
+            }
+        });
+        Modificar_Arbitro.getContentPane().add(Imagen_atras9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO12.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1350,12 +1379,6 @@ public class main extends javax.swing.JFrame {
         Modificar_Club.setIconImage(null);
         Modificar_Club.setIconImages(null);
         Modificar_Club.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton27.setText("Atras");
-        jButton27.setBorder(null);
-        jButton27.setOpaque(false);
-        Modificar_Club.getContentPane().add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton28.setText("Modificar");
         jButton28.addActionListener(new java.awt.event.ActionListener() {
@@ -1403,6 +1426,14 @@ public class main extends javax.swing.JFrame {
         });
         Modificar_Club.getContentPane().add(CM_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 220, 220, -1));
 
+        Imagen_atras10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras10MouseClicked(evt);
+            }
+        });
+        Modificar_Club.getContentPane().add(Imagen_atras10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO13.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1439,12 +1470,6 @@ public class main extends javax.swing.JFrame {
         jLabel100.setForeground(new java.awt.Color(255, 255, 255));
         jLabel100.setText("Monto:");
         Modificar_Quiniela.getContentPane().add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
-
-        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton33.setText("Atras");
-        jButton33.setBorder(null);
-        jButton33.setOpaque(false);
-        Modificar_Quiniela.getContentPane().add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton34.setText("Modificar");
         jButton34.addActionListener(new java.awt.event.ActionListener() {
@@ -1489,6 +1514,14 @@ public class main extends javax.swing.JFrame {
 
         Modificar_Quiniela.getContentPane().add(QM_partido, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 220, -1));
 
+        Imagen_atras11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras11MouseClicked(evt);
+            }
+        });
+        Modificar_Quiniela.getContentPane().add(Imagen_atras11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO16.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1497,12 +1530,6 @@ public class main extends javax.swing.JFrame {
         Eliminar_Jugador.setIconImage(null);
         Eliminar_Jugador.setIconImages(null);
         Eliminar_Jugador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton35.setText("Atras");
-        jButton35.setBorder(null);
-        jButton35.setOpaque(false);
-        Eliminar_Jugador.getContentPane().add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton36.setText("Eliminar");
         jButton36.addActionListener(new java.awt.event.ActionListener() {
@@ -1544,6 +1571,14 @@ public class main extends javax.swing.JFrame {
 
         Eliminar_Jugador.getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 350, 530));
 
+        Imagen_atras12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras12MouseClicked(evt);
+            }
+        });
+        Eliminar_Jugador.getContentPane().add(Imagen_atras12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO17.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1552,12 +1587,6 @@ public class main extends javax.swing.JFrame {
         Eliminar_Entrenador.setIconImage(null);
         Eliminar_Entrenador.setIconImages(null);
         Eliminar_Entrenador.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton37.setText("Atras");
-        jButton37.setBorder(null);
-        jButton37.setOpaque(false);
-        Eliminar_Entrenador.getContentPane().add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton38.setText("Eliminar");
         jButton38.addActionListener(new java.awt.event.ActionListener() {
@@ -1584,6 +1613,14 @@ public class main extends javax.swing.JFrame {
 
         Eliminar_Entrenador.getContentPane().add(EE_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
 
+        Imagen_atras13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras13MouseClicked(evt);
+            }
+        });
+        Eliminar_Entrenador.getContentPane().add(Imagen_atras13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO18.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1592,12 +1629,6 @@ public class main extends javax.swing.JFrame {
         Eliminar_Arbitro.setIconImage(null);
         Eliminar_Arbitro.setIconImages(null);
         Eliminar_Arbitro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton39.setText("Atras");
-        jButton39.setBorder(null);
-        jButton39.setOpaque(false);
-        Eliminar_Arbitro.getContentPane().add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton40.setText("Eliminar");
         jButton40.addActionListener(new java.awt.event.ActionListener() {
@@ -1624,6 +1655,14 @@ public class main extends javax.swing.JFrame {
 
         Eliminar_Arbitro.getContentPane().add(EA_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
 
+        Imagen_atras14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras14MouseClicked(evt);
+            }
+        });
+        Eliminar_Arbitro.getContentPane().add(Imagen_atras14, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO19.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1632,12 +1671,6 @@ public class main extends javax.swing.JFrame {
         Eliminar_Club.setIconImage(null);
         Eliminar_Club.setIconImages(null);
         Eliminar_Club.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton41.setText("Atras");
-        jButton41.setBorder(null);
-        jButton41.setOpaque(false);
-        Eliminar_Club.getContentPane().add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton42.setText("Eliminar");
         jButton42.addActionListener(new java.awt.event.ActionListener() {
@@ -1664,6 +1697,14 @@ public class main extends javax.swing.JFrame {
 
         Eliminar_Club.getContentPane().add(EC_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
 
+        Imagen_atras15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras15MouseClicked(evt);
+            }
+        });
+        Eliminar_Club.getContentPane().add(Imagen_atras15, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO20.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1672,12 +1713,6 @@ public class main extends javax.swing.JFrame {
         Eliminar_Quiniela.setIconImage(null);
         Eliminar_Quiniela.setIconImages(null);
         Eliminar_Quiniela.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
-        jButton47.setText("Atras");
-        jButton47.setBorder(null);
-        jButton47.setOpaque(false);
-        Eliminar_Quiniela.getContentPane().add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 23, 80, 40));
 
         jButton48.setText("Eliminar");
         jButton48.addActionListener(new java.awt.event.ActionListener() {
@@ -1704,6 +1739,14 @@ public class main extends javax.swing.JFrame {
 
         Eliminar_Quiniela.getContentPane().add(EQ_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 220, -1));
 
+        Imagen_atras16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras16MouseClicked(evt);
+            }
+        });
+        Eliminar_Quiniela.getContentPane().add(Imagen_atras16, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 30, -1, -1));
+
         jbl_IMAGEN_FONDO23.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbl_IMAGEN_FONDO23.setForeground(new java.awt.Color(255, 255, 255));
         jbl_IMAGEN_FONDO23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registro_sinletras.png"))); // NOI18N
@@ -1714,7 +1757,7 @@ public class main extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Lista de Jugadores");
-        Listar_Jugador.getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, 70));
+        Listar_Jugador.getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, 70));
 
         LT_Jugador.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1730,6 +1773,14 @@ public class main extends javax.swing.JFrame {
 
         Listar_Jugador.getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
 
+        Imagen_atras17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras17MouseClicked(evt);
+            }
+        });
+        Listar_Jugador.getContentPane().add(Imagen_atras17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
         Jbl_FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
         Listar_Jugador.getContentPane().add(Jbl_FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
 
@@ -1738,7 +1789,7 @@ public class main extends javax.swing.JFrame {
         jLabel22.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Lista de Entrenador");
-        Listar_Entrenador.getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, 70));
+        Listar_Entrenador.getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, 70));
 
         LT_Entrenador.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1754,6 +1805,14 @@ public class main extends javax.swing.JFrame {
 
         Listar_Entrenador.getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
 
+        Imagen_atras18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras18MouseClicked(evt);
+            }
+        });
+        Listar_Entrenador.getContentPane().add(Imagen_atras18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
         Jbl_FONDO1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
         Listar_Entrenador.getContentPane().add(Jbl_FONDO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
 
@@ -1762,7 +1821,7 @@ public class main extends javax.swing.JFrame {
         jLabel27.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("Lista de Arbitro");
-        Listar_Arbitro.getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, -1, 70));
+        Listar_Arbitro.getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, -1, 70));
 
         LT_Arbitro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1778,6 +1837,14 @@ public class main extends javax.swing.JFrame {
 
         Listar_Arbitro.getContentPane().add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
 
+        Imagen_atras19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras19MouseClicked(evt);
+            }
+        });
+        Listar_Arbitro.getContentPane().add(Imagen_atras19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
         Jbl_FONDO2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
         Listar_Arbitro.getContentPane().add(Jbl_FONDO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
 
@@ -1786,7 +1853,7 @@ public class main extends javax.swing.JFrame {
         jLabel28.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("Lista de Club");
-        Listar_Club.getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, -1, 70));
+        Listar_Club.getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 30, -1, 70));
 
         LT_Club.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1801,6 +1868,14 @@ public class main extends javax.swing.JFrame {
         jScrollPane11.setViewportView(LT_Club);
 
         Listar_Club.getContentPane().add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Imagen_atras20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras20MouseClicked(evt);
+            }
+        });
+        Listar_Club.getContentPane().add(Imagen_atras20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         Jbl_FONDO3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
         Listar_Club.getContentPane().add(Jbl_FONDO3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
@@ -1826,6 +1901,14 @@ public class main extends javax.swing.JFrame {
 
         Listar_Clubjugador.getContentPane().add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
 
+        Imagen_atras21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras21MouseClicked(evt);
+            }
+        });
+        Listar_Clubjugador.getContentPane().add(Imagen_atras21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
         Jbl_FONDO4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
         Listar_Clubjugador.getContentPane().add(Jbl_FONDO4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
 
@@ -1834,7 +1917,7 @@ public class main extends javax.swing.JFrame {
         jLabel31.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setText("Lista de Partidos");
-        Listar_Partido.getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, -1, 70));
+        Listar_Partido.getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, 70));
 
         LT_Partidos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1850,6 +1933,14 @@ public class main extends javax.swing.JFrame {
 
         Listar_Partido.getContentPane().add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
 
+        Imagen_atras22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras22MouseClicked(evt);
+            }
+        });
+        Listar_Partido.getContentPane().add(Imagen_atras22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
         Jbl_FONDO5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
         Listar_Partido.getContentPane().add(Jbl_FONDO5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
 
@@ -1858,7 +1949,7 @@ public class main extends javax.swing.JFrame {
         jLabel32.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("Lista de Quiniela");
-        Listar_Quiniela.getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, 70));
+        Listar_Quiniela.getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, 70));
 
         LT_Quiniela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1873,6 +1964,14 @@ public class main extends javax.swing.JFrame {
         jScrollPane14.setViewportView(LT_Quiniela);
 
         Listar_Quiniela.getContentPane().add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Imagen_atras23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras23MouseClicked(evt);
+            }
+        });
+        Listar_Quiniela.getContentPane().add(Imagen_atras23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         Jbl_FONDO6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
         Listar_Quiniela.getContentPane().add(Jbl_FONDO6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
@@ -1897,6 +1996,14 @@ public class main extends javax.swing.JFrame {
         jScrollPane15.setViewportView(LT_ganadorQuinielas);
 
         Listar_Ganadores.getContentPane().add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 780, 410));
+
+        Imagen_atras24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras24MouseClicked(evt);
+            }
+        });
+        Listar_Ganadores.getContentPane().add(Imagen_atras24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         Jbl_FONDO7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Listar_fondo.png"))); // NOI18N
         Listar_Ganadores.getContentPane().add(Jbl_FONDO7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
@@ -1944,6 +2051,14 @@ public class main extends javax.swing.JFrame {
             }
         });
         Resultado_quiniela.getContentPane().add(JQ_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 310, 30));
+
+        Imagen_atras25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flecha-hacia-atras.png"))); // NOI18N
+        Imagen_atras25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Imagen_atras25MouseClicked(evt);
+            }
+        });
+        Resultado_quiniela.getContentPane().add(Imagen_atras25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         lbl_Fondo_Imagen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lbl_Fondo_Imagen.setForeground(new java.awt.Color(255, 255, 255));
@@ -2022,7 +2137,7 @@ public class main extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/futbodl.png"))); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/futbol-americano.png"))); // NOI18N
         jMenuItem4.setText("Club Jugador");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2145,6 +2260,7 @@ public class main extends javax.swing.JFrame {
         jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/portapapeles.png"))); // NOI18N
         jMenu4.setText("Listar");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/jugador-de-futbol (1).png"))); // NOI18N
         jMenuItem1.setText("Jugador");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2153,6 +2269,7 @@ public class main extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem1);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/entrenador.png"))); // NOI18N
         jMenuItem3.setText("Entrenador");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2161,6 +2278,7 @@ public class main extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem3);
 
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/arbitro-de-futbol.png"))); // NOI18N
         jMenuItem9.setText("Arbitro");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2169,6 +2287,7 @@ public class main extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem9);
 
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/club.png"))); // NOI18N
         jMenuItem10.setText("Club");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2177,6 +2296,7 @@ public class main extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem10);
 
+        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/prediccion.png"))); // NOI18N
         jMenuItem17.setText("Quiniela");
         jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2185,6 +2305,7 @@ public class main extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem17);
 
+        jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/torneo.png"))); // NOI18N
         jMenuItem19.setText("Club Jugador");
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2193,6 +2314,7 @@ public class main extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem19);
 
+        jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/futbodl.png"))); // NOI18N
         jMenuItem20.setText("Partido");
         jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2201,6 +2323,7 @@ public class main extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem20);
 
+        jMenuItem21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ganadores.png"))); // NOI18N
         jMenuItem21.setText("Ganadores");
         jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -4399,6 +4522,114 @@ public class main extends javax.swing.JFrame {
 
     }//GEN-LAST:event_JQ_idItemStateChanged
 
+    private void Imagen_atrasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atrasMouseClicked
+        // TODO add your handling code here:
+        Registro_Jugador.setModal(false);
+        Registro_Jugador.pack();
+       //Registro_Jugador.setLocationRelativeTo(this);
+        Registro_Jugador.setVisible(false);
+    }//GEN-LAST:event_Imagen_atrasMouseClicked
+
+    private void Imagen_atras1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras1MouseClicked
+
+    private void Imagen_atras2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras2MouseClicked
+
+    private void Imagen_atras3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras3MouseClicked
+
+    private void Imagen_atras4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras4MouseClicked
+
+    private void Imagen_atras5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras5MouseClicked
+
+    private void Imagen_atras6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras6MouseClicked
+
+    private void Imagen_atras7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras7MouseClicked
+
+    private void Imagen_atras8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras8MouseClicked
+
+    private void Imagen_atras9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras9MouseClicked
+
+    private void Imagen_atras10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras10MouseClicked
+
+    private void Imagen_atras11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras11MouseClicked
+
+    private void Imagen_atras12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras12MouseClicked
+
+    private void Imagen_atras13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras13MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras13MouseClicked
+
+    private void Imagen_atras14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras14MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras14MouseClicked
+
+    private void Imagen_atras15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras15MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras15MouseClicked
+
+    private void Imagen_atras16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras16MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras16MouseClicked
+
+    private void Imagen_atras17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras17MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras17MouseClicked
+
+    private void Imagen_atras18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras18MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras18MouseClicked
+
+    private void Imagen_atras19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras19MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras19MouseClicked
+
+    private void Imagen_atras20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras20MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras20MouseClicked
+
+    private void Imagen_atras21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras21MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras21MouseClicked
+
+    private void Imagen_atras22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras22MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras22MouseClicked
+
+    private void Imagen_atras23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras23MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras23MouseClicked
+
+    private void Imagen_atras24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras24MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras24MouseClicked
+
+    private void Imagen_atras25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Imagen_atras25MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Imagen_atras25MouseClicked
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -4473,6 +4704,32 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel GQ_visita;
     private javax.swing.JLabel GR_local;
     private javax.swing.JLabel GR_visita;
+    private javax.swing.JLabel Imagen_atras;
+    private javax.swing.JLabel Imagen_atras1;
+    private javax.swing.JLabel Imagen_atras10;
+    private javax.swing.JLabel Imagen_atras11;
+    private javax.swing.JLabel Imagen_atras12;
+    private javax.swing.JLabel Imagen_atras13;
+    private javax.swing.JLabel Imagen_atras14;
+    private javax.swing.JLabel Imagen_atras15;
+    private javax.swing.JLabel Imagen_atras16;
+    private javax.swing.JLabel Imagen_atras17;
+    private javax.swing.JLabel Imagen_atras18;
+    private javax.swing.JLabel Imagen_atras19;
+    private javax.swing.JLabel Imagen_atras2;
+    private javax.swing.JLabel Imagen_atras20;
+    private javax.swing.JLabel Imagen_atras21;
+    private javax.swing.JLabel Imagen_atras22;
+    private javax.swing.JLabel Imagen_atras23;
+    private javax.swing.JLabel Imagen_atras24;
+    private javax.swing.JLabel Imagen_atras25;
+    private javax.swing.JLabel Imagen_atras3;
+    private javax.swing.JLabel Imagen_atras4;
+    private javax.swing.JLabel Imagen_atras5;
+    private javax.swing.JLabel Imagen_atras6;
+    private javax.swing.JLabel Imagen_atras7;
+    private javax.swing.JLabel Imagen_atras8;
+    private javax.swing.JLabel Imagen_atras9;
     private javax.swing.JComboBox<String> JQ_id;
     private javax.swing.JLabel Jbl_FONDO;
     private javax.swing.JLabel Jbl_FONDO1;
@@ -4539,38 +4796,21 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> club_entrenador;
     private javax.swing.JTextField club_nombre;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton33;
     private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton38;
-    private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton40;
-    private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton47;
     private javax.swing.JButton jButton48;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
